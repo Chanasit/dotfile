@@ -1,5 +1,5 @@
 # dotfile
-Chanasit dotfile for global config command line tool
+whole dotfile for global config command line tool
 
 ## Setup .bashrc or .zshrc
 ```
