@@ -229,6 +229,8 @@ let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 " => You Complete Me
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap gd :YcmCompleter GoTo<CR>
+nnoremap gf :YcmCompleter FixIt<CR>
+
 let g:ycm_auto_hover=''
 let s:ycm_hover_popup = -1
 let g:ycm_min_num_of_chars_for_completion = 2
