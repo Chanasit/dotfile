@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/chanasit'
+let g:netrw_dirhist_3='/Users/chanasit/.config/nvim'
+let g:netrw_dirhist_2='/Users/chanasit/go/gitlab.com/bn-sme-microservice-go/src/adapter'
+let g:netrw_dirhist_1='/Users/chanasit/go/gitlab.com/bn-sme-microservice-go/src'
+let g:netrw_dirhist_0='/Users/chanasit/go/gitlab.com/bn-sme-microservice-go'
+let g:netrw_dirhist_9='/Users/chanasit/go/gitlab.com/bn-sme-microservice-go/src/adapter'
+let g:netrw_dirhist_8='/Users/chanasit/go/gitlab.com/bn-sme-microservice-go/src'
+let g:netrw_dirhist_7='/Users/chanasit/go/gitlab.com/bn-sme-microservice-go'
+let g:netrw_dirhist_6='/Users/chanasit'
+let g:netrw_dirhist_5='/Users/chanasit/go/gitlab.com/vim-test'
