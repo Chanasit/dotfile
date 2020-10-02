@@ -1,6 +1,11 @@
 # dotfile
 whole dotfile for global config command line tool
 
+## Setup Vim Plug
+```
+$ cp -r .vim $HOME/
+```
+
 ## Setup .bashrc or .zshrc
 ```
 alias vim=mvim -v
