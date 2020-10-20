@@ -33,16 +33,20 @@ Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
 
 " THEME
-Plug 'cormacrelf/vim-colors-github'
+" Plug 'cormacrelf/vim-colors-github'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " YCM
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --go-completer --ts-completer' }
+
+" Coc.vim
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Multi Cursor
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 " Vim Proc
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'mattn/emmet-vim'
 
 " Terraform
 Plug 'hashivim/vim-terraform'
@@ -61,7 +65,7 @@ noremap! <C-j> <Down>
 noremap! <C-k> <Up>
 noremap! <C-l> <Right>
 
-" map leader key
+"" map leader key
 let mapleader = ","
 let maplocalleader = ","
 
@@ -75,6 +79,7 @@ set completeopt-=preview
 set clipboard=unnamed
 set cursorline
 set nocompatible
+
 
 " Relative line number with absolute number of the current line
 set number relativenumber
@@ -113,9 +118,7 @@ set magic
 " set list
 
 " File Detect
-filetype on                   " Enable filetype detection
-filetype indent on            " Enable filetype-specific indenting
-filetype plugin on            " Enable filetype-specific plugins
+filetype plugin indent on
 
 " Folding section
 set foldmethod=syntax   
@@ -155,20 +158,22 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " use a slightly darker background, like GitHub inline code blocks
-let g:github_colors_soft = 1
+" let g:github_colors_soft = 1
 
 " use the dark theme
-set background=light
+set background=dark
 
 " more blocky diff markers in signcolumn (e.g. GitGutter)
-let g:github_colors_block_diffmark = 0
+" let g:github_colors_block_diffmark = 0
 
 " Color scheme
-colorscheme github
+let g:dracula_italic = 0
+colorscheme dracula
+highlight Normal ctermbg=None
 
 " if you use airline / lightline
-let g:airline_theme = "github"
-let g:lightline = { 'colorscheme': 'github' }
+" let g:airline_theme = "dracula"
+" let g:lightline = { 'colorscheme': 'dracula' }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
@@ -234,18 +239,18 @@ nnoremap gf :YcmCompleter FixIt<CR>
 let g:ycm_auto_hover=''
 let s:ycm_hover_popup = -1
 let g:ycm_min_num_of_chars_for_completion = 2
-let g:ycm_min_num_identifier_candidate_chars = 0
-let g:ycm_max_num_candidates = 13
-let g:ycm_max_num_identifier_candidates = 13
+let g:ycm_min_num_identifier_candidate_chars = 1
+let g:ycm_max_num_candidates = 8
+let g:ycm_max_num_identifier_candidates = 8
 let g:ycm_auto_trigger = 2
-let g:ycm_show_diagnostics_ui = 0
+let g:ycm_show_diagnostics_ui = 1
 let g:ycm_error_symbol = '>>'
 let g:ycm_warning_symbol = '>>'
-let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_signs = 1
 let g:ycm_enable_diagnostic_highlighting = 1
-let g:ycm_echo_current_diagnostic = 0
-let g:ycm_allow_changing_updatetime = 0
-let g:ycm_disable_for_files_larger_than_kb = 300
+let g:ycm_echo_current_diagnostic = 1
+let g:ycm_allow_changing_updatetime = 1
+let g:ycm_disable_for_files_larger_than_kb = 1000
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Terraform Config
