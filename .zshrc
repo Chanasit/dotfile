@@ -15,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="gozilla"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -104,8 +104,8 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # Stop after sending count ECHO_REQUEST packets #
 alias ping='ping -c 5'
@@ -127,7 +127,7 @@ alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A
 alias icloud="~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 alias spotify="open -a spotify"
 alias dota2="open -a Dota\ 2"
-alias google="googler"
+alias gg="googler"
 
 # GIT ALIAS
 alias g3="git log --graph --oneline --all"
@@ -135,7 +135,8 @@ alias gs="git status"
 
 
 # PYTHON PATH
-export PATH=$PATH:$HOME/Library/Python/3.7/bin
+export PATH="/usr/local/opt/python@3.9/bin:$PATH"
+
 
 # GOPATH
 export GOPATH=$HOME/go
@@ -153,8 +154,10 @@ export GO111MODULE=on
 # OS Condition
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     echo "linux"
+    alias hjkl="/media/chanasit/hjkl/"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    echo "Mac OSX"
+    echo "osx"
+    alias hjkl="/Volumes/hjkl/"
 else
     echo "no os found"
 fi
