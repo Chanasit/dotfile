@@ -36,20 +36,11 @@ Plug 'preservim/nerdtree'
 " Plug 'cormacrelf/vim-colors-github'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
-" YCM
-" Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --go-completer --ts-completer' }
-
-" Coc.vim
+" Coc.vim :CocInstall coc-go coc-tsserver
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Multi Cursor
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-
-" Vim Proc
-Plug 'mattn/emmet-vim'
-
-" Terraform
-Plug 'hashivim/vim-terraform'
 
 " Commentary
 Plug 'tpope/vim-commentary'
@@ -234,7 +225,7 @@ let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 " => COC VIM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set updatetime=300
-set cmdheight=2
+set cmdheight=1
 set pumheight=16
 set shortmess+=c
 
@@ -379,10 +370,3 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Terraform Config
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:terraform_align=1
-let g:terraform_fold_sections=1
-let g:terraform_fmt_on_save=1
