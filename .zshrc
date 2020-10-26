@@ -1,5 +1,6 @@
 # REMOVE USERNAME
-prompt_context () { }
+prompt_context () {
+}
 
 # REMOVE current working directory
 prompt_dir() {
@@ -69,11 +70,14 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
 plugins=(
+    osx
     docker
     git
     zsh-syntax-highlighting
     zsh-autosuggestions
+    zsh-lazyload
     vi-mode
 )
 
@@ -163,9 +167,10 @@ else
     echo "no os found"
 fi
 
+
 # NVMPATH
 export NVM_DIR="$HOME/.nvm"
-source $(brew --prefix nvm)/nvm.sh
+lazyload nvm -- 'source "$(brew --prefix nvm)/nvm.sh"'
 
 # YARN
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
@@ -173,7 +178,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # KUBECONFIG
 export KUBECONFIG=$HOME/.kube/bn-sme-production-cluster:$HOME/.kube/bn-sme-staging-cluster:$HOME/.kube/config
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Binding Key
 bindkey -v
