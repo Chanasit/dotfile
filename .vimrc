@@ -1,4 +1,6 @@
 set encoding=utf-8
+let &t_TI = ""
+let &t_TE = ""
 
 if !has('gui_running')
   map "in Insert mode, type Ctrl+v Alt+n here" <A-n>
