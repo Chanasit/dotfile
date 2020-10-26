@@ -74,6 +74,7 @@ plugins=(
     git
     zsh-syntax-highlighting
     zsh-autosuggestions
+    vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -96,7 +97,7 @@ fi
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -136,6 +137,8 @@ alias gs="git status"
 
 # PYTHON PATH
 export PATH="/usr/local/opt/python@3.9/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/python@3.9/lib"
+export PKG_CONFIG_PATH="/usr/local/opt/python@3.9/lib/pkgconfig"
 
 
 # GOPATH
@@ -153,27 +156,16 @@ export GO111MODULE=on
 
 # OS Condition
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    echo "linux"
-    alias hjkl="/media/chanasit/hjkl/"
+    alias hjkl="/media/$USER/hjkl/"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    echo "osx"
     alias hjkl="/Volumes/hjkl/"
 else
     echo "no os found"
 fi
 
-# SQLite
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/sqlite/lib"
-export CPPFLAGS="-I/usr/local/opt/sqlite/include"
-
 # NVMPATH
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
-
-# JENV
-# export PATH="$HOME/.jenv/bin:$PATH"
-# eval "$(jenv init -)"
 
 # YARN
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
@@ -182,3 +174,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export KUBECONFIG=$HOME/.kube/bn-sme-production-cluster:$HOME/.kube/bn-sme-staging-cluster:$HOME/.kube/config
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Binding Key
+bindkey -v
