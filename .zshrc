@@ -175,7 +175,7 @@ export GOCACHE=$HOME/.cache
 
 # OS Condition
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    export GOROOT=$HOME/snap/go/current
+    export GOROOT=/snap/go/current
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     export GOROOT=/usr/local/Cellar/go/1.15.3/libexec
 fi
