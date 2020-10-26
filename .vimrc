@@ -53,11 +53,6 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" provide hjkl movements in Insert mode and Command-line mode via the <Alt> modifier key
-noremap! <C-h> <Left>
-noremap! <C-j> <Down>
-noremap! <C-k> <Up>
-noremap! <C-l> <Right>
 
 "" map leader key
 let mapleader = ","
@@ -251,6 +246,12 @@ if has("patch-8.1.1564")
 else
   set signcolumn=yes
 endif
+
+" provide hjkl movements in Insert mode and Command-line mode via the <Alt> modifier key
+noremap! <C-h> <Left>
+noremap! <C-j> <Down>
+noremap! <C-k> <Up>
+noremap! <C-l> <Right>
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by

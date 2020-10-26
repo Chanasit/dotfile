@@ -1,6 +1,6 @@
 # TMUX
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux attach -t default || tmux new -s default
+    tmux || tmux new
 fi
 
 # REMOVE USERNAME
@@ -89,8 +89,6 @@ plugins=(
     git
     zsh-syntax-highlighting
     zsh-autosuggestions
-    zsh-lazyload
-    vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
