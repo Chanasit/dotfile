@@ -128,8 +128,15 @@ alias ping='ping -c 5'
 # Do not wait interval 1 second, go fast #
 alias fastping='ping -c 100 -s.2'
 alias watch='watch '
-alias vim='mvim -v'
-alias vi='mvim -v'
+
+# OS Condition
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    alias vim='vim'
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    alias vim='mvim -v'
+    alias vi='mvim -v'
+fi
+
 alias python="python3"
 alias pip="pip3"
 alias pypy="pypy3"
@@ -148,6 +155,12 @@ alias gg="googler"
 alias g3="git log --graph --oneline --all"
 alias gs="git status"
 
+# OS Condition
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    alias hjkl="/media/$USER/hjkl/"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    alias hjkl="/Volumes/hjkl/"
+fi
 
 # PYTHON PATH
 export PATH="/usr/local/opt/python@3.9/bin:$PATH"
@@ -159,7 +172,14 @@ export PKG_CONFIG_PATH="/usr/local/opt/python@3.9/lib/pkgconfig"
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 export GOCACHE=$HOME/.cache
-export GOROOT=/usr/local/Cellar/go/1.15.3/libexec
+
+# OS Condition
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    export GOROOT=$HOME/snap/go/current
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    export GOROOT=/usr/local/Cellar/go/1.15.3/libexec
+fi
+
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export GO111MODULE=on
@@ -168,19 +188,16 @@ export GO111MODULE=on
 # export CXX="g++"
 # export CGO_ENABLED="1"
 
-# OS Condition
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    alias hjkl="/media/$USER/hjkl/"
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    alias hjkl="/Volumes/hjkl/"
-else
-    echo "no os found"
-fi
-
 
 # NVMPATH
 export NVM_DIR="$HOME/.nvm"
-source "$(brew --prefix nvm)/nvm.sh"
+
+# OS Condition
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    source "$HOME/.nvm/nvm.sh"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    source "$(brew --prefix nvm)/nvm.sh"
+fi
 
 # YARN
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
