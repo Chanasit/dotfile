@@ -1,3 +1,8 @@
+# TMUX
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
+
 # REMOVE USERNAME
 prompt_context () {
 }
@@ -6,6 +11,12 @@ prompt_context () {
 prompt_dir() {
   prompt_segment blue black '%c'
 }
+
+timezsh() {
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+}
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -17,6 +28,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="gozilla"
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -149,7 +161,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/python@3.9/lib/pkgconfig"
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 export GOCACHE=$HOME/.cache
-export GOROOT=/usr/local/Cellar/go/1.15.2/libexec
+export GOROOT=/usr/local/Cellar/go/1.15.3/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export GO111MODULE=on
@@ -170,15 +182,13 @@ fi
 
 # NVMPATH
 export NVM_DIR="$HOME/.nvm"
-lazyload nvm -- 'source "$(brew --prefix nvm)/nvm.sh"'
+source "$(brew --prefix nvm)/nvm.sh"
 
 # YARN
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # KUBECONFIG
 export KUBECONFIG=$HOME/.kube/bn-sme-production-cluster:$HOME/.kube/bn-sme-staging-cluster:$HOME/.kube/config
-
-# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Binding Key
 bindkey -v

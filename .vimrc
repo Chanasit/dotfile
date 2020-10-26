@@ -1,6 +1,4 @@
 set encoding=utf-8
-let &t_TI = ""
-let &t_TE = ""
 
 if !has('gui_running')
   map "in Insert mode, type Ctrl+v Alt+n here" <A-n>
@@ -20,6 +18,9 @@ Plug 'vim-airline/vim-airline-themes'
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+
+" Tmux
+Plug 'christoomey/vim-tmux-navigator'
 
 " Navigation in-file
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -165,8 +166,7 @@ colorscheme dracula
 highlight Normal ctermbg=None
 
 " if you use airline / lightline
-" let g:airline_theme = "dracula"
-" let g:lightline = { 'colorscheme': 'dracula' }
+let g:airline_theme='dracula'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
@@ -192,11 +192,23 @@ set undofile                       " Enable undo
 set undolevels=100                 " How many undos
 set undoreload=1000                " Number of lines to save for undo
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Tmux
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => FZF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <Leader>b :Buffers<CR>
-nnoremap <silent> <Leader>f :GFiles<CR>
+nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>r :Rg<CR>
 nnoremap <silent> <Leader>/ :BLines<CR>
 nnoremap <silent> <Leader>' :Marks<CR>

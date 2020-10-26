@@ -129,7 +129,7 @@
 /.srl
 /.ssh
 /.subversion
-/.tmux.conf
+# /.tmux.conf
 /.tox
 /.tsd-cache/
 /.ttytterkey
