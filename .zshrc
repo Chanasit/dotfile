@@ -1,8 +1,3 @@
-# TMUX
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux || tmux new
-fi
-
 # REMOVE USERNAME
 prompt_context () {
 }
@@ -16,6 +11,9 @@ timezsh() {
   shell=${1-$SHELL}
   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 }
+
+# Binding Key
+bindkey -v
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -131,7 +129,8 @@ alias watch='watch '
 
 # OS Condition
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    alias vim='vim'
+    alias vim='vim -X'
+    alias vi='vim -X'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     alias vim='mvim -v'
     alias vi='mvim -v'
@@ -205,5 +204,8 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # KUBECONFIG
 export KUBECONFIG=$HOME/.kube/bn-sme-production-cluster:$HOME/.kube/bn-sme-staging-cluster:$HOME/.kube/config
 
-# Binding Key
-bindkey -v
+# TMUX
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux || tmux new
+fi
+
