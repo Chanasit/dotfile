@@ -108,9 +108,6 @@ fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -127,13 +124,18 @@ alias ping='ping -c 5'
 alias fastping='ping -c 100 -s.2'
 alias watch='watch '
 
-# OS Condition
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+
     alias vim='vim -X'
     alias vi='vim -X'
+    alias hjkl="/media/$USER/hjkl/"
+
 elif [[ "$OSTYPE" == "darwin"* ]]; then
+
     alias vim='mvim -v'
     alias vi='mvim -v'
+    alias hjkl="/Volumes/hjkl/"
+
 fi
 
 alias python="python3"
@@ -154,14 +156,14 @@ alias gg="googler"
 alias g3="git log --graph --oneline --all"
 alias gs="git status"
 
-# OS Condition
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    alias hjkl="/media/$USER/hjkl/"
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    alias hjkl="/Volumes/hjkl/"
-fi
+# AWS PATH
+export AWS_CONFIG_FILE="/Volumes/hjkl/.aws/config"
+export AWS_SHARED_CREDENTIALS_FILE="/Volumes/hjkl/.aws/credentials"
 
-# PYTHON PATH
+# SSH PATH
+export SSH_KEY_PATH="/Volumes/hjkl/.ssh/rsa_id"
+
+#PYTHON PATH
 export PATH="/usr/local/opt/python@3.9/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/python@3.9/lib"
 export PKG_CONFIG_PATH="/usr/local/opt/python@3.9/lib/pkgconfig"
@@ -171,14 +173,11 @@ export PKG_CONFIG_PATH="/usr/local/opt/python@3.9/lib/pkgconfig"
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 export GOCACHE=$HOME/.cache
-
-# OS Condition
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     export GOROOT=/snap/go/current
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     export GOROOT=/usr/local/Cellar/go/1.15.3/libexec
 fi
-
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export GO111MODULE=on
@@ -190,12 +189,14 @@ export GO111MODULE=on
 
 # NVMPATH
 export NVM_DIR="$HOME/.nvm"
-
-# OS Condition
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+
     source "$HOME/.nvm/nvm.sh"
+
 elif [[ "$OSTYPE" == "darwin"* ]]; then
+
     source "$(brew --prefix nvm)/nvm.sh"
+
 fi
 
 # YARN
@@ -204,8 +205,11 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # KUBECONFIG
 export KUBECONFIG=$HOME/.kube/bn-sme-production-cluster:$HOME/.kube/bn-sme-staging-cluster:$HOME/.kube/config
 
+# FZF
+export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
+export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
+
 # TMUX
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux || tmux new
 fi
-
