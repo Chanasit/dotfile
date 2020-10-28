@@ -142,6 +142,7 @@ let g:dracula_italic = 0
 colorscheme dracula
 
 " if you use airline / lightline
+let g:airline_powerline_fonts = 1
 let g:airline_theme='dracula'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
