@@ -1,16 +1,7 @@
-set encoding=utf-8
-
-if !has('gui_running')
-  map "in Insert mode, type Ctrl+v Alt+n here" <A-n>
-endif
-
-if has('win32')
-        call plug#begin('~/.vim/plugged')
-endif
-if has('unix')
-        call plug#begin('~/.vim/plugged')
-endif
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VIM Plug
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call plug#begin('~/.vim/plugged')
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -53,6 +44,7 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set encoding=utf-8
 
 "" map leader key
 let mapleader = ","
@@ -102,10 +94,6 @@ set lazyredraw
 " For regular expressions turn magic on
 set magic
 
-" Indent symbol
-" set listchars=tab:\\ 
-" set list
-
 " File Detect
 filetype plugin indent on
 
@@ -146,14 +134,8 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " => Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" use a slightly darker background, like GitHub inline code blocks
-" let g:github_colors_soft = 1
-
 " use the dark theme
 set background=dark
-
-" more blocky diff markers in signcolumn (e.g. GitGutter)
-" let g:github_colors_block_diffmark = 0
 
 " Color scheme
 let g:dracula_italic = 0
@@ -166,13 +148,8 @@ let g:airline_theme='dracula'
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintain undo history between sessions
-if has('win32')
-    set undodir=~/.vim/undodir    " Dir to save undo info for Windows
-endif
+set undodir=~/.vim/undodir
 
-if has('unix')
-    set undodir=~/.vim/undodir  " Dir to save undo info for Linux
-endif
 nnoremap <leader>nn :NERDTreeToggle<cr>
 nnoremap <leader>nb :NERDTreeFromBookmark<Space>
 nnoremap <leader>nf :NERDTreeFind<cr>
@@ -213,10 +190,7 @@ nnoremap <silent> <Leader>h: :History:<CR>
 nnoremap <silent> <Leader>h/ :History/<CR> 
 
 " Get text in files with Rg
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --hidden --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
-  \   fzf#vim#with_preview(), <bang>0)
+command! -bang -nargs=* Rg call fzf#vim#grep( 'rg --column --hidden --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0 )
 
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
@@ -265,11 +239,7 @@ function! s:check_back_space() abort
 endfunction
 
 " Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
+inoremap <silent><expr> <c-@> coc#refresh()
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
@@ -307,8 +277,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-" xmap <leader>f  <Plug>(coc-format-selected)
-" nmap <leader>f  <Plug>(coc-format-selected)
+xmap <leader>t  <Plug>(coc-format-selected)
+nmap <leader>t  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
