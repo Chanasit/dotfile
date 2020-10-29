@@ -126,11 +126,13 @@ alias watch='watch '
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 
-    alias vim='vim -X'
-    alias vi='vim -X'
+    alias vim='vim'
+    alias vi='vim'
     alias hjkl="/media/$USER/hjkl/"
+    alias pbcopy='xclip -selection clipboard'
+    alias pbpaste='xclip -selection clipboard -o'
 
-elif [[ "$OSTYPE" == "darwin"* ]]; then
+elif [[ "$OSTYPE" == "DARWIN"* ]]; then
 
     alias vim='mvim -v'
     alias vi='mvim -v'
