@@ -159,11 +159,11 @@ alias g3="git log --graph --oneline --all"
 alias gs="git status"
 
 # AWS PATH
-export AWS_CONFIG_FILE="/Volumes/hjkl/.aws/config"
-export AWS_SHARED_CREDENTIALS_FILE="/Volumes/hjkl/.aws/credentials"
+export AWS_CONFIG_FILE="$HOME/.aws/config"
+export AWS_SHARED_CREDENTIALS_FILE="$HOME/.aws/credentials"
 
 # SSH PATH
-export SSH_KEY_PATH="/Volumes/hjkl/.ssh/rsa_id"
+export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 
 #PYTHON PATH
 export PATH="/usr/local/opt/python@3.9/bin:$PATH"
