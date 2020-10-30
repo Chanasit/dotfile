@@ -1,2 +1,0 @@
-# Do what "set -o vi" does in Bash to whatever uses readline.
-set editing-mode vi

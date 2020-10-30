@@ -1,3 +1,16 @@
+# Any items in the `env` entry below will be added as
+# environment variables. Some entries may override variables
+# set by alacritty it self.
+env:
+  # TERM env customization.
+  #
+  # If this property is not set, alacritty will set it to xterm-256color.
+  #
+  # Note that some xterm terminfo databases don't declare support for italics.
+  # You can verify this by checking for the presence of `smso` and `sitm` in
+  # `infocmp xterm-256color`.
+  TERM: screen-256color
+
 # Colors (Monokai Dark)
 colors:
   primary:
@@ -47,3 +60,20 @@ font:
     family: Droid Sans Mono Slashed for Powerline
     # Style can be specified to pick a specific face.
     # style: Italic
+    #
+window:
+  padding:
+    x: 1
+    y: 1
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 10000
+
+  # Number of lines the viewport will move for every line scrolled when
+  # scrollback is enabled (history > 0).
+  multiplier: 10
+
+# key_bindings:
+#   - {}
