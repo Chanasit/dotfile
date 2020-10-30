@@ -13,7 +13,7 @@ timezsh() {
 }
 
 # Binding Key
-set -o vi
+# set -o vi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -210,6 +210,10 @@ export KUBECONFIG=$HOME/.kube/bn-sme-production-cluster:$HOME/.kube/bn-sme-stagi
 # FZF
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
 export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
+
+# Bind Key
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
 
 # TMUX
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
