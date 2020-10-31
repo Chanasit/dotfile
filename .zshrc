@@ -189,6 +189,12 @@ export GO111MODULE=on
 # export CGO_ENABLED="1"
 
 
+# Clang LLVM
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/llvm/lib"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"
+
+
 # NVMPATH
 export NVM_DIR="$HOME/.nvm"
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
