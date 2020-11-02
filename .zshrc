@@ -214,7 +214,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export KUBECONFIG=$HOME/.kube/bn-sme-production-cluster:$HOME/.kube/bn-sme-staging-cluster:$HOME/.kube/config
 
 # FZF
-export FZF_DEFAULT_COMMAND="rg --column --hidden --line-number --no-heading --color=always --smart-case"
+export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
 export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
 
 # Bind Key
