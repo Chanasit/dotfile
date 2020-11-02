@@ -193,7 +193,8 @@ nnoremap <silent> <Leader>h: :History:<CR>
 nnoremap <silent> <Leader>h/ :History/<CR> 
 
 " Get text in files with Rg
-command! -bang -nargs=* Rg call fzf#vim#grep( 'rg --column --hidden --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0 )
+" command! -bang -nargs=* Rg call fzf#vim#grep( 'rg --column --hidden --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0 )
+command! -bang -nargs=* Rg call fzf#vim#grep( 'rg --column --hidden --line-number --no-heading --color=always --smart-case --follow -g "!{.git,node_modules}/*" '.shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0 )
 
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1

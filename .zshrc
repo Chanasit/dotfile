@@ -214,8 +214,12 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export KUBECONFIG=$HOME/.kube/bn-sme-production-cluster:$HOME/.kube/bn-sme-staging-cluster:$HOME/.kube/config
 
 # FZF
-export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
+# export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
+# export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
+
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
 export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Bind Key
 bindkey "^[[1;3C" forward-word
