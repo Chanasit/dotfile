@@ -154,6 +154,8 @@ set undodir=~/.vim/undodir
 nnoremap <leader>nn :NERDTreeToggle<cr>
 nnoremap <leader>nb :NERDTreeFromBookmark<Space>
 nnoremap <leader>nf :NERDTreeFind<cr>
+let g:NERDTreeMapJumpPrevSibling=""
+let g:NERDTreeMapJumpNextSibling=""
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen = 0
 let NERDTreeMinimalUI = 0
