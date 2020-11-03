@@ -58,6 +58,7 @@ set wrap "Wrap lines
 set nobackup
 set nowb
 set noswapfile
+set undodir=~/.vim/undodir
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -72,22 +73,20 @@ let g:airline_theme='dracula'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set undodir=~/.vim/undodir
 nnoremap <leader>nn :NERDTreeToggle<cr>
 nnoremap <leader>nb :NERDTreeFromBookmark<Space>
 nnoremap <leader>nf :NERDTreeFind<cr>
 let g:NERDTreeMapJumpPrevSibling=""
 let g:NERDTreeMapJumpNextSibling=""
 let NERDTreeShowHidden=1
-let NERDTreeQuitOnOpen = 0
-let NERDTreeMinimalUI = 0
+let NERDTreeQuitOnOpen = 1
+let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeAutoDeleteBuffer = 1
-let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules']
+let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules', '.git']
 set undofile                       " Enable undo
 set undolevels=100                 " How many undos
 set undoreload=1000                " Number of lines to save for undo
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tmux
