@@ -9,7 +9,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'jiangmiao/auto-pairs'
 Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -73,6 +72,9 @@ let g:airline_theme='dracula'
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set undodir=~/.vim/undodir
+set undofile                       " Enable undo
+set undolevels=100                 " How many undos
+set undoreload=1000                " Number of lines to save for undo
 nnoremap <leader>nn :NERDTreeToggle<cr>
 nnoremap <leader>nb :NERDTreeFromBookmark<Space>
 nnoremap <leader>nf :NERDTreeFind<cr>
@@ -83,10 +85,7 @@ let NERDTreeQuitOnOpen = 0
 let NERDTreeMinimalUI = 0
 let NERDTreeDirArrows = 1
 let NERDTreeAutoDeleteBuffer = 1
-let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules']
-set undofile                       " Enable undo
-set undolevels=100                 " How many undos
-set undoreload=1000                " Number of lines to save for undo
+let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules', '.git']
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
