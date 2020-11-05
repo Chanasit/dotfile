@@ -1,12 +1,11 @@
 # My Dotfile
 
 ## Basic setup required
-- homebrew (OSX)
-- node 10+  
-- python 3.6+  
-- make 3.81+  
-- tmux 3.1c+  
-- rg (ripgrep) 12.1.1+
+- [brew](https://brew.sh/)(OSX)
+- [node](https://nodejs.org/en/) 10+  
+- [python](https://www.python.org/) 3.6+  
+- [tmux](https://github.com/tmux/tmux) 3.1+  
+- [rg](https://github.com/BurntSushi/ripgrep) (ripgrep) 12+
 
 ## Vim Installation
 
