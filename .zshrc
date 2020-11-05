@@ -146,6 +146,12 @@ alias pypy="pypy3"
 alias pip_pypy="pip_pypy3"
 alias k="kubectl"
 
+# TMUX
+alias t="tmux"
+alias ta="t a -t"
+alias tls="t ls"
+alias tn="t new -t"
+
 # Application
 alias tf="terraform"
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport"
