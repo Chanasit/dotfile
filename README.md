@@ -8,7 +8,7 @@
 - [rg](https://github.com/BurntSushi/ripgrep) (ripgrep) 12+
 - [zsh](https://ohmyz.sh/#install) 5.7+
 
-## vim installation
+## Vim installation
 
 ### osx by homebrew
 ```
