@@ -1,6 +1,6 @@
-# my dotfile
+# My dotfile
 
-## basic setup required
+## Basic setup required
 - [brew](https://brew.sh/) (osx)
 - [node](https://nodejs.org/en/) 10+  
 - [python](https://www.python.org/) 3.6+  
@@ -15,17 +15,17 @@
 $ brew install macvim
 ```
 
-### ubuntu 
+### ubuntu by apt
 ```
 $ sudo apt install vim-gtk3
 ```
 
-## plugins installation
+## Plugins installation
 ```
 $ make install
 ```
 
-## language server installation
+## Language server installation
 ```
-$ make lls
+$ make ls
 ```
