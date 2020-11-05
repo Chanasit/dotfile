@@ -1,5 +1,5 @@
 # non-dot files
-/[^.]*
+# /[^.]*
 !/bin
 
 # Don't include files with sensitive data
