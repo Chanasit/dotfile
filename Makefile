@@ -1,4 +1,4 @@
-all:
+install:
 	@echo "symlink config to ${HOME}"
 	@sleep 0.6
 	@ln -s -f ~/dotfile/.vimrc ~/.vimrc
@@ -9,4 +9,6 @@ all:
 	@curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	@sleep 0.6
 	@vim '+PlugInstall'
-	@vim '+CocInstall coc-tsserver coc-python coc-go coc-html coc-css coc-vetur'
+
+lls:
+	@vim '+CocInstall coc-tsserver coc-python coc-go coc-html coc-css coc-vetur coc-json'
