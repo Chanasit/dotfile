@@ -13,4 +13,4 @@ install:
 ls:
 	@echo "install coc.vim language server to ${HOME}/.config/coc/extensions/package.json"
 	@sleep 1.6
-	@vim '+CocInstall coc-tsserver coc-python coc-go coc-html coc-css coc-vetur coc-json'
+	@vim '+CocInstall coc-tsserver coc-python coc-go coc-html coc-css coc-vetur coc-json coc-docker'

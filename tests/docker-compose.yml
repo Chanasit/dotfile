@@ -1,0 +1,8 @@
+version: "2"
+services:
+  vim:
+    build:
+      context: .
+    container_name: vim
+    restart: always
+    command: "while (true) do sleep 300; done"
