@@ -165,10 +165,6 @@ alias spotify="open -a spotify"
 alias dota2="open -a Dota\ 2"
 alias gg="googler"
 
-# Docker
-alias drm="docker rm $(docker ps -a -q)"
-alias drmi="docker rmi $(docker images -f "dangling=true" -q)"
-
 # GIT ALIAS
 alias g3="git log --graph --oneline --all"
 alias gs="git status"
