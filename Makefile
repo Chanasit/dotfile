@@ -5,6 +5,7 @@ install:
 	@ln -s -f ~/dotfile/.zshrc ~/.zshrc
 	@ln -s -f ~/dotfile/.tmux.conf ~/.tmux.conf
 	@ln -s -f ~/dotfile/.curlrc ~/.curlrc
+	@ln -s -f ~/dotfile/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 	@echo "vim plug install on ${HOME}/.vim/plugged"
 	@curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	@sleep 1.6

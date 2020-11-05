@@ -28,7 +28,8 @@ let mapleader = ","
 let maplocalleader = ","
 set timeoutlen=1000 ttimeoutlen=0
 set completeopt-=preview
-set clipboard^=unnamed
+" set clipboard^=unnamed
+set clipboard+=unnamed
 set cursorline
 set nocompatible
 set number relativenumber
