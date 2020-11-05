@@ -11,6 +11,9 @@ install:
 	@sleep 1.6
 	@vim '+PlugInstall'
 
+lv10:
+	@git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
 ls:
 	@echo "install coc.vim language server to ${HOME}/.config/coc/extensions/package.json"
 	@sleep 1.6
