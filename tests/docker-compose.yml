@@ -1,8 +1,0 @@
-version: "2"
-services:
-  vim:
-    build:
-      context: .
-    container_name: vim
-    restart: always
-    command: "bash -c 'while (true) do sleep 300; done'"
