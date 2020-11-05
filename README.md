@@ -1,6 +1,6 @@
-# My Dotfile
+# my dotfile
 
-## Basic setup required
+## basic setup required
 - [brew](https://brew.sh/) (osx)
 - [node](https://nodejs.org/en/) 10+  
 - [python](https://www.python.org/) 3.6+  
@@ -8,24 +8,24 @@
 - [rg](https://github.com/BurntSushi/ripgrep) (ripgrep) 12+
 - [zsh](https://ohmyz.sh/#install) 5.7+
 
-## Vim Installation
+## vim installation
 
-### OSX by Homebrew
+### osx by homebrew
 ```
 $ brew install macvim
 ```
 
-### Ubuntu 
+### ubuntu 
 ```
 $ sudo apt install vim-gtk3
 ```
 
-## Install Vim Plugins
+## plugins installation
 ```
 $ make install
 ```
 
-## Install Language Server
+## language server installation
 ```
 $ make lls
 ```
