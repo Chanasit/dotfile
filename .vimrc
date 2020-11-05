@@ -28,8 +28,7 @@ let mapleader = ","
 let maplocalleader = ","
 set timeoutlen=1000 ttimeoutlen=0
 set completeopt-=preview
-set clipboard=unnamedplus
-set cursorline
+set clipboard^=unnamed,unnamedplus
 set nocompatible
 set number relativenumber
 set history=300
@@ -60,17 +59,6 @@ set nowb
 set noswapfile
 set undodir=~/.vim/undodir
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Pair Brackets
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-inoremap { {}<Esc>ha
-inoremap ( ()<Esc>ha
-inoremap [ []<Esc>ha
-inoremap " ""<Esc>ha
-inoremap ' ''<Esc>ha
-inoremap ` ``<Esc>ha
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme
