@@ -3,7 +3,7 @@ whole dotfile for global config command line tool
 
 ## Vim Installation
 
-### OSX
+### OSX by Homebrew
 ```
 $ brew install macvim
 ```
@@ -13,7 +13,7 @@ $ brew install macvim
 $ sudo apt install vim-gtk3
 ```
 
-## Makefile Installation
+## Makefile
 ```
 $ make
 ```

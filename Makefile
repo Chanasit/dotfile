@@ -1,5 +1,6 @@
 all:
 	 @echo "symlink config to ${HOME}"
+	 @sleep 0.6
 	 @ln -s -f ~/dotfile/.vimrc ~/.vimrc
 	 @ln -s -f ~/dotfile/.zshrc ~/.zshrc
 	 @ln -s -f ~/dotfile/.tmux.conf ~/.tmux.conf
