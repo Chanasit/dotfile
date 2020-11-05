@@ -1,27 +1,19 @@
 # dotfile
 whole dotfile for global config command line tool
 
-## Setup Vim Plug
-```
-$ cp -r .vim $HOME/
-```
+## Install Vim
 
-## Setup .bashrc or .zshrc
-```
-alias vim=mvim -v
-```
-
-## Install Macvim
+### OSX
 ```
 $ brew install macvim
 ```
 
-## Install Vim Plugin
-```shell
-$ vim +PlugInstall
+### Ubuntu 
+```
+$ sudo apt install vim-gtk3
 ```
 
-## Clean Vim Plugin
-```shell
-$ vim +PlugClean
+## Makefile
+```
+$ make
 ```
