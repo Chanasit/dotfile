@@ -1,3 +1,8 @@
+# TMUX
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux || tmux new
+fi
+
 # REMOVE USERNAME
 prompt_context () {
 }
@@ -231,7 +236,4 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
-# TMUX
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux || tmux new
-fi
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

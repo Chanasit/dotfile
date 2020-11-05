@@ -5,4 +5,4 @@ services:
       context: .
     container_name: vim
     restart: always
-    command: "while (true) do sleep 300; done"
+    command: "bash -c 'while (true) do sleep 300; done'"
