@@ -12,6 +12,8 @@ fi
 
 prompt_context() {}
 
+export TERM=xterm-256color
+
 # Binding Key
 set -o vi
 
