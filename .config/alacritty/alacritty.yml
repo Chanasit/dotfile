@@ -1,43 +1,16 @@
-# Any items in the `env` entry below will be added as
-# environment variables. Some entries may override variables
-# set by alacritty it self.
 env:
-  # TERM env customization.
-  #
-  # If this property is not set, alacritty will set it to xterm-256color.
-  #
-  # Note that some xterm terminfo databases don't declare support for italics.
-  # You can verify this by checking for the presence of `smso` and `sitm` in
-  # `infocmp xterm-256color`.
-  # TERM: screen-256color
   TERM: xterm-256color
 
-# Colors (Monokai Dark)
 colors:
-
-  # Default colors
   primary:
     background: '0x282a36'
     foreground: '0xf8f8f2'
-
-  # Cursor colors
-  #
-  # Colors which should be used to draw the terminal cursor. If these are unset,
-  # the cursor color will be the inverse of the cell color.
   cursor:
     text: '0x44475a'
     cursor: '0xf8f8f2'
-
-  # Selection colors
-  #
-  # Colors which should be used to draw the selection area. If selection
-  # background is unset, selection color will be the inverse of the cell colors.
-  # If only text is unset the cell text color will remain the same.
   selection:
     text: '0xf8f8f2'
     background: '0x44475a'
-
-  # Normal colors
   normal:
     black:   '0x000000'
     red:     '0xff5555'
@@ -47,8 +20,6 @@ colors:
     magenta: '0xff79c6'
     cyan:    '0x8be9fd'
     white:   '0xbfbfbf'
-
-  # Bright colors
   bright:
     black:   '0x4d4d4d'
     red:     '0xff6e67'
@@ -58,11 +29,6 @@ colors:
     magenta: '0xff92d0'
     cyan:    '0x9aedfe'
     white:   '0xe6e6e6'
-
-  # Dim colors
-  #
-  # If the dim colors are not set, they will be calculated automatically based
-  # on the `normal` colors.
   dim:
     black:   '0x14151b'
     red:     '0xff2222'
@@ -72,51 +38,41 @@ colors:
     magenta: '0xff46b0'
     cyan:    '0x59dffc'
     white:   '0xe6e6d1'
-
-  # Indexed Colors
-  #
-  # The indexed colors include all colors from 16 to 256.
-  # When these are not set, they're filled with sensible defaults.
-  #
-  # Example:
-  #   `- { index: 16, color: '0xff00ff' }`
-  #
   indexed_colors: []
+
+mouse:
+    hide_when_typing: true
+    url:
+        modifiers: Shift
+
+selection:
+    save_to_clipboard: true
+
+cursor:
+    thickness: 0.18
+    vi_mode_style: Block
 
 # Font configuration (changes require restart)
 font:
-  # The size to use.
   size: 12
-  # The normal (roman) font face to use.
   normal:
-    family: Droid Sans Mono Slashed for Powerline
-    # Style can be specified to pick a specific face.
+    family: SauceCodePro Nerd Font
     style: Regular
-
-  # The bold font face
   bold:
-    family: Droid Sans Mono Slashed for Powerline
-    # Style can be specified to pick a specific face.
-    # style: Bold
+    family: SauceCodePro Nerd Font
+    style: Bold
 
-  # The italic font face
   italic:
-    family: Droid Sans Mono Slashed for Powerline
-    # Style can be specified to pick a specific face.
-    # style: Italic
-    #
+    family: SauceCodePro Nerd Font
+    style: Italic
+
 window:
   padding:
     x: 1
     y: 1
 
 scrolling:
-  # Maximum number of lines in the scrollback buffer.
-  # Specifying '0' will disable scrolling.
   history: 10000
-
-  # Number of lines the viewport will move for every line scrolled when
-  # scrollback is enabled (history > 0).
   multiplier: 10
 
 # key_bindings:

@@ -31,7 +31,7 @@ set completeopt-=preview
 set clipboard^=unnamed,unnamedplus
 set nocompatible
 set number relativenumber
-set history=300
+set history=1000
 set autoread
 set belloff=all
 set ignorecase
