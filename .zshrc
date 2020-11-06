@@ -25,6 +25,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# Disable p10k wizard
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
 
@@ -199,6 +202,3 @@ bindkey "^[[1;3D" backward-word
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Disable p10k wizard
-POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
