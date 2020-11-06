@@ -10,8 +10,7 @@ install:
 	@curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	@sleep 1.6
 	@vim '+PlugInstall'
-
-lv10:
+p10k:
 	@git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 ls:

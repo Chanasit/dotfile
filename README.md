@@ -9,6 +9,7 @@
 - [rg](https://github.com/BurntSushi/ripgrep) (ripgrep) 12+
 - [zsh](https://ohmyz.sh/#install) 5.7+
 - [alacritty](https://github.com/alacritty/alacritty) 5.7+
+- [p10k](https://github.com/romkatv/powerlevel10k)
 
 ## Vim installation
 
