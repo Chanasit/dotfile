@@ -104,7 +104,6 @@ nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => FZF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 let g:fzf_buffers_jump = 1
 let g:fzf_tags_command = 'ctags -R'
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
@@ -118,7 +117,6 @@ nnoremap <silent> <Leader>g :Commits<CR>
 nnoremap <silent> <Leader>h :History<CR>
 
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column -n --no-heading -p --color=always -s ".shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0) 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => COC VIM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
