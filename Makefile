@@ -9,6 +9,8 @@ install:
 	@sleep 1.6
 	@git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${HOME}/.oh-my-zsh/custom/themes/powerlevel10k
 	@ln -s -f ~/dotfile/.zshrc ~/.zshrc
+	@echo "install tpm to ${HOME}/.tmux/plugins/tpm\n"
+	@git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 	@ln -s -f ~/dotfile/.tmux.conf ~/.tmux.conf
 	@ln -s -f ~/dotfile/.p10k.zsh ~/.p10k.zsh
 	@ln -s -f ~/dotfile/.curlrc ~/.curlrc
