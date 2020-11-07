@@ -11,7 +11,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
-" Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'cormacrelf/vim-colors-github'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
@@ -64,20 +63,14 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " => Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" let g:dracula_italic = 0
-" colorscheme dracula
-" set background=dark
-"
-" let g:airline_powerline_fonts = 1
-" let g:airline_theme='dracula'
+" if you use airline / lightline
+let g:github_colors_soft = 0
+let g:github_colors_block_diffmark = 1
 
 " in your .vimrc or init.vim
 colorscheme github
 set background=light
 
-" if you use airline / lightline
-let g:github_colors_soft = 1
-let g:github_colors_block_diffmark = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = "github"
 let g:lightline = { 'colorscheme': 'github' }

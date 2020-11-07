@@ -57,12 +57,13 @@ font:
 
 window:
   padding:
-    x: 1
-    y: 1
+    x: 0
+    y: 0
+  dynamic_padding: true
 
 scrolling:
   history: 10000
-  multiplier: 10
+  multiplier: 8
 
 # key_bindings:
 #   - {}
