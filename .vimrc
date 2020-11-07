@@ -29,7 +29,7 @@ set timeoutlen=1000 ttimeoutlen=0
 set completeopt-=preview
 set clipboard^=unnamed,unnamedplus
 set nocompatible
-set number relativenumber
+set number
 set history=1000
 set autoread
 set belloff=all
@@ -41,9 +41,7 @@ set lazyredraw
 set magic
 set foldmethod=syntax   
 set foldnestmax=1
-set nofoldenable
 set foldlevel=2
-set foldcolumn=2
 set expandtab
 set smarttab
 set shiftwidth=4
