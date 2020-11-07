@@ -71,7 +71,7 @@ let g:github_colors_block_diffmark = 1
 colorscheme github
 set background=light
 
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 let g:airline_theme = "github"
 let g:lightline = { 'colorscheme': 'github' }
 
