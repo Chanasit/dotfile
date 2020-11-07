@@ -12,6 +12,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
 Plug 'cormacrelf/vim-colors-github'
+Plug 'ryanoasis/vim-devicons'
+Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'tpope/vim-commentary'
@@ -54,6 +56,7 @@ set wrap "Wrap lines
 set nobackup
 set nowb
 set noswapfile
+set signcolumn=yes
 set undodir=~/.vim/undodir
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
