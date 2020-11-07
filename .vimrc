@@ -73,7 +73,6 @@ set background=light
 
 let g:airline_powerline_fonts = 0
 let g:airline_theme = "github"
-let g:lightline = { 'colorscheme': 'github' }
 
 if exists('+termguicolors')
   let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
@@ -115,7 +114,7 @@ nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
 " => FZF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:fzf_buffers_jump = 1
-let g:fzf_tags_command = 'ctags -R'
+let g:fzf_tags_command = 'ctags -r'
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
 nnoremap <silent> <Leader>b :Buffers<CR>

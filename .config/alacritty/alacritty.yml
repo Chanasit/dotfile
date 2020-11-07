@@ -2,32 +2,32 @@ env:
   TERM: xterm-256color
 
 colors:
-  name: Mocha (light)
+  name: Default (light)
   author: Chris Kempson
   primary:
-    background: "#f5eeeb"
-    foreground: "#645240"
+    background: "#f5f5f5"
+    foreground: "#303030"
   cursor:
-    text: "#f5eeeb"
-    cursor: "#645240"
+    text: "#f5f5f5"
+    cursor: "#303030"
   normal:
-    black: "#3b3228"
-    red: "#cb6077"
-    green: "#beb55b"
-    yellow: "#f4bc87"
-    blue: "#8ab3b5"
-    magenta: "#a89bb9"
-    cyan: "#7bbda4"
-    white: "#d0c8c6"
+    black: "#151515"
+    red: "#ac4142"
+    green: "#90a959"
+    yellow: "#f4bf75"
+    blue: "#6a9fb5"
+    magenta: "#aa759f"
+    cyan: "#75b5aa"
+    white: "#d0d0d0"
   bright:
-    black: "#7e705a"
-    red: "#cb6077"
-    green: "#beb55b"
-    yellow: "#f4bc87"
-    blue: "#8ab3b5"
-    magenta: "#a89bb9"
-    cyan: "#7bbda4"
-    white: "#f5eeeb"
+    black: "#505050"
+    red: "#ac4142"
+    green: "#90a959"
+    yellow: "#f4bf75"
+    blue: "#6a9fb5"
+    magenta: "#aa759f"
+    cyan: "#75b5aa"
+    white: "#f5f5f5"
 
 mouse:
   hide_when_typing: true
