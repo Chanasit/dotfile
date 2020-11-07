@@ -92,6 +92,8 @@ export ARCHFLAGS="-arch x86_64"
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
+alias top="bashtop"
+
 # Stop after sending count ECHO_REQUEST packets #
 alias ping='ping -c 5'
 
@@ -189,6 +191,9 @@ fi
 
 # YARN
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# GNU Bin
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # KUBECONFIG
 export KUBECONFIG=$HOME/.kube/bn-sme-production-cluster:$HOME/.kube/bn-sme-staging-cluster:$HOME/.kube/config
