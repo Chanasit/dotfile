@@ -32,3 +32,10 @@ $ make install
 ```
 $ make ls
 ```
+
+## Review
+### tmux 
+![Screenshot](./__assets__/tmux.png)
+
+### vim + fzf
+![Screenshot](./__assets__/vim-fzf.png)
