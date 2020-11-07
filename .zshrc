@@ -80,17 +80,17 @@ export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  export EDITOR='nvim'
 else
-  export EDITOR='vim'
+  export EDITOR='nvim'
 fi
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
 # Aliases
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
+alias zshconfig="nvim ~/.zshrc"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
 
 alias top="bashtop"
 
@@ -101,20 +101,17 @@ alias ping='ping -c 5'
 alias fastping='ping -c 100 -s.2'
 alias watch='watch '
 
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+alias v="nvim"
+alias vi="nvim"
+alias vi="nvim"
 
-    alias vim='vim'
-    alias vi='vim'
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     alias hjkl="/media/$USER/hjkl/"
     alias pbcopy='xclip -selection clipboard'
     alias pbpaste='xclip -selection clipboard -o'
 
 elif [[ "$OSTYPE" == "DARWIN"* ]]; then
-
-    alias vim='mvim -v'
-    alias vi='mvim -v'
     alias hjkl="/Volumes/hjkl/"
-
 fi
 
 alias python="python3"
