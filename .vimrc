@@ -11,7 +11,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
-Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'cormacrelf/vim-colors-github'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'tpope/vim-commentary'
@@ -23,7 +24,6 @@ call plug#end()
 set encoding=utf-8
 filetype plugin indent on
 syntax on
-
 let mapleader = ","
 let maplocalleader = ","
 set timeoutlen=1000 ttimeoutlen=0
@@ -63,13 +63,23 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set background=dark
+" set background=dark
 
-let g:dracula_italic = 0
-colorscheme dracula
+" let g:dracula_italic = 0
+" colorscheme dracula
 
+" let g:airline_powerline_fonts = 1
+" let g:airline_theme='dracula'
+
+set background=light
+
+" in your .vimrc or init.vim
+colorscheme github
+
+" if you use airline / lightline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='dracula'
+let g:airline_theme = "github"
+let g:lightline = { 'colorscheme': 'github' }
 
 if exists('+termguicolors')
   let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
