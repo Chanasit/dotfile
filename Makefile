@@ -17,7 +17,9 @@ install:
 	@curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	@sleep 1.6
 	@vim '+PlugInstall'
-
+fonts:
+	@echo "fonts install on ${HOME}/Library/Fonts/NerdFonts/"
+	@cp -r .fonts/. ${HOME}/Library/Fonts/NerdFonts/
 ls:
 	@echo "install coc.vim language server to ${HOME}/.config/coc/extensions/package.json"
 	@sleep 1.6
