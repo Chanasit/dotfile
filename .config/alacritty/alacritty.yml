@@ -2,32 +2,32 @@ env:
   TERM: xterm-256color
 
 colors:
-  name: Brewer (light)
+  name: Ashes (light)
   author: Chris Kempson
   primary:
-    background: "#fcfdfe"
-    foreground: "#515253"
+    background: "#f3f4f5"
+    foreground: "#565e65"
   cursor:
-    text: "#fcfdfe"
-    cursor: "#515253"
+    text: "#f3f4f5"
+    cursor: "#565e65"
   normal:
-    black: "#0c0d0e"
-    red: "#e31a1c"
-    green: "#31a354"
-    yellow: "#dca060"
-    blue: "#3182bd"
-    magenta: "#756bb1"
-    cyan: "#80b1d3"
-    white: "#b7b8b9"
+    black: "#1c2023"
+    red: "#c7ae95"
+    green: "#95c7ae"
+    yellow: "#aec795"
+    blue: "#ae95c7"
+    magenta: "#c795ae"
+    cyan: "#95aec7"
+    white: "#c7ccd1"
   bright:
-    black: "#737475"
-    red: "#e31a1c"
-    green: "#31a354"
-    yellow: "#dca060"
-    blue: "#3182bd"
-    magenta: "#756bb1"
-    cyan: "#80b1d3"
-    white: "#fcfdfe"
+    black: "#747c84"
+    red: "#c7ae95"
+    green: "#95c7ae"
+    yellow: "#aec795"
+    blue: "#ae95c7"
+    magenta: "#c795ae"
+    cyan: "#95aec7"
+    white: "#f3f4f5"
 
 mouse:
   hide_when_typing: true
@@ -71,6 +71,30 @@ window:
 scrolling:
   history: 10000
   multiplier: 8
+
+debug:
+   # Display the time it takes to redraw each frame.
+  render_timer: false
+
+   # Keep the log file after quitting Alacritty.
+  persistent_logging: false
+
+   # Log level
+  
+   # Values for `log_level`:
+   #   - None
+   #   - Error
+   #   - Warn
+   #   - Info
+   #   - Debug
+   #   - Trace
+  log_level: None
+
+   # Print all received window events.
+  print_events: false
+
+   # Record all characters and escape sequences as test data.
+  ref_test: false
 
 # key_bindings:
 #   - {}
