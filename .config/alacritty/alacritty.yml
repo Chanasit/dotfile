@@ -2,32 +2,32 @@ env:
   TERM: xterm-256color
 
 colors:
-  name: Default (light)
+  name: Google (light)
   author: Chris Kempson
   primary:
-    background: "#f5f5f5"
-    foreground: "#303030"
+    background: "#ffffff"
+    foreground: "#373b41"
   cursor:
-    text: "#f5f5f5"
-    cursor: "#303030"
+    text: "#ffffff"
+    cursor: "#373b41"
   normal:
-    black: "#151515"
-    red: "#ac4142"
-    green: "#90a959"
-    yellow: "#f4bf75"
-    blue: "#6a9fb5"
-    magenta: "#aa759f"
-    cyan: "#75b5aa"
-    white: "#d0d0d0"
+    black: "#1d1f21"
+    red: "#cc342b"
+    green: "#198844"
+    yellow: "#fba922"
+    blue: "#3971ed"
+    magenta: "#a36ac7"
+    cyan: "#3971ed"
+    white: "#c5c8c6"
   bright:
-    black: "#505050"
-    red: "#ac4142"
-    green: "#90a959"
-    yellow: "#f4bf75"
-    blue: "#6a9fb5"
-    magenta: "#aa759f"
-    cyan: "#75b5aa"
-    white: "#f5f5f5"
+    black: "#969896"
+    red: "#cc342b"
+    green: "#198844"
+    yellow: "#fba922"
+    blue: "#3971ed"
+    magenta: "#a36ac7"
+    cyan: "#3971ed"
+    white: "#ffffff"
 
 mouse:
   hide_when_typing: true
