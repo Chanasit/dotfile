@@ -9,11 +9,14 @@ install:
 	@sleep 1.6
 	@git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${HOME}/.oh-my-zsh/custom/themes/powerlevel10k
 	@ln -s -f ~/dotfile/.zshrc ~/.zshrc
+	@echo "cleanup old tpm ${HOME}/.tmux/plugins/tpm\n"
+	@rm -rf ${HOME}/.tmux/plugins/tpm
 	@echo "install tpm to ${HOME}/.tmux/plugins/tpm\n"
 	@git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 	@ln -s -f ~/dotfile/.tmux.conf ~/.tmux.conf
 	@ln -s -f ~/dotfile/.p10k.zsh ~/.p10k.zsh
 	@ln -s -f ~/dotfile/.curlrc ~/.curlrc
+	@ln -s -f ~/dotfile/.config/spotify-tui/config.yml ~/.config/spotify-tui/config.yml
 	@ln -s -f ~/dotfile/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 	@echo "vim plug install on ${HOME}/.vim/plugged\n"
 	@curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
