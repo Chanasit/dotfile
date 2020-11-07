@@ -43,7 +43,7 @@ cursor:
 
 # Font configuration (changes require restart)
 font:
-  size: 12
+  size: 13
   normal:
     family: Hack Nerd Font
     style: Regular
@@ -56,10 +56,17 @@ font:
     style: Italic
 
 window:
+  position:
+    x: 0
+    y: 0
+  dimensions:
+    columns: 0
+    lines: 0
   padding:
     x: 0
     y: 0
   dynamic_padding: true
+  start_maximized: false
 
 scrolling:
   history: 10000

@@ -12,6 +12,8 @@ fi
 
 prompt_context() {}
 
+WINIT_HIDPI_FACTOR=1
+
 export TERM=xterm-256color
 
 # Binding Key
