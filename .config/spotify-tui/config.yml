@@ -9,12 +9,12 @@ theme:
   hint: Yellow # hint text in errors
   hovered: "66, 209, 92" # hovered pane border
   inactive: Gray # borders of inactive panes
-  playbar_background: Black # background of progress bar
+  playbar_background: White # background of progress bar
   playbar_progress: "66, 209, 92" # filled-in part of the progress bar
-  playbar_text: Black # artist name in player pane
+  playbar_text: White # artist name in player pane
   selected: "66, 209, 92" # a) selected pane border, b) hovered item in list, & c) track title in player
-  text: Black # text in panes
-  header: Black # header text in panes (e.g. 'Title', 'Artist', etc.)
+  text: White # text in panes
+  header: White # header text in panes (e.g. 'Title', 'Artist', etc.)
 
 behavior:
   seek_milliseconds: 5000

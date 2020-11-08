@@ -21,13 +21,7 @@ $ brew install neovim
 
 ### ubuntu by apt
 ```
-<<<<<<< HEAD
-$ sudo add-apt-repository ppa:jonathonf/vim
-$ sudo apt update
-$ sudo apt install vim-gtk3 vim-nox
-=======
 $ snap install nvim --classic
->>>>>>> c2074e7c907e0bad6bf9c64b3cded97a06700fd7
 ```
 
 ## Plugins installation
