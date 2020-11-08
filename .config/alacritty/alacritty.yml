@@ -2,31 +2,31 @@ env:
   TERM: screen-256color
 
 colors:
-  name: Isotope (light)
+  name: Twilight (light)
   author: Chris Kempson
   primary:
     background: "#ffffff"
-    foreground: "#606060"
+    foreground: "#464b50"
   cursor:
     text: "#ffffff"
-    cursor: "#606060"
+    cursor: "#464b50"
   normal:
-    black: "#000000"
-    red: "#ff0000"
-    green: "#33ff00"
-    yellow: "#ff0099"
-    blue: "#0066ff"
-    magenta: "#cc00ff"
-    cyan: "#00ffff"
-    white: "#d0d0d0"
+    black: "#1e1e1e"
+    red: "#cf6a4c"
+    green: "#8f9d6a"
+    yellow: "#f9ee98"
+    blue: "#7587a6"
+    magenta: "#9b859d"
+    cyan: "#afc4db"
+    white: "#a7a7a7"
   bright:
-    black: "#808080"
-    red: "#ff0000"
-    green: "#33ff00"
-    yellow: "#ff0099"
-    blue: "#0066ff"
-    magenta: "#cc00ff"
-    cyan: "#00ffff"
+    black: "#5f5a60"
+    red: "#cf6a4c"
+    green: "#8f9d6a"
+    yellow: "#f9ee98"
+    blue: "#7587a6"
+    magenta: "#9b859d"
+    cyan: "#afc4db"
     white: "#ffffff"
 
 mouse:
