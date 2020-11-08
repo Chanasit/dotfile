@@ -32,8 +32,7 @@ set shortmess+=c
 
 set timeoutlen=1000 ttimeoutlen=0
 set completeopt-=preview
-" set clipboard^=unnamed,unnamedplus
-set clipboard+=unnamedplus,unnamed
+set clipboard^=unnamed,unnamedplus
 set number
 set history=10000
 set ignorecase
