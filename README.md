@@ -16,12 +16,12 @@
 
 ### osx by homebrew
 ```
-$ brew install macvim
+$ brew install neovim
 ```
 
 ### ubuntu by apt
 ```
-$ sudo apt install vim-gtk3
+$ snap install nvim --classic
 ```
 
 ## Plugins installation
