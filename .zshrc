@@ -103,7 +103,7 @@ alias watch='watch '
 
 alias v="nvim"
 alias vi="nvim"
-alias vi="nvim"
+alias vim="nvim"
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     alias hjkl="/media/$USER/hjkl/"

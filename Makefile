@@ -1,5 +1,6 @@
 install:
 	@echo "symlink config to ${HOME}\n"
+	@ln -s -f ~/dotfile/.vim/autoload ~/.vim/autoload
 	@ln -s -f ~/dotfile/.vimrc ~/.vimrc
 	@ln -s -f ~/dotfile/.config/nvim/init.vim ~/.config/nvim/init.vim
 	@echo "cleanup old powerlevel10k config on ${HOME}/.oh-my-zsh/custom/themes/powerlevel10k\n"
@@ -14,12 +15,11 @@ install:
 	@ln -s -f ~/dotfile/.tmux.conf ~/.tmux.conf
 	@ln -s -f ~/dotfile/.p10k.zsh ~/.p10k.zsh
 	@ln -s -f ~/dotfile/.curlrc ~/.curlrc
-	@ln -s -f ~/dotfile/.config/spotify-tui/config.yml ~/.config/spotify-tui/config.yml
 	@ln -s -f ~/dotfile/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
-	@vim '+PlugInstall'
+	@nvim '+PlugInstall'
 fonts:
 	@echo "fonts install on ${HOME}/Library/Fonts/NerdFonts/"
 	@cp -r .fonts/. ${HOME}/Library/Fonts/NerdFonts/
 ls:
 	@echo "install coc.vim language server to ${HOME}/.config/coc/extensions/package.json"
-	@vim '+CocInstall coc-tsserver coc-python coc-go coc-html coc-css coc-vetur coc-json coc-docker'
+	@nvim '+CocInstall coc-tsserver coc-python coc-go coc-html coc-css coc-vetur coc-json coc-docker'
