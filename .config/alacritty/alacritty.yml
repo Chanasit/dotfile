@@ -54,6 +54,9 @@ font:
   italic:
     family: Hack Nerd Font
     style: Italic
+  offset:
+    x: 0
+    y: 2
 
 window:
   position:
