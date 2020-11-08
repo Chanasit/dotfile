@@ -14,7 +14,7 @@ prompt_context() {}
 
 WINIT_HIDPI_FACTOR=1
 
-export TERM=xterm-256color
+export TERM=screen-256color
 
 # Binding Key
 set -o vi

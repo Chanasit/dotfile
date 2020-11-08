@@ -22,42 +22,39 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set encoding=utf-8
-filetype plugin indent on
-syntax on
 let mapleader = ","
 let maplocalleader = ","
+
+set updatetime=4000
+set cmdheight=1
+set pumheight=16
+set shortmess+=c
+
 set timeoutlen=1000 ttimeoutlen=0
 set completeopt-=preview
 set clipboard^=unnamed,unnamedplus
-set nocompatible
 set number
-set history=1000
-set autoread
-set belloff=all
+set history=10000
 set ignorecase
 set smartcase
-set hlsearch
-set incsearch 
-set lazyredraw 
 set magic
 set foldmethod=syntax   
 set foldnestmax=1
 set foldlevel=2
 set expandtab
-set smarttab
 set shiftwidth=4
 set tabstop=4
 set lbr
-set tw=500
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap lines
+set tw=0
 set nobackup
 set nowb
 set noswapfile
 set signcolumn=yes
-set undodir=~/.vim/undodir
+
+set undofile                       " Enable undo
+set undolevels=100                 " How many undos
+set undoreload=1000                " Number of lines to save for undo
+
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -84,10 +81,6 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set undodir=~/.vim/undodir
-set undofile                       " Enable undo
-set undolevels=100                 " How many undos
-set undoreload=1000                " Number of lines to save for undo
 nnoremap <leader>nn :NERDTreeToggle<cr>
 nnoremap <leader>nb :NERDTreeFromBookmark<Space>
 nnoremap <leader>nf :NERDTreeFind<cr>
@@ -130,34 +123,10 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column -n --no-heading -p --c
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => COC VIM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set updatetime=600
-set cmdheight=1
-set pumheight=16
-set shortmess+=c
-
-noremap! <C-h> <Left>
-noremap! <C-j> <Down>
-noremap! <C-k> <Up>
-noremap! <C-l> <Right>
-
-" Tab Auto Complete
-inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : coc#refresh()
-inorem<SID>check_ap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -168,6 +137,25 @@ function! s:show_documentation()
     execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
+
+noremap! <C-h> <Left>
+noremap! <C-j> <Down>
+noremap! <C-k> <Up>
+noremap! <C-l> <Right>
+
+" Tab Auto Complete
+inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : coc#refresh()
+inorem<SID>check_ap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 " Highlight the symbol and its references when holding the cursor.
 nmap <leader>ac  <Plug>(coc-codeaction)

@@ -2,6 +2,7 @@
 
 ## Basic setup required
 - [brew](https://brew.sh/) (osx)
+- [nvim](https://github.com/neovim/neovim)
 - [node](https://nodejs.org/en/) 10+  
 - [nvm](https://github.com/nvm-sh/nvm)
 - [python](https://www.python.org/) 3.6+  
