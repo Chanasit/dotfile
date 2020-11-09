@@ -77,6 +77,13 @@ let g:airline_powerline_fonts = 0
 let g:airline_theme = "github"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => DEV Icon
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:WebDevIconsNerdTreeBeforeGlyphPadding = ""
+let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
+autocmd FileType nerdtree setlocal signcolumn=no
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>nn :NERDTreeToggle<cr>
