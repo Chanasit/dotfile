@@ -2,32 +2,32 @@ env:
   TERM: screen-256color
 
 colors:
-  # Default colors
+  name: Pretty and Pastel
+  author: IWAFU
   primary:
-    background: '#282a36'
-    foreground: '#f8f8f2'
-
-  # Normal colors
+    background: "#151515"
+    foreground: "#888888"
+  cursor:
+    text: "#151515"
+    cursor: "#888888"
   normal:
-    black: '#000000'
-    red: '#ff5555'
-    green: '#50fa7b'
-    yellow: '#f1fa8c'
-    blue: '#caa9fa'
-    magenta: '#ff79c6'
-    cyan: '#8be9fd'
-    white: '#bfbfbf'
-
-  # Bright colors
+    black: "#292929"
+    red: "#CF6A4C"
+    green: "#19CB00"
+    yellow: "#FAD07A"
+    blue: "#8197BF"
+    magenta: "#8787AF"
+    cyan: "#668799"
+    white: "#888888"
   bright:
-    black: '#575b70'
-    red: '#ff6e67'
-    green: '#5af78e'
-    yellow: '#f4f99d'
-    blue: '#caa9fa'
-    magenta: '#ff92d0'
-    cyan: '#9aedfe'
-    white: '#e6e6e6'
+    black: "#525252"
+    red: "#FF9D80"
+    green: "#23FD00"
+    yellow: "#FFEFBF"
+    blue: "#ACCAFF"
+    magenta: "#C4C4FF"
+    cyan: "#80BFAF"
+    white: "#E8E8D3"
 
 mouse:
   hide_when_typing: true
