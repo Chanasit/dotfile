@@ -10,53 +10,27 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-prompt_context() {}
-
-WINIT_HIDPI_FACTOR=1
-
 export TERM=screen-256color
 
 # Binding Key
 set -o vi
+bindkey -v '^?' backward-delete-char
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-
-# Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-YPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
 export UPDATE_ZSH_DAYS=13
 
-# Uncomment the following line to disable colors in ls.
+ZSH_THEME="powerlevel10k/powerlevel10k"
+CASE_SENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
+DISABLE_AUTO_UPDATE="true"
 DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Would you like to use another custom folder than $ZSH/custom?
@@ -71,33 +45,20 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
 export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nvim'
 else
   export EDITOR='nvim'
 fi
 
-# Compilation flags
 export ARCHFLAGS="-arch x86_64"
-
-# Aliases
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
-
 alias top="bashtop"
-
-# Stop after sending count ECHO_REQUEST packets #
 alias ping='ping -c 5'
-
-# Do not wait interval 1 second, go fast #
 alias fastping='ping -c 100 -s.2'
 alias watch='watch '
 
@@ -167,6 +128,7 @@ fi
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export GO111MODULE=on
+export GOPRIVATE="gitlab.com/botnoi-sme,bitbucket.org/botnoi-sme,github.com/botnoi-sme"
 
 # Clang LLVM
 export PATH="/usr/local/opt/llvm/bin:$PATH"
@@ -199,10 +161,6 @@ export KUBECONFIG=$HOME/.kube/bn-sme-production-cluster:$HOME/.kube/bn-sme-stagi
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
 export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
-# Bind Key
-bindkey "^[[1;3C" forward-word
-bindkey "^[[1;3D" backward-word
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
