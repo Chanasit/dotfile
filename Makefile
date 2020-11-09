@@ -1,7 +1,8 @@
 install:
 	@echo "symlink config to ${HOME}\n"
-	@ln -s -f ~/dotfile/.vim/autoload/plug.vim ~/.vim/autoload/plug.vim
+	@ln -s -f ~/dotfile/.editorconfig ~/.editorconfig
 	@ln -s -f ~/dotfile/.vimrc ~/.vimrc
+	@curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	@ln -s -f ~/dotfile/.config/nvim/init.vim ~/.config/nvim/init.vim
 	@echo "cleanup old powerlevel10k config on ${HOME}/.oh-my-zsh/custom/themes/powerlevel10k\n"
 	@rm -rf ${HOME}/.oh-my-zsh/custom/themes/powerlevel10k

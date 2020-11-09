@@ -16,6 +16,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-commentary'
 call plug#end()
 
@@ -75,6 +76,12 @@ set background=light
 
 let g:airline_powerline_fonts = 0
 let g:airline_theme = "github"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Editor Config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+let g:EditorConfig_disable_rules = ['trim_trailing_whitespace']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => DEV Icon
