@@ -3,6 +3,7 @@
 ## Basic setup required
 - [brew](https://brew.sh/) (osx)
 - [reattach-to-user-namespace](https://formulae.brew.sh/formula/reattach-to-user-namespace) (osx)
+- [xclip](https://github.com/astrand/xclip) (linux)
 - [nvim](https://github.com/neovim/neovim)
 - [node](https://nodejs.org/en/) 12+  
 - [python](https://www.python.org/downloads/) 3.6+  
