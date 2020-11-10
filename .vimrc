@@ -86,8 +86,6 @@ let g:EditorConfig_disable_rules = ['trim_trailing_whitespace']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => DEV Icon
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:WebDevIconsNerdTreeBeforeGlyphPadding = ""
-let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
 autocmd FileType nerdtree setlocal signcolumn=no
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
