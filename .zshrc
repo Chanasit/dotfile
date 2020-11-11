@@ -122,7 +122,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 
-    export GOROOT=/usr/local/Cellar/go/1.15.3/libexec
+    export GOROOT=/usr/local/Cellar/go/1.15.4/libexec
 
 fi
 export PATH=$PATH:$GOPATH/bin
