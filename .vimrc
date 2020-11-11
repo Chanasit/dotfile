@@ -84,6 +84,19 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 let g:EditorConfig_disable_rules = ['trim_trailing_whitespace']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Git Gutter
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Line Number highlight color
+highlight default link GitGutterAddLineNr          DiffAdd
+highlight default link GitGutterChangeLineNr       DiffChange
+highlight default link GitGutterDeleteLineNr       DiffDelete
+highlight default link GitGutterChangeDeleteLineNr GitGutterChangeLine
+
+let g:gitgutter_signs = 1
+let g:gitgutter_enabled = 1
+let g:gitgutter_highlight_lines = 0
+let g:gitgutter_highlight_linenrs = 1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => DEV Icon
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType nerdtree setlocal signcolumn=no
