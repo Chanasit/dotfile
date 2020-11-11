@@ -161,6 +161,7 @@ function! s:show_documentation()
   endif
 endfunction
 
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : coc#refresh()
 inorem<SID>check_ap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
@@ -173,7 +174,6 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <leader> ac <Plug>(coc-codeaction)
 nmap <leader> qf <Plug>(coc-fix-current)
 
-nnoremap <silent> K :call <SID>show_documentation()<CR>
 nnoremap <nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
 nnoremap <nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 inoremap <nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
