@@ -66,6 +66,7 @@ noremap! <C-l> <Right>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set termguicolors
 
 " if you use airline / lightline
 let g:github_colors_soft = 0
