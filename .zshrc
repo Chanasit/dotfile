@@ -148,7 +148,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
 fi
 
-# ALL BINARY FILE (ubuntu)
+# Custom BINARY FILE (ubuntu)
 export PATH=$PATH:$HOME/bin
 
 # YARN
