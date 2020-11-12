@@ -148,6 +148,9 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
 fi
 
+# ALL BINARY FILE (ubuntu)
+export PATH=$PATH:$HOME/bin
+
 # YARN
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
