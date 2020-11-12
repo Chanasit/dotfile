@@ -1,5 +1,5 @@
 all:
-    @echo "pls run make install"
+	@echo Run \'make install\' to install my dotfile.
 install:
 	@echo "symlink config to ${HOME}\n"
 	@ln -s -f ~/dotfile/.editorconfig ~/.editorconfig
