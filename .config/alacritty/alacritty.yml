@@ -2,32 +2,32 @@ env:
   TERM: screen-256color
 
 colors:
-  name: Cloud
-  author: ""
+  name: Kasugano
+  author: Kori Ayakashi
   primary:
-    background: "#000000"
+    background: "#1b1b1b"
     foreground: "#ffffff"
   cursor:
-    text: "#000000"
+    text: "#1b1b1b"
     cursor: "#ffffff"
   normal:
-    black: "#222827"
-    red: "#d5a8e3"
-    green: "#9c75dd"
-    yellow: "#9898ae"
-    blue: "#654a96"
-    magenta: "#625566"
-    cyan: "#a9d1df"
-    white: "#e6ebe5"
+    black: "#3D3D3D"
+    red: "#6673BF"
+    green: "#3EA290"
+    yellow: "#B0EAD9"
+    blue: "#31658C"
+    magenta: "#596196"
+    cyan: "#8292B2"
+    white: "#C8CACC"
   bright:
-    black: "#5d6f74"
-    red: "#cd749c"
-    green: "#63b0b0"
-    yellow: "#c0c0dd"
-    blue: "#5786bc"
-    magenta: "#3f3442"
-    cyan: "#849da2"
-    white: "#d9d6cf"
+    black: "#4D4D4D"
+    red: "#899AFF"
+    green: "#52AD91"
+    yellow: "#98C9BB"
+    blue: "#477AB3"
+    magenta: "#7882BF"
+    cyan: "#95A7CC"
+    white: "#EDEFF2"
 
 mouse:
   hide_when_typing: true
