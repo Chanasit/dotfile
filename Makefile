@@ -1,3 +1,5 @@
+all:
+    @echo "pls run make install"
 install:
 	@echo "symlink config to ${HOME}\n"
 	@ln -s -f ~/dotfile/.editorconfig ~/.editorconfig
