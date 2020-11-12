@@ -2,32 +2,32 @@ env:
   TERM: screen-256color
 
 colors:
-  # Default colors
+  name: Lost Woods
+  author: Baskerville
   primary:
-    background: '#202734'
-    foreground: '#CBCCC6'
-
-  # Normal colors
+    background: "#000000"
+    foreground: "#919191"
+  cursor:
+    text: "#000000"
+    cursor: "#919191"
   normal:
-    black: '#191E2A'
-    red: '#FF3333'
-    green: '#BAE67E'
-    yellow: '#FFA759'
-    blue: '#73D0FF'
-    magenta: '#FFD580'
-    cyan: '#95E6CB'
-    white: '#C7C7C7'
-
-  # Bright colors
+    black: "#303030"
+    red: "#a13a38"
+    green: "#00715d"
+    yellow: "#006f32"
+    blue: "#a43261"
+    magenta: "#913e88"
+    cyan: "#007086"
+    white: "#c6c6c6"
   bright:
-    black: '#686868'
-    red: '#F27983'
-    green: '#A6CC70'
-    yellow: '#FFCC66'
-    blue: '#5CCFE6'
-    magenta: '#FFEE99'
-    cyan: '#95E6CB'
-    white: '#FFFFFF'
+    black: "#5e5e5e"
+    red: "#ffa59a"
+    green: "#24dfc4"
+    yellow: "#73db95"
+    blue: "#ff9fc9"
+    magenta: "#ffa7f6"
+    cyan: "#00ddf4"
+    white: "#ffffff"
 
 mouse:
   hide_when_typing: true
