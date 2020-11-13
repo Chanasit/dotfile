@@ -67,8 +67,6 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set termguicolors
-
 " if you use airline / lightline
 let g:github_colors_soft = 0
 let g:github_colors_block_diffmark = 1
