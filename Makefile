@@ -1,5 +1,7 @@
 all:
 	@echo Run \'make install\' to install my dotfile.
+	@echo Run \'make fonts\' to install Hack Nerd Fonts.
+	@echo Run \'make ls\' to install Language Server.
 install:
 	@echo "symlink config to ${HOME}\n"
 	@ln -s -f ~/dotfile/.editorconfig ~/.editorconfig
