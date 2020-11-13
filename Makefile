@@ -1,7 +1,9 @@
 all:
 	@echo Run \'make install\' to install my dotfile.
 	@echo Run \'make fonts\' to install Hack Nerd Fonts.
-	@echo Run \'make ls\' to install Language Server.
+fonts:
+	@echo "fonts install on ${HOME}/Library/Fonts/NerdFonts/"
+	@cp -r .fonts/. ${HOME}/Library/Fonts/NerdFonts/
 install:
 	@echo "symlink config to ${HOME}\n"
 	@ln -s -f ~/dotfile/.editorconfig ~/.editorconfig
@@ -22,9 +24,3 @@ install:
 	@ln -s -f ~/dotfile/.curlrc ~/.curlrc
 	@ln -s -f ~/dotfile/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 	@nvim '+PlugInstall'
-fonts:
-	@echo "fonts install on ${HOME}/Library/Fonts/NerdFonts/"
-	@cp -r .fonts/. ${HOME}/Library/Fonts/NerdFonts/
-ls:
-	@echo "install coc.vim language server to ${HOME}/.config/coc/extensions/package.json"
-	@nvim '+CocInstall coc-tsserver coc-python coc-go coc-html coc-css coc-vetur coc-json coc-docker'

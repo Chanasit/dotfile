@@ -5,11 +5,11 @@
 - [reattach-to-user-namespace](https://formulae.brew.sh/formula/reattach-to-user-namespace) (osx)
 - [xclip](https://github.com/astrand/xclip) (linux)
 - [nvim](https://github.com/neovim/neovim)
-- [node](https://nodejs.org/en/) 12+  
-- [python](https://www.python.org/downloads/) 3.6+  
+- [node](https://nodejs.org/en/) 12+
+- [python](https://www.python.org/downloads/) 3.6+
 - [nvm](https://github.com/nvm-sh/nvm)
-- [python](https://www.python.org/) 3.6+  
-- [tmux](https://github.com/tmux/tmux) 3.1+  
+- [python](https://www.python.org/) 3.6+
+- [tmux](https://github.com/tmux/tmux) 3.1+
 - [rg](https://github.com/BurntSushi/ripgrep) (ripgrep) 12+
 - [fzf](https://github.com/junegunn/fzf) 0.24+
 - [zsh](https://ohmyz.sh/#install) 5.7+
@@ -31,11 +31,6 @@ $ snap install nvim --classic
 ## Plugins installation
 ```
 $ make install
-```
-
-## Language server installation
-```
-$ make ls
 ```
 
 ## Review

@@ -148,6 +148,18 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column -n --no-heading -p --c
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => COC VIM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:coc_global_extensions = [
+            \'coc-tsserver', 
+            \'coc-python', 
+            \'coc-go', 
+            \'coc-html', 
+            \'coc-css', 
+            \'coc-vetur', 
+            \'coc-json', 
+            \'coc-docker', 
+            \'coc-markdownlint',
+            \]
+
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
