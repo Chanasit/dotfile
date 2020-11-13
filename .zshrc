@@ -51,11 +51,10 @@ source $ZSH/oh-my-zsh.sh
 ##############################################################
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias top="bashtop"
+alias top="htop"
 alias ping='ping -c 5'
 alias fastping='ping -c 100 -s.2'
 alias watch='watch '
-
 alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
@@ -67,28 +66,17 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 elif [[ "$OSTYPE" == "DARWIN"* ]]; then
     alias hjkl="/Volumes/hjkl/"
 fi
-
 alias python="python3"
 alias pip="pip3"
 alias pypy="pypy3"
 alias pip_pypy="pip_pypy3"
 alias k="kubectl"
-
-# TMUX
-alias t="tmux"
-alias ta="t a -t"
-alias tls="t ls"
-alias tn="t new -t"
-
-# Application
 alias tf="terraform"
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport"
 alias icloud="~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 alias spotify="open -a spotify"
 alias dota2="open -a Dota\ 2"
 alias gg="googler"
-
-# GIT ALIAS
 alias g3="git log --graph --oneline --all"
 alias gs="git status"
 
