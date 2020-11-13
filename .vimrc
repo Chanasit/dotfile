@@ -52,7 +52,6 @@ set tw=0
 set nobackup
 set nowb
 set noswapfile
-set signcolumn=yes
 
 set undofile                       " Enable undo
 set undolevels=100                 " How many undos
@@ -82,7 +81,6 @@ let g:airline_theme = "github"
 " => Editor Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
-let g:EditorConfig_disable_rules = ['trim_trailing_whitespace']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git Gutter
