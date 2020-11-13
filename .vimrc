@@ -57,13 +57,13 @@ set undofile                       " Enable undo
 set undolevels=100                 " How many undos
 set undoreload=1000                " Number of lines to save for undo
 
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
 noremap! <C-h> <Left>
 noremap! <C-j> <Down>
 noremap! <C-k> <Up>
 noremap! <C-l> <Right>
+nnoremap tn :tabnew<CR>
 
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
