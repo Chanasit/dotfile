@@ -152,6 +152,7 @@ let g:coc_global_extensions = [
             \'coc-tsserver', 
             \'coc-python', 
             \'coc-go', 
+            \'coc-emmet', 
             \'coc-html', 
             \'coc-css', 
             \'coc-vetur', 

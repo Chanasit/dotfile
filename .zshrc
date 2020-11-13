@@ -64,7 +64,6 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     alias hjkl="/media/$USER/hjkl/"
     alias pbcopy='xclip -selection clipboard'
     alias pbpaste='xclip -selection clipboard -o'
-
 elif [[ "$OSTYPE" == "DARWIN"* ]]; then
     alias hjkl="/Volumes/hjkl/"
 fi
