@@ -158,6 +158,7 @@ let g:coc_global_extensions = [
             \'coc-json', 
             \'coc-docker', 
             \'coc-markdownlint',
+            \'coc-sh',
             \]
 
 function! s:check_back_space() abort
