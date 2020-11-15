@@ -52,6 +52,7 @@ set tw=0
 set nobackup
 set nowb
 set noswapfile
+set signcolumn=yes
 
 set undofile                       " Enable undo
 set undolevels=100                 " How many undos
