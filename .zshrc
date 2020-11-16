@@ -41,6 +41,8 @@ plugins=(
     osx
     docker
     git
+    brew
+    kubectl
     zsh-syntax-highlighting
     zsh-autosuggestions
 )
