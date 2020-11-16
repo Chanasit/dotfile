@@ -13,7 +13,6 @@ Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
 Plug 'cormacrelf/vim-colors-github'
 Plug 'ryanoasis/vim-devicons'
-Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'editorconfig/editorconfig-vim'
@@ -62,6 +61,13 @@ noremap! <C-h> <Left>
 noremap! <C-j> <Down>
 noremap! <C-k> <Up>
 noremap! <C-l> <Right>
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
 nnoremap tn :tabnew<CR>
 
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
