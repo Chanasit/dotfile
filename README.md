@@ -23,7 +23,7 @@
 $ brew install neovim
 ```
 
-### ubuntu by apt
+### ubuntu by snap
 ```
 $ snap install nvim --classic
 ```
@@ -32,10 +32,3 @@ $ snap install nvim --classic
 ```
 $ make install
 ```
-
-## Review
-### tmux 
-![Screenshot](./__assets__/tmux.png)
-
-### vim + fzf
-![Screenshot](./__assets__/vim-fzf.png)
