@@ -31,7 +31,7 @@ set cmdheight=1
 set pumheight=16
 set shortmess+=c
 
-set timeoutlen=60 ttimeoutlen=60
+set timeoutlen=1000 ttimeoutlen=50
 set nowrap
 set completeopt-=preview
 set clipboard^=unnamed,unnamedplus
