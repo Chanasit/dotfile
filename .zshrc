@@ -135,6 +135,9 @@ export PATH=$PATH:$HOME/bin
 # YARN
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+# RUST
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # GNU bin
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
