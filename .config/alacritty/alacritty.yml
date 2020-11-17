@@ -2,32 +2,32 @@ env:
   TERM: screen-256color
 
 colors:
-  name: Kasugano
-  author: Kori Ayakashi
+  # Default colors
   primary:
-    background: "#1b1b1b"
-    foreground: "#ffffff"
-  cursor:
-    text: "#1b1b1b"
-    cursor: "#ffffff"
+    background: '#282a36'
+    foreground: '#f8f8f2'
+
+  # Normal colors
   normal:
-    black: "#3D3D3D"
-    red: "#6673BF"
-    green: "#3EA290"
-    yellow: "#B0EAD9"
-    blue: "#31658C"
-    magenta: "#596196"
-    cyan: "#8292B2"
-    white: "#C8CACC"
+    black: '#000000'
+    red: '#ff5555'
+    green: '#50fa7b'
+    yellow: '#f1fa8c'
+    blue: '#caa9fa'
+    magenta: '#ff79c6'
+    cyan: '#8be9fd'
+    white: '#bfbfbf'
+
+  # Bright colors
   bright:
-    black: "#4D4D4D"
-    red: "#899AFF"
-    green: "#52AD91"
-    yellow: "#98C9BB"
-    blue: "#477AB3"
-    magenta: "#7882BF"
-    cyan: "#95A7CC"
-    white: "#EDEFF2"
+    black: '#575b70'
+    red: '#ff6e67'
+    green: '#5af78e'
+    yellow: '#f4f99d'
+    blue: '#caa9fa'
+    magenta: '#ff92d0'
+    cyan: '#9aedfe'
+    white: '#e6e6e6'
 
 mouse:
   hide_when_typing: true
