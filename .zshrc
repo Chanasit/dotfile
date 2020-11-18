@@ -141,6 +141,10 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # GNU bin
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
+# DOCKER CONFIG
+export COMPOSE_DOCKER_CLI_BUILD=1
+export DOCKER_BUILDKIT=1
+
 # KUBE config
 export KUBECONFIG=$HOME/.kube/bn-sme-production-cluster:$HOME/.kube/bn-sme-staging-cluster:$HOME/.kube/config
 
