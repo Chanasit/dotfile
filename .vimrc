@@ -41,7 +41,7 @@ set ignorecase
 set smartcase
 set magic
 set foldmethod=syntax   
-set foldnestmax=1
+set foldnestmax=2
 set foldlevelstart=99
 set foldlevel=2
 set expandtab
