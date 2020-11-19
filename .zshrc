@@ -26,6 +26,10 @@ bindkey "^[[1;3D" backward-word
 ##############################################################
 # => ZSH Plugins
 ##############################################################
+timezsh() {
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+}
 ZSH="$HOME/.oh-my-zsh"
 UPDATE_ZSH_DAYS=13
 ZSH_CUSTOM=$ZSH/custom
@@ -36,16 +40,21 @@ DISABLE_AUTO_UPDATE="true"
 DISABLE_LS_COLORS="true"
 DISABLE_AUTO_TITLE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
+NVM_LAZY_LOAD=true
+NVM_COMPLETION=true
 # ZSH Plugins
 plugins=(
     osx
     docker
+    terraform
     git
     brew
     kubectl
+    zsh-nvm
     zsh-syntax-highlighting
     zsh-autosuggestions
 )
+
 source $ZSH/oh-my-zsh.sh
 
 ##############################################################
@@ -124,10 +133,10 @@ export CPPFLAGS="-I/usr/local/opt/llvm/include"
 
 
 # NVM path
-export NVM_DIR="$HOME/.nvm"
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then source "$HOME/.nvm/nvm.sh"
-elif [[ "$OSTYPE" == "darwin"* ]]; then source "$(brew --prefix nvm)/nvm.sh"
-fi
+# export NVM_DIR="$HOME/.nvm"
+# if [[ "$OSTYPE" == "linux-gnu"* ]]; then source "$HOME/.nvm/nvm.sh"
+# elif [[ "$OSTYPE" == "darwin"* ]]; then source "$(brew --prefix nvm)/nvm.sh"
+# fi
 
 # Custom binary file (ubuntu)
 export PATH=$PATH:$HOME/bin
