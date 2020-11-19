@@ -155,7 +155,7 @@ export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # P10K config
-[[ ! -f ~/dotfile/.p10k.zsh ]] || source ~/dotfile/.p10k.zsh
+[[ ! -f ~/dotfiles/.p10k.zsh ]] || source ~/dotfiles/.p10k.zsh
 POWERLEVEL9K_DIR_MAX_LENGTH=1
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_to_last"
