@@ -126,7 +126,7 @@ let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeAutoDeleteBuffer = 1
-let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules', '.git']
+let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tmux
