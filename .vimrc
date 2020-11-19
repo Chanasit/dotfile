@@ -119,13 +119,8 @@ autocmd FileType nerdtree setlocal signcolumn=no
 nnoremap <leader>nn :NERDTreeToggle<cr>
 nnoremap <leader>nb :NERDTreeFromBookmark<Space>
 nnoremap <leader>nf :NERDTreeFind<cr>
-let g:NERDTreeMapJumpPrevSibling=""
-let g:NERDTreeMapJumpNextSibling=""
 let NERDTreeShowHidden=1
-let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
