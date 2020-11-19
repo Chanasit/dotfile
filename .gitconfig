@@ -1,0 +1,12 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Chanasit
+	email = kai.chr160@gmail.com
+[core]
+	editor = vim
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
+[pull]
+	rebase = true
