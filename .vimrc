@@ -35,13 +35,14 @@ set timeoutlen=1000 ttimeoutlen=50
 set nowrap
 set completeopt-=preview
 set clipboard^=unnamed,unnamedplus
-set number
+set relativenumber
 set history=10000
 set ignorecase
 set smartcase
 set magic
 set foldmethod=syntax   
 set foldnestmax=1
+set foldlevelstart=99
 set foldlevel=2
 set expandtab
 set shiftwidth=4
