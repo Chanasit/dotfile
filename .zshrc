@@ -59,6 +59,12 @@ plugins=(
     web-search
 )
 
+nvim () {
+    unset -f nvim
+    _zsh_nvm_load
+    nvim "$@"
+}
+
 source $ZSH/oh-my-zsh.sh
 
 ##############################################################
