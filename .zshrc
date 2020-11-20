@@ -76,7 +76,6 @@ alias top="htop"
 alias ping='ping -c 5'
 alias fastping='ping -c 100 -s.2'
 alias watch='watch '
-alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
 
