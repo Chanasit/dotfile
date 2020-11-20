@@ -42,17 +42,21 @@ DISABLE_AUTO_TITLE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 NVM_LAZY_LOAD=true
 NVM_COMPLETION=true
+
 # ZSH Plugins
 plugins=(
     osx
     docker
+    docker-compose
     terraform
     git
+    golang
     brew
     kubectl
     zsh-nvm
     zsh-syntax-highlighting
     zsh-autosuggestions
+    web-search
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -87,7 +91,6 @@ alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A
 alias icloud="~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 alias spotify="open -a spotify"
 alias dota2="open -a Dota\ 2"
-alias gg="googler"
 alias g3="git log --graph --oneline --all"
 alias gs="git status"
 
