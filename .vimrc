@@ -70,11 +70,11 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " => Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " if you use airline / lightline
-let g:github_colors_soft = 0
+let g:github_colors_soft = 1
 let g:github_colors_block_diffmark = 1
 
 colorscheme github
-set background=light
+set background=dark
 
 let g:airline_powerline_fonts = 0
 let g:airline_theme = "github"
