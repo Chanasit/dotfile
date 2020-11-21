@@ -97,10 +97,10 @@ let g:VM_leader="\\"
 " => Git Gutter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Line Number highlight color
-highlight default link GitGutterAddLineNr          GitGutterAddLine
-highlight default link GitGutterChangeLineNr       GitGutterChangeLine
-highlight default link GitGutterDeleteLineNr       GitGutterDeleteLine
-highlight default link GitGutterChangeDeleteLineNr GitGutterChangeDeleteLine
+hi default link GitGutterAddLineNr          DiffAdd
+hi default link GitGutterChangeLineNr       DiffChange
+hi default link GitGutterDeleteLineNr       DiffDelete
+hi default link GitGutterChangeDeleteLineNr GitGutterChangeLine
 
 let g:gitgutter_signs = 1
 let g:gitgutter_enabled = 1
