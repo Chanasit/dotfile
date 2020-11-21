@@ -4,30 +4,30 @@ env:
 colors:
   # Default colors
   primary:
-    background: '#1a1a1a'
-    foreground: '#c4c5b5'
+    background: '#282a36'
+    foreground: '#f8f8f2'
 
   # Normal colors
   normal:
-    black: '#1a1a1a'
-    red: '#f4005f'
-    green: '#98e024'
-    yellow: '#fa8419'
-    blue: '#9d65ff'
-    magenta: '#f4005f'
-    cyan: '#58d1eb'
-    white: '#c4c5b5'
+    black: '#000000'
+    red: '#ff5555'
+    green: '#50fa7b'
+    yellow: '#f1fa8c'
+    blue: '#caa9fa'
+    magenta: '#ff79c6'
+    cyan: '#8be9fd'
+    white: '#bfbfbf'
 
   # Bright colors
   bright:
-    black: '#625e4c'
-    red: '#f4005f'
-    green: '#98e024'
-    yellow: '#e0d561'
-    blue: '#9d65ff'
-    magenta: '#f4005f'
-    cyan: '#58d1eb'
-    white: '#f6f6ef'
+    black: '#575b70'
+    red: '#ff6e67'
+    green: '#5af78e'
+    yellow: '#f4f99d'
+    blue: '#caa9fa'
+    magenta: '#ff92d0'
+    cyan: '#9aedfe'
+    white: '#e6e6e6'
 
 mouse:
   hide_when_typing: true
