@@ -25,7 +25,7 @@ call plug#end()
 let mapleader = ","
 let maplocalleader = ","
 
-set updatetime=100
+set updatetime=50
 set cmdheight=1
 set pumheight=16
 set shortmess+=c
