@@ -27,7 +27,7 @@ let maplocalleader = ","
 
 set updatetime=50
 set cmdheight=1
-set pumheight=16
+set pumheight=10
 set shortmess+=c
 
 set timeoutlen=1000 ttimeoutlen=50
@@ -40,7 +40,7 @@ set ignorecase
 set smartcase
 set magic
 set foldmethod=syntax   
-set foldnestmax=2
+set foldnestmax=1
 set foldlevelstart=99
 set foldlevel=2
 set expandtab
