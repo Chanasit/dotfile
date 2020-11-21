@@ -109,7 +109,7 @@ let g:gitgutter_highlight_linenrs = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => DEV Icon
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType nerdtree setlocal signcolumn=no
+let g:webdevicons_enable = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
@@ -120,6 +120,8 @@ nnoremap <leader>nf :NERDTreeFind<cr>
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules']
+
+autocmd FileType nerdtree setlocal signcolumn=no
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tmux
