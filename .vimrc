@@ -3,7 +3,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
@@ -69,19 +68,20 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" if you use airline / lightline
-let g:github_colors_soft = 0
-let g:github_colors_block_diffmark = 1
-
-colorscheme github
-set background=dark
-let g:airline_powerline_fonts = 0
-
 if exists('+termguicolors')
   let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
+
+" if you use airline / lightline
+let g:github_colors_soft = 0
+let g:github_colors_extra_functions=0
+let g:github_colors_block_diffmark = 1
+
+set background=dark
+
+colorscheme github
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor Config
@@ -97,10 +97,10 @@ let g:VM_leader="\\"
 " => Git Gutter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Line Number highlight color
-highlight default link GitGutterAddLineNr          DiffAdd
-highlight default link GitGutterChangeLineNr       DiffChange
-highlight default link GitGutterDeleteLineNr       DiffDelete
-highlight default link GitGutterChangeDeleteLineNr GitGutterChangeLine
+highlight default link GitGutterAddLineNr          GitGutterAddLine
+highlight default link GitGutterChangeLineNr       GitGutterChangeLine
+highlight default link GitGutterDeleteLineNr       GitGutterDeleteLine
+highlight default link GitGutterChangeDeleteLineNr GitGutterChangeDeleteLine
 
 let g:gitgutter_signs = 1
 let g:gitgutter_enabled = 1
