@@ -121,7 +121,7 @@ nnoremap <leader>nf :NERDTreeFind<cr>
 
 let g:NERDTreeShowHidden=1
 let g:NERDTreeMinimalUI = 1
-let g:NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules']
+let g:NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules', 'vendor']
 let g:NERDTreeStatusline = ''
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
