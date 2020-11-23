@@ -96,7 +96,7 @@ alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A
 alias icloud="~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 alias spotify="open -a spotify"
 alias dota2="open -a Dota\ 2"
-alias g3="git log --graph --oneline --all"
+alias g3="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gs="git status"
 
 ##############################################################
