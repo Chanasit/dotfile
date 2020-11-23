@@ -75,8 +75,6 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-syntax enable
-
 " if you use airline / lightline
 let g:github_colors_soft = 0
 let g:github_colors_extra_functions=0
