@@ -75,7 +75,6 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-" if you use airline / lightline
 let g:github_colors_soft = 0
 let g:github_colors_extra_functions=0
 let g:github_colors_block_diffmark = 1
@@ -99,7 +98,6 @@ let g:VM_leader="\\"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git Gutter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Line Number highlight color
 hi default link GitGutterAddLineNr          DiffAdd
 hi default link GitGutterChangeLineNr       DiffChange
 hi default link GitGutterDeleteLineNr       DiffDelete
