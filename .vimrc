@@ -68,11 +68,14 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 if exists('+termguicolors')
   let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
+
+syntax enable
 
 " if you use airline / lightline
 let g:github_colors_soft = 0
@@ -117,10 +120,13 @@ let g:webdevicons_enable = 1
 nnoremap <leader>nn :NERDTreeToggle<cr>
 nnoremap <leader>nb :NERDTreeFromBookmark<Space>
 nnoremap <leader>nf :NERDTreeFind<cr>
-let NERDTreeShowHidden=1
-let NERDTreeMinimalUI = 1
-let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules']
 
+let g:NERDTreeShowHidden=1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules']
+let g:NERDTreeStatusline = ''
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd FileType nerdtree setlocal signcolumn=no
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -154,6 +160,7 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column -n --no-heading -p --c
 let g:coc_global_extensions = [
             \'coc-tsserver', 
             \'coc-python', 
+            \'coc-highlight', 
             \'coc-go', 
             \'coc-emmet', 
             \'coc-html', 
