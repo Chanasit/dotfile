@@ -86,6 +86,8 @@ set background=dark
 
 colorscheme github
 
+let g:airline_theme='github'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
