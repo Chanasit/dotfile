@@ -62,7 +62,6 @@ source $ZSH/oh-my-zsh.sh
 ##############################################################
 # => Keys Binding
 ##############################################################
-# set -o vi
 bindkey -v
 bindkey -v '^?' backward-delete-char
 bindkey "^[[1;3C" forward-word
