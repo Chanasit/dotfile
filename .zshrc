@@ -16,14 +16,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 ##############################################################
-# => Keys Binding
-##############################################################
-set -o vi
-bindkey -v '^?' backward-delete-char
-bindkey "^[[1;3C" forward-word
-bindkey "^[[1;3D" backward-word
-
-##############################################################
 # => ZSH Plugins
 ##############################################################
 timezsh() {
@@ -66,6 +58,15 @@ nvim () {
 }
 
 source $ZSH/oh-my-zsh.sh
+
+##############################################################
+# => Keys Binding
+##############################################################
+# set -o vi
+bindkey -v
+bindkey -v '^?' backward-delete-char
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
 
 ##############################################################
 # => Alias Bash Script
