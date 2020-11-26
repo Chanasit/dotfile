@@ -86,6 +86,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 elif [[ "$OSTYPE" == "DARWIN"* ]]; then
     alias hjkl="/Volumes/hjkl/"
 fi
+alias clang="clang-11"
 alias python="python3"
 alias pip="pip3"
 alias pypy="pypy3"
