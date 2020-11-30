@@ -25,4 +25,5 @@ install:
 	@ln -s -f ~/dotfiles/.p10k.zsh ~/.p10k.zsh
 	@ln -s -f ~/dotfiles/.curlrc ~/.curlrc
 	@ln -s -f ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+	@ln -s -f ~/dotfiles/.vim/coc-settings.json ~/.vim/coc-settings.json
 	@nvim '+PlugInstall'
