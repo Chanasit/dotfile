@@ -39,7 +39,7 @@ set history=10000
 set ignorecase
 set smartcase
 set magic
-set foldmethod=syntax   
+set foldmethod=syntax
 set foldnestmax=2
 set foldlevelstart=99
 set foldlevel=2
@@ -150,22 +150,23 @@ nnoremap <silent> <Leader>' :Marks<CR>
 nnoremap <silent> <Leader>g :Commits<CR>
 nnoremap <silent> <Leader>h :History<CR>
 
-command! -bang -nargs=* Rg call fzf#vim#grep("rg --column -n --no-heading -p --color=always -s ".shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0) 
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column -n --no-heading -p --color=always -s ".shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => COC VIM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:coc_global_extensions = [
-            \'coc-tsserver', 
-            \'coc-python', 
-            \'coc-go', 
-            \'coc-emmet', 
-            \'coc-html', 
-            \'coc-css', 
-            \'coc-json', 
-            \'coc-docker', 
+            \'coc-tsserver',
+            \'coc-python',
+            \'coc-go',
+            \'coc-emmet',
+            \'coc-html',
+            \'coc-css',
+            \'coc-json',
+            \'coc-docker',
             \'coc-markdownlint',
             \'coc-sh',
+            \'coc-vetur',
             \]
 
 function! s:check_back_space() abort
