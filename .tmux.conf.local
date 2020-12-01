@@ -330,13 +330,6 @@ set -g history-limit 10000
 set -g status-keys vi
 set -g mode-keys vi
 
-bind-key -T copy-mode-vi "v" send-keys -X begin-selection
-bind-key -T copy-mode-vi 'y' send-keys -X copy-pipe \
-  "if command -v reattach-to-user-namespace >/dev/null; \
-   then reattach-to-user-namespace pbcopy; \
-   elif command -v xclip >/dev/null; \
-   then xclip -selection clipboard; fi"
-
 is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
     | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?(g?(view|n?vim?x?)(diff)?|fzf)$'"
 
