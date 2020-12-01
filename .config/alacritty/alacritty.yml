@@ -2,32 +2,32 @@ env:
   TERM: screen-256color
 
 colors:
-  name: Atelierdune (dark)
-  author: Chris Kempson
+  # Default colors
   primary:
-    background: "#20201d"
-    foreground: "#a6a28c"
-  cursor:
-    text: "#20201d"
-    cursor: "#a6a28c"
+    background: '#282a36'
+    foreground: '#eff0eb'
+
+  # Normal colors
   normal:
-    black: "#20201d"
-    red: "#d73737"
-    green: "#60ac39"
-    yellow: "#cfb017"
-    blue: "#6684e1"
-    magenta: "#b854d4"
-    cyan: "#1fad83"
-    white: "#a6a28c"
+    black: '#282a36'
+    red: '#ff5c57'
+    green: '#5af78e'
+    yellow: '#f3f99d'
+    blue: '#57c7ff'
+    magenta: '#ff6ac1'
+    cyan: '#9aedfe'
+    white: '#f1f1f0'
+
+  # Bright colors
   bright:
-    black: "#7d7a68"
-    red: "#d73737"
-    green: "#60ac39"
-    yellow: "#cfb017"
-    blue: "#6684e1"
-    magenta: "#b854d4"
-    cyan: "#1fad83"
-    white: "#fefbec"
+    black: '#686868'
+    red: '#ff5c57'
+    green: '#5af78e'
+    yellow: '#f3f99d'
+    blue: '#57c7ff'
+    magenta: '#ff6ac1'
+    cyan: '#9aedfe'
+    white: '#f1f1f0'
 
 mouse:
   hide_when_typing: true
