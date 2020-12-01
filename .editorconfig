@@ -38,3 +38,9 @@ trim_trailing_whitespace = false
 
 [*.go]
 indent_style = tab
+
+[*.ts]
+indent_style = tab
+
+[*.js]
+indent_style = tab
