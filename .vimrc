@@ -156,6 +156,7 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column -n --no-heading -p --c
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:coc_global_extensions = [
             \'coc-tsserver',
+            \'coc-clangd',
             \'coc-python',
             \'coc-go',
             \'coc-emmet',
