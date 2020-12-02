@@ -24,12 +24,10 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
 let maplocalleader = ","
-
 set updatetime=50
 set cmdheight=1
 set pumheight=10
 set shortmess+=c
-
 set timeoutlen=1000 ttimeoutlen=50
 set nowrap
 set completeopt-=preview
@@ -52,7 +50,6 @@ set nobackup
 set nowb
 set noswapfile
 set signcolumn=yes
-
 set undofile                       " Enable undo
 set undolevels=100                 " How many undos
 set undoreload=1000                " Number of lines to save for undo
