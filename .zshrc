@@ -99,6 +99,7 @@ alias spotify="open -a spotify"
 alias dota2="open -a Dota\ 2"
 alias g3="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gs="git status"
+alias bt="blueutil"
 
 ##############################################################
 # => Export Global Environments Variable
