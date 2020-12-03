@@ -37,9 +37,9 @@ set history=10000
 set ignorecase
 set smartcase
 set magic
-set foldmethod=syntax
-set foldnestmax=2
-set foldlevelstart=99
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
 set foldlevel=2
 set expandtab
 set shiftwidth=4
