@@ -1,5 +1,4 @@
 # My dotfile
-Pre Installation environment with this command.
 
 ![screenshot](./assets/screen_shot.png)
 
