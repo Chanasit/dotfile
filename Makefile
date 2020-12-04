@@ -5,8 +5,8 @@ fonts: ## font package
 	echo "fonts install on ${HOME}/Library/Fonts/NerdFonts/"
 	cp -r ${PWD}/.fonts/. ${HOME}/Library/Fonts/NerdFonts/
 brew: ## brew package
-	brew install $(cat ${PWD}/brew-formular.txt)
-	brew install $(cat ${PWD}/brew-cask.txt)
+	brew install --formula $(cat ${PWD}/brew_formula.txt)
+	brew install --cask $(cat ${PWD}/brew_cask.txt)
 snap: ## snap package
 	echo "todo .. . ."
 install: ## symlinks
