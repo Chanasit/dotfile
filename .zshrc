@@ -186,3 +186,6 @@ POWERLEVEL9K_DIR_MAX_LENGTH=1
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_to_last"
 ZLE_RPROMPT_INDENT=0
+
+# Bash Completion
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
