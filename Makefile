@@ -34,7 +34,8 @@ config: ## install configuration
 	nvim '+PlugInstall'
 
 install: ## install all packages base on OSTYPE
-	make -i fonts brew config
+	echo ${OSTYPE}
+	# make -i fonts brew config
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
