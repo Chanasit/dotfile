@@ -9,7 +9,7 @@ brew: ## install brew package
 snap: ## install snap package
 	echo "todo .. . ."
 
-symlink: ## symlinks on dotfile
+config: ## install configuration
 	echo "install vim plug"
 	curl -fLo ${HOME}/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -34,7 +34,7 @@ symlink: ## symlinks on dotfile
 	nvim '+PlugInstall'
 
 install: ## install all packages base on OSTYPE
-	make -i fonts brew symlink
+	make -i fonts brew config
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
