@@ -163,6 +163,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # GNU bin
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
+# Terraform Config
+export TF_LOG=1
+
 # DOCKER CONFIG
 export COMPOSE_DOCKER_CLI_BUILD=1
 export DOCKER_BUILDKIT=1
