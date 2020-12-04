@@ -100,6 +100,10 @@ alias dota2="open -a Dota\ 2"
 alias g3="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gs="git status"
 alias bt="blueutil"
+alias bt-on="blueutil --power 1"
+alias bt-off="blueutil --power 0"
+alias bt-on-sony="blueutil --connect 38-18-4c-c1-9b-01"
+alias bt-off-sony="blueutil --connect 38-18-4c-c1-9b-01"
 
 ##############################################################
 # => Export Global Environments Variable
