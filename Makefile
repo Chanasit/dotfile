@@ -1,14 +1,18 @@
 all:
 	echo Run \'make install\' to install my dotfiles.
 	echo Run \'make fonts\' to install Hack Nerd Fonts.
+
 fonts: ## font package
 	echo "fonts install on ${HOME}/Library/Fonts/NerdFonts/"
 	cp -r ${PWD}/.fonts/. ${HOME}/Library/Fonts/NerdFonts/
+
 brew: ## brew package
-	brew install --formula $(cat ${PWD}/brew_formula.txt)
-	brew install --cask $(cat ${PWD}/brew_cask.txt)
+	brew install --formula $(shell cat brew_formula.txt)
+	brew install --cask $(shell cat brew_cask.txt)
+
 snap: ## snap package
 	echo "todo .. . ."
+
 install: ## symlinks
 	echo "symlink config to ${HOME}\n"
 	ln -vsf ${PWD}/.editorconfig ${HOME}/.editorconfig
