@@ -33,8 +33,8 @@ symlink: ## symlinks on dotfile
 	ln -vsf ${PWD}/.vim/coc-settings.json ${HOME}/.vim/coc-settings.json
 	nvim '+PlugInstall'
 
-install: ## install all packages
-	make fonts brew symlink
+install: ## install all packages base on OSTYPE
+	make -i fonts brew symlink
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
