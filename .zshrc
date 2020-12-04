@@ -75,6 +75,7 @@ alias fastping='ping -c 100 -s.2'
 alias watch='watch '
 alias vi="nvim"
 alias vim="nvim"
+alias emacs="emacs -nw"
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     alias hjkl="/media/$USER/hjkl/"
