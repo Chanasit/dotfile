@@ -2,32 +2,32 @@ env:
   TERM: screen-256color
 
 colors:
-  # Default colors
+  name: Isotope (light)
+  author: Chris Kempson
   primary:
-    background: '#282a36'
-    foreground: '#eff0eb'
-
-  # Normal colors
+    background: "#ffffff"
+    foreground: "#606060"
+  cursor:
+    text: "#ffffff"
+    cursor: "#606060"
   normal:
-    black: '#282a36'
-    red: '#ff5c57'
-    green: '#5af78e'
-    yellow: '#f3f99d'
-    blue: '#57c7ff'
-    magenta: '#ff6ac1'
-    cyan: '#9aedfe'
-    white: '#f1f1f0'
-
-  # Bright colors
+    black: "#000000"
+    red: "#ff0000"
+    green: "#33ff00"
+    yellow: "#ff0099"
+    blue: "#0066ff"
+    magenta: "#cc00ff"
+    cyan: "#00ffff"
+    white: "#d0d0d0"
   bright:
-    black: '#686868'
-    red: '#ff5c57'
-    green: '#5af78e'
-    yellow: '#f3f99d'
-    blue: '#57c7ff'
-    magenta: '#ff6ac1'
-    cyan: '#9aedfe'
-    white: '#f1f1f0'
+    black: "#808080"
+    red: "#ff0000"
+    green: "#33ff00"
+    yellow: "#ff0099"
+    blue: "#0066ff"
+    magenta: "#cc00ff"
+    cyan: "#00ffff"
+    white: "#ffffff"
 
 mouse:
   hide_when_typing: true

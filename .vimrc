@@ -75,7 +75,7 @@ let g:github_colors_soft = 0
 let g:github_colors_extra_functions=0
 let g:github_colors_block_diffmark = 1
 
-set background=dark
+set background=light
 
 colorscheme github
 
