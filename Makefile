@@ -2,11 +2,11 @@ fonts: ## install font package
 	echo "fonts install on ${HOME}/Library/Fonts/NerdFonts/"
 	cp -r ${PWD}/.fonts/. ${HOME}/Library/Fonts/NerdFonts/
 
-brew: ## install brew package
+brew: ## install brew package (osx)
 	brew install --formula $(shell cat brew_formula.txt)
 	brew install --cask $(shell cat brew_cask.txt)
 
-snap: ## install snap package
+snap: ## install snap package (ubuntu)
 	echo "todo .. . ."
 
 config: ## install configuration
