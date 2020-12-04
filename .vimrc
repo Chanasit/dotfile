@@ -16,6 +16,8 @@ Plug 'cormacrelf/vim-colors-github'
 Plug 'ryanoasis/vim-devicons'
 Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-commentary'
+Plug 'mhinz/vim-startify'
+Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
