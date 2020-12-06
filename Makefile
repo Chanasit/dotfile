@@ -1,3 +1,5 @@
+export OSTYPE = $(shell uname)
+
 fonts: ## install font package
 	echo "fonts install on ${HOME}/Library/Fonts/NerdFonts/"
 	cp -r ${PWD}/.fonts/. ${HOME}/Library/Fonts/NerdFonts/
@@ -34,8 +36,12 @@ config: ## install configuration
 	nvim '+PlugInstall'
 
 install: ## install all packages base on OSTYPE
-	echo ${OSTYPE}
-	# make -i fonts brew config
+ifeq (${OSTYPE}, Linux)
+	echo "linux"
+endif
+ifeq (${OSTYPE}, Darwin)
+	make -i fonts brew config
+endif
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
