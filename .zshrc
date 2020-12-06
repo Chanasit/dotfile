@@ -35,13 +35,6 @@ NVM_COMPLETION=true
 # ZSH Plugins
 plugins=(
     osx
-    docker
-    docker-compose
-    terraform
-    git
-    golang
-    brew
-    kubectl
     zsh-nvm
     zsh-syntax-highlighting
     zsh-autosuggestions
