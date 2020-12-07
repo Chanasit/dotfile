@@ -93,10 +93,6 @@ alias g3="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias gs="git status"
 alias gd="git diff"
 alias bt="blueutil"
-alias bt-on="blueutil --power 1"
-alias bt-off="blueutil --power 0"
-alias bt-pair-sony="blueutil --connect 38-18-4c-c1-9b-01"
-alias bt-unpair-sony="blueutil --disconnect 38-18-4c-c1-9b-01"
 
 ##############################################################
 # => Export Global Environments Variable
