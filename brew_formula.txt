@@ -1,4 +1,3 @@
-aircrack-ng
 ansible
 aom
 autoconf
@@ -21,9 +20,7 @@ curl
 dav1d
 dbus
 docker
-fd
 ffmpeg
-fish
 flac
 fontconfig
 freetype
@@ -52,7 +49,6 @@ helm
 heroku
 heroku-node
 htop
-httpie
 icu4c
 imlib2
 jansson
@@ -115,7 +111,6 @@ ncurses
 neovim
 nettle
 nghttp2
-nginx
 nvm
 opencore-amr
 openjdk
@@ -155,7 +150,6 @@ tcl-tk
 telnet
 terraform
 tesseract
-the_silver_searcher
 theora
 tmux
 unbound
