@@ -8,8 +8,8 @@ brew: ## install brew package (osx)
 	brew install --formula $(shell cat brew_formula.txt)
 	brew install --cask $(shell cat brew_cask.txt)
 
-snap: ## install snap package (ubuntu)
-	echo "todo .. . ."
+snap: ## TODO: install snap package (ubuntu)
+	echo "......"
 
 config: ## install configuration
 	echo "install vim plug"
@@ -37,7 +37,7 @@ config: ## install configuration
 
 install: ## install all packages base on OSTYPE
 ifeq (${OSTYPE}, Linux)
-	echo "linux"
+	echo ".........."
 endif
 ifeq (${OSTYPE}, Darwin)
 	make -i fonts brew config
