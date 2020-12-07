@@ -150,6 +150,9 @@ export PATH=$PATH:$HOME/bin
 # YARN
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+# Swift
+# export PATH="/Library/Developer/CommandLineTools/usr/bin:$PATH"
+
 # RUST
 export PATH="$HOME/.cargo/bin:$PATH"
 
