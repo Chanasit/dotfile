@@ -51,9 +51,9 @@ set nobackup
 set nowb
 set noswapfile
 set signcolumn=yes
-set undofile                       " Enable undo
-set undolevels=100                 " How many undos
-set undoreload=1000                " Number of lines to save for undo
+set undofile
+set undolevels=10
+set undoreload=1000
 
 noremap! <C-h> <Left>
 noremap! <C-j> <Down>
