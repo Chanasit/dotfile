@@ -1,6 +1,7 @@
 adoptopenjdk8
 alacritty
 android-platform-tools
+authy
 balenaetcher
 discord
 docker
