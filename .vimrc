@@ -52,7 +52,7 @@ set nowb
 set noswapfile
 set signcolumn=yes
 set undofile
-set undolevels=10
+set undolevels=30
 set undoreload=1000
 
 noremap! <C-h> <Left>
