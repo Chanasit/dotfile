@@ -13,7 +13,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'cormacrelf/vim-colors-github'
-Plug 'ryanoasis/vim-devicons'
 Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-commentary'
 Plug 'mhinz/vim-startify'
@@ -105,10 +104,6 @@ let g:gitgutter_signs = 1
 let g:gitgutter_enabled = 1
 let g:gitgutter_highlight_lines = 0
 let g:gitgutter_highlight_linenrs = 1
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => DEV Icon
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:webdevicons_enable = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
