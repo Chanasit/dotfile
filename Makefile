@@ -1,7 +1,7 @@
 export OSTYPE = $(shell uname)
 
 fonts: ## install font package
-	echo "fonts install on ${HOME}/Library/Fonts/NerdFonts/"
+	echo "fonts install \n"
 	cp -r ${PWD}/.fonts/. ${HOME}/Library/Fonts/NerdFonts/
 
 brew: ## install brew package (osx)
@@ -23,7 +23,7 @@ config: ## install configuration
 	rm -rf ${HOME}/.tmux
 	git clone https://github.com/gpakosz/.tmux.git ${HOME}/.tmux
 
-	echo "symlink config to ${HOME}\n"
+	echo "symlink dotfile config \n"
 	ln -vsf ${PWD}/.editorconfig ${HOME}/.editorconfig
 	ln -vsf ${PWD}/.gitconfig ${HOME}/.gitconfig
 	ln -vsf ${PWD}/.vimrc ${HOME}/.vimrc
