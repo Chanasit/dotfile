@@ -15,7 +15,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'cormacrelf/vim-colors-github'
 Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-commentary'
-Plug 'mhinz/vim-startify'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 call plug#end()
 
