@@ -23,7 +23,7 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
 let maplocalleader = ","
-set updatetime=1600
+set updatetime=600
 set cmdheight=1
 set pumheight=10
 set shortmess+=c
