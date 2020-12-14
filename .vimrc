@@ -94,14 +94,15 @@ let g:VM_leader="\\"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git Gutter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-hi GitGutterAddLineNr          guibg=#ddfbe6 guifg=#000000 ctermfg=2
-hi GitGutterChangeLineNr       guibg=#f6fabb guifg=#000000 ctermfg=3
-hi GitGutterDeleteLineNr       guibg=#f9d7dc guifg=#000000 ctermfg=1
-hi GitGutterChangeDeleteLineNr guibg=#f6fabb guifg=#000000 ctermfg=3
-hi GitGutterAdd								 guibg=#ddfbe6 guifg=#000000 ctermfg=2
-hi GitGutterChange 						 guibg=#f6fabb guifg=#000000 ctermfg=3
-hi GitGutterDelete 						 guibg=#f9d7dc guifg=#000000 ctermfg=1
-hi GitGutterChangeDeleteLine   guibg=#f6fabb guifg=#000000 ctermfg=3
+hi GitGutterAddLineNr          guibg=#DEFFCD guifg=#505050 ctermfg=2
+hi GitGutterChangeLineNr       guibg=#FBFFCD guifg=#505050 ctermfg=3
+hi GitGutterDeleteLineNr       guibg=#FFD8CB guifg=#505050 ctermfg=1
+hi GitGutterChangeDeleteLineNr guibg=#FBFFCD guifg=#505050 ctermfg=3
+
+hi GitGutterAdd								 guibg=#CCFFB2 guifg=#505050 ctermfg=2
+hi GitGutterChange 						 guibg=#F7FF98 guifg=#505050 ctermfg=3
+hi GitGutterDelete 						 guibg=#FFBBA6 guifg=#505050 ctermfg=1
+hi GitGutterChangeDeleteLine   guibg=#F7FF98 guifg=#505050 ctermfg=3
 
 let g:gitgutter_signs = 1
 let g:gitgutter_set_sign_backgrounds = 0
