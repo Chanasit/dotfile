@@ -94,16 +94,20 @@ let g:VM_leader="\\"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git Gutter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-hi default link GitGutterAddLineNr          DiffAdd
-hi default link GitGutterChangeLineNr       DiffChange
-hi default link GitGutterDeleteLineNr       DiffDelete
-hi default link GitGutterChangeDeleteLineNr GitGutterChangeLine
+hi GitGutterAddLineNr          guibg=#ddfbe6 guifg=#000000 ctermfg=2
+hi GitGutterChangeLineNr       guibg=#f6fabb guifg=#000000 ctermfg=3
+hi GitGutterDeleteLineNr       guibg=#f9d7dc guifg=#000000 ctermfg=1
+hi GitGutterChangeDeleteLineNr guibg=#f6fabb guifg=#000000 ctermfg=3
+hi GitGutterAdd								 guibg=#ddfbe6 guifg=#000000 ctermfg=2
+hi GitGutterChange 						 guibg=#f6fabb guifg=#000000 ctermfg=3
+hi GitGutterDelete 						 guibg=#f9d7dc guifg=#000000 ctermfg=1
+hi GitGutterChangeDeleteLine   guibg=#f6fabb guifg=#000000 ctermfg=3
 
 let g:gitgutter_signs = 1
+let g:gitgutter_set_sign_backgrounds = 0
 let g:gitgutter_enabled = 1
 let g:gitgutter_highlight_lines = 0
 let g:gitgutter_highlight_linenrs = 1
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
