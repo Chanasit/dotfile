@@ -100,9 +100,9 @@ hi GitGutterDeleteLineNr       guibg=#FFD8CB guifg=#505050 ctermfg=1
 hi GitGutterChangeDeleteLineNr guibg=#FBFFCD guifg=#505050 ctermfg=3
 
 hi GitGutterAdd								 guibg=#CCFFB2 guifg=#505050 ctermfg=2
-hi GitGutterChange 						 guibg=#F7FF98 guifg=#505050 ctermfg=3
+hi GitGutterChange 						 guibg=#F9FFB2 guifg=#505050 ctermfg=3
 hi GitGutterDelete 						 guibg=#FFBBA6 guifg=#505050 ctermfg=1
-hi GitGutterChangeDeleteLine   guibg=#F7FF98 guifg=#505050 ctermfg=3
+hi GitGutterChangeDeleteLine   guibg=#F9FFB2 guifg=#505050 ctermfg=3
 
 let g:gitgutter_signs = 1
 let g:gitgutter_set_sign_backgrounds = 0
