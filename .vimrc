@@ -99,7 +99,7 @@ hi GitGutterChangeLineNr       guibg=#FBFFCD guifg=#505050 ctermfg=3
 hi GitGutterDeleteLineNr       guibg=#FFD8CB guifg=#505050 ctermfg=1
 hi GitGutterChangeDeleteLineNr guibg=#FBFFCD guifg=#505050 ctermfg=3
 
-hi GitGutterAdd								 guibg=#CCFFB2 guifg=#505050 ctermfg=2
+hi GitGutterAdd								 guibg=#B4FFB2 guifg=#505050 ctermfg=2
 hi GitGutterChange 						 guibg=#F9FFB2 guifg=#505050 ctermfg=3
 hi GitGutterDelete 						 guibg=#FFBBA6 guifg=#505050 ctermfg=1
 hi GitGutterChangeDeleteLine   guibg=#F9FFB2 guifg=#505050 ctermfg=3
