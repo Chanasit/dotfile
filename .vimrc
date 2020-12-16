@@ -79,6 +79,8 @@ colorscheme github
 
 let g:airline_theme = "github"
 
+call github_colors#togglebg_map('<f5>')
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
