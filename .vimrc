@@ -26,11 +26,9 @@ let maplocalleader = ","
 set updatetime=200
 set cmdheight=1
 set pumheight=10
-set shortmess+=c
 set timeoutlen=1000 ttimeoutlen=50
 set nowrap
 set completeopt-=preview
-set clipboard^=unnamed,unnamedplus
 set relativenumber
 set history=10000
 set ignorecase
@@ -60,6 +58,24 @@ noremap! <C-l> <Right>
 nnoremap tn :tabnew<CR>
 
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => NVIM Config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set clipboard^=unnamed,unnamedplus
+
+let g:clipboard = {
+      \   'name': 'myClipboard',
+      \   'copy': {
+      \      '+': 'pbcopy',
+      \      '*': 'pbcopy',
+      \   },
+      \   'paste': {
+      \      '+': '+',
+      \      '*': '*',
+      \   },
+      \   'cache_enabled': 1,
+      \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme
@@ -109,6 +125,7 @@ let g:gitgutter_set_sign_backgrounds = 0
 let g:gitgutter_enabled = 1
 let g:gitgutter_highlight_lines = 0
 let g:gitgutter_highlight_linenrs = 1
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -151,6 +168,7 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column -n --no-heading -p --c
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => COC VIM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set shortmess+=c
 let g:coc_global_extensions = [
             \'coc-tsserver',
             \'coc-clangd',
