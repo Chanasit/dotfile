@@ -25,7 +25,7 @@ let mapleader = ","
 let maplocalleader = ","
 set updatetime=200
 set cmdheight=1
-set pumheight=10
+set pumheight=8
 set timeoutlen=1000 ttimeoutlen=50
 set nowrap
 set completeopt-=preview
