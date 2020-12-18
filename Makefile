@@ -25,7 +25,6 @@ config: ## install configuration
 
 	echo "symlink dotfile config \n"
 	ln -vsf ${PWD}/.editorconfig ${HOME}/.editorconfig
-	ln -vsf ${PWD}/.gitconfig ${HOME}/.gitconfig
 	ln -vsf ${PWD}/.vimrc ${HOME}/.vimrc
 	ln -vsf ${PWD}/.config/htop/htoprc ${HOME}/.config/htop/htoprc
 	ln -vsf ${PWD}/.config/nvim/init.vim ${HOME}/.config/nvim/init.vim
