@@ -2,19 +2,19 @@
 " => VIM Plug
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'cormacrelf/vim-colors-github'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'cormacrelf/vim-colors-github'
 Plug 'mg979/vim-visual-multi'
-Plug 'tpope/vim-commentary'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 call plug#end()
 
