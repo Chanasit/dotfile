@@ -64,18 +64,18 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set clipboard^=unnamed,unnamedplus
 
-let g:clipboard = {
-      \   'name': 'myClipboard',
-      \   'copy': {
-      \      '+': 'pbcopy',
-      \      '*': 'pbcopy',
-      \   },
-      \   'paste': {
-      \      '+': '+',
-      \      '*': '*',
-      \   },
-      \   'cache_enabled': 1,
-      \ }
+"let g:clipboard = {
+      "\   'name': 'myClipboard',
+      "\   'copy': {
+      "\      '+': 'pbcopy',
+      "\      '*': 'pbcopy',
+      "\   },
+      "\   'paste': {
+      "\      '+': '+',
+      "\      '*': '*',
+      "\   },
+      "\   'cache_enabled': 1,
+      "\ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme
