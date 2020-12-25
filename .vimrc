@@ -65,25 +65,25 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 set clipboard^=unnamed,unnamedplus
 
 "let g:clipboard = {
-      "\   'name': 'myClipboard',
-      "\   'copy': {
-      "\      '+': 'pbcopy',
-      "\      '*': 'pbcopy',
-      "\   },
-      "\   'paste': {
-      "\      '+': '+',
-      "\      '*': '*',
-      "\   },
-      "\   'cache_enabled': 1,
-      "\ }
+			"\   'name': 'myClipboard',
+			"\   'copy': {
+			"\      '+': 'pbcopy',
+			"\      '*': 'pbcopy',
+			"\   },
+			"\   'paste': {
+			"\      '+': '+',
+			"\      '*': '*',
+			"\   },
+			"\   'cache_enabled': 1,
+			"\ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if exists('+termguicolors')
-  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
+	let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+	let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+	set termguicolors
 endif
 
 let g:github_colors_soft = 1
@@ -171,34 +171,34 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column -n --no-heading -p --c
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set shortmess+=c
 let g:coc_global_extensions = [
-            \'coc-tsserver',
-            \'coc-clangd',
-            \'coc-python',
-            \'coc-go',
-            \'coc-emmet',
-            \'coc-html',
-            \'coc-css',
-						\'coc-prettier',
-            \'coc-json',
-            \'coc-docker',
-            \'coc-markdownlint',
-            \'coc-sh',
-            \'coc-vetur',
-            \]
+			\'coc-tsserver',
+			\'coc-clangd',
+			\'coc-python',
+			\'coc-go',
+			\'coc-emmet',
+			\'coc-html',
+			\'coc-css',
+			\'coc-prettier',
+			\'coc-json',
+			\'coc-docker',
+			\'coc-markdownlint',
+			\'coc-sh',
+			\'coc-vetur',
+			\]
 
 function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+	let col = col('.') - 1
+	return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
+	if (index(['vim','help'], &filetype) >= 0)
+		execute 'h '.expand('<cword>')
+	elseif (coc#rpc#ready())
+		call CocActionAsync('doHover')
+	else
+		execute '!' . &keywordprg . " " . expand('<cword>')
+	endif
 endfunction
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
