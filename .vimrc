@@ -23,59 +23,45 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
 let maplocalleader = ","
-set updatetime=200
-set cmdheight=1
-set pumheight=8
-set timeoutlen=1000 ttimeoutlen=50
+set updatetime=300
+set timeoutlen=1300 ttimeoutlen=80
+set history=500
+set undofile
+set undolevels=30
+set undoreload=500
+set nobackup
+set nowb
 set nowrap
-set completeopt-=preview
+set noswapfile
+
+" interface
+set so=5
 set relativenumber
-set history=10000
-set ignorecase
-set smartcase
-set magic
+set signcolumn=yes
+
+" folding
 set foldmethod=indent
 set foldnestmax=2
 set nofoldenable
 set foldlevel=2
-set expandtab
-set shiftwidth=4
-set tabstop=4
-set lbr
-set tw=0
-set nobackup
-set nowb
-set noswapfile
-set signcolumn=yes
-set undofile
-set undolevels=30
-set undoreload=1000
+
+" completion
+set cmdheight=1
+set pumheight=8
+set completeopt-=preview
+
+" last line history
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 noremap! <C-h> <Left>
 noremap! <C-j> <Down>
 noremap! <C-k> <Up>
 noremap! <C-l> <Right>
-nnoremap tn :tabnew<CR>
-
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NVIM Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set clipboard^=unnamed,unnamedplus
-
-"let g:clipboard = {
-            "\   'name': 'myClipboard',
-            "\   'copy': {
-            "\      '+': 'pbcopy',
-            "\      '*': 'pbcopy',
-            "\   },
-            "\   'paste': {
-            "\      '+': '+',
-            "\      '*': '*',
-            "\   },
-            "\   'cache_enabled': 1,
-            "\ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme
