@@ -14,15 +14,12 @@ snap: ## TODO: install snap package (ubuntu)
 config: ## install configuration
 	echo "install vim plug \n"
 	curl -fLo ${HOME}/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 	echo "install powerlevel10k \n"
 	rm -rf ${HOME}/.oh-my-zsh/custom/themes/powerlevel10k
 	git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${HOME}/.oh-my-zsh/custom/themes/powerlevel10k
-
 	echo "install oh-my-tmux \n"
 	rm -rf ${HOME}/.tmux
 	git clone https://github.com/gpakosz/.tmux.git ${HOME}/.tmux
-
 	echo "symlink dotfile config \n"
 	ln -vsf ${PWD}/.editorconfig ${HOME}/.editorconfig
 	ln -vsf ${PWD}/.vimrc ${HOME}/.vimrc
