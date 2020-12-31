@@ -42,7 +42,7 @@ cursor:
 
 # Font configuration (changes require restart)
 font:
-  size: 11
+  size: 13
   normal:
     family: Hack Nerd Font
     style: Regular
@@ -69,7 +69,7 @@ window:
   start_maximized: false
 
 scrolling:
-  history: 10000
+  history: 5000
   multiplier: 8
 
 debug:

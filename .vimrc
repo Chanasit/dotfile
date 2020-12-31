@@ -138,7 +138,7 @@ let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules', 'vendor']
 let g:NERDTreeStatusline = ''
 
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd FileType nerdtree setlocal signcolumn=no
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
