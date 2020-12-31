@@ -65,25 +65,25 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 set clipboard^=unnamed,unnamedplus
 
 "let g:clipboard = {
-			"\   'name': 'myClipboard',
-			"\   'copy': {
-			"\      '+': 'pbcopy',
-			"\      '*': 'pbcopy',
-			"\   },
-			"\   'paste': {
-			"\      '+': '+',
-			"\      '*': '*',
-			"\   },
-			"\   'cache_enabled': 1,
-			"\ }
+            "\   'name': 'myClipboard',
+            "\   'copy': {
+            "\      '+': 'pbcopy',
+            "\      '*': 'pbcopy',
+            "\   },
+            "\   'paste': {
+            "\      '+': '+',
+            "\      '*': '*',
+            "\   },
+            "\   'cache_enabled': 1,
+            "\ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if exists('+termguicolors')
-	let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-	let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-	set termguicolors
+    let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
 endif
 
 let g:github_colors_soft = 1
@@ -105,6 +105,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " => Visual Multi
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:VM_leader="\\"
+let g:VM_theme = 'paper'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git Gutter
@@ -113,12 +114,12 @@ hi GitGutterAddLineNr          guibg=#DEFFCD guifg=#505050 ctermfg=2
 hi GitGutterChangeLineNr       guibg=#FBFFCD guifg=#505050 ctermfg=3
 hi GitGutterDeleteLineNr       guibg=#FFD8CB guifg=#505050 ctermfg=1
 hi GitGutterChangeDeleteLineNr guibg=#FBFFCD guifg=#505050 ctermfg=3
-
-hi GitGutterAdd								 guibg=#B4FFB2 guifg=#505050 ctermfg=2
-hi GitGutterChange 						 guibg=#F9FFB2 guifg=#505050 ctermfg=3
-hi GitGutterDelete 						 guibg=#FFBBA6 guifg=#505050 ctermfg=1
+hi GitGutterAdd				   			 guibg=#B4FFB2 guifg=#505050 ctermfg=2
+hi GitGutterChange						 guibg=#F9FFB2 guifg=#505050 ctermfg=3
+hi GitGutterDelete 			   		 guibg=#FFBBA6 guifg=#505050 ctermfg=1
 hi GitGutterChangeDeleteLine   guibg=#F9FFB2 guifg=#505050 ctermfg=3
 
+let g:gitgutter_max_signs=300
 let g:gitgutter_signs = 1
 let g:gitgutter_set_sign_backgrounds = 0
 let g:gitgutter_enabled = 1
@@ -171,33 +172,33 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column -n --no-heading -p --c
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set shortmess+=c
 let g:coc_global_extensions = [
-			\'coc-tsserver',
-			\'coc-clangd',
-			\'coc-python',
-			\'coc-go',
-			\'coc-emmet',
-			\'coc-html',
-			\'coc-css',
-			\'coc-json',
-			\'coc-docker',
-			\'coc-markdownlint',
-			\'coc-sh',
-			\'coc-vetur',
-			\]
+            \'coc-tsserver',
+            \'coc-clangd',
+            \'coc-python',
+            \'coc-go',
+            \'coc-emmet',
+            \'coc-html',
+            \'coc-css',
+            \'coc-json',
+            \'coc-docker',
+            \'coc-markdownlint',
+            \'coc-sh',
+            \'coc-vetur',
+            \]
 
 function! s:check_back_space() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~# '\s'
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 function! s:show_documentation()
-	if (index(['vim','help'], &filetype) >= 0)
-		execute 'h '.expand('<cword>')
-	elseif (coc#rpc#ready())
-		call CocActionAsync('doHover')
-	else
-		execute '!' . &keywordprg . " " . expand('<cword>')
-	endif
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    elseif (coc#rpc#ready())
+        call CocActionAsync('doHover')
+    else
+        execute '!' . &keywordprg . " " . expand('<cword>')
+    endif
 endfunction
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
