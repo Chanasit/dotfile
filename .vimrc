@@ -74,7 +74,7 @@ endif
 
 let g:github_colors_soft = 1
 
-set background=light
+set background=dark
 
 colorscheme github
 
@@ -92,6 +92,15 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:VM_leader="\\"
 let g:VM_theme = 'lightblue1'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Airline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git Gutter
