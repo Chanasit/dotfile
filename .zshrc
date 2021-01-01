@@ -69,6 +69,7 @@ alias watch='watch '
 alias vi="nvim"
 alias vim="nvim"
 alias emacs="emacs -nw"
+alias excel="open -a Microsoft\ Excel "
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     alias hjkl="/media/$USER/hjkl/"
