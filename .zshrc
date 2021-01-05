@@ -70,13 +70,9 @@ alias vi="nvim"
 alias vim="nvim"
 alias emacs="emacs -nw"
 alias excel="open -a Microsoft\ Excel "
-
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    alias hjkl="/media/$USER/hjkl/"
     alias pbcopy='xclip -selection clipboard'
     alias pbpaste='xclip -selection clipboard -o'
-elif [[ "$OSTYPE" == "DARWIN"* ]]; then
-    alias hjkl="/Volumes/hjkl/"
 fi
 alias clang="clang-11"
 alias python="python3"
