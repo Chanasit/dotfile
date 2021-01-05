@@ -121,16 +121,19 @@ let g:gitgutter_highlight_linenrs = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>nn :NERDTreeToggle<cr>
-nnoremap <leader>nb :NERDTreeFromBookmark<Space>
-nnoremap <leader>nf :NERDTreeFind<cr>
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 
 let g:NERDTreeShowHidden=1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules', 'vendor']
 let g:NERDTreeStatusline = ''
 
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Mirror the NERDTree before showing it. This makes it the same on all tabs.
+nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
+
 autocmd FileType nerdtree setlocal signcolumn=no
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -131,6 +131,7 @@ protobuf
 pulseaudio
 pypy3
 python@3.9
+ranger
 rav1e
 readline
 reattach-to-user-namespace
