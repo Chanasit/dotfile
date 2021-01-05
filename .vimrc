@@ -35,7 +35,7 @@ set nowrap
 set noswapfile
 
 " interface
-set so=5
+set so=8
 set relativenumber
 set signcolumn=yes
 
