@@ -5,12 +5,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'cormacrelf/vim-colors-github'
 Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
@@ -23,7 +23,7 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
 let maplocalleader = ","
-set updatetime=100
+set updatetime=200
 set timeoutlen=1300 ttimeoutlen=80
 set history=1000
 set undofile
@@ -66,19 +66,20 @@ set clipboard^=unnamed,unnamedplus
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if exists('+termguicolors')
+    let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
 
-" for alacritty
-"if exists('+termguicolors')
-    "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-    "let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-    "set termguicolors
-"endif
 set background=dark
+colorscheme github
+
+call github_colors#togglebg_map('<f5>')
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -90,14 +91,14 @@ let g:VM_theme = 'codedark'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline_theme='base16_google'
+let g:airline_theme = "github"
 let g:airline_powerline_fonts = 1
-let g:airline_highlighting_cache = 0
-let g:airline_extensions= ['branch', 'hunks', 'coc', 'tabline']
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#show_splits = 0
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+"let g:airline_highlighting_cache = 0
+"let g:airline_extensions= ['branch', 'hunks', 'coc', 'tabline']
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#show_splits = 1
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git Gutter
