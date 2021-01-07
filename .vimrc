@@ -11,6 +11,7 @@ Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
@@ -78,7 +79,6 @@ set background=dark
 
 colorscheme github
 
-let g:airline_theme = "github"
 
 call github_colors#togglebg_map('<f5>')
 
@@ -96,8 +96,13 @@ let g:VM_theme = 'codedark'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline_theme='base16'
 let g:airline_powerline_fonts = 1
 let g:airline_highlighting_cache = 1
+let g:airline_extensions= ['branch', 'hunks', 'coc', 'tabline']
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git Gutter
