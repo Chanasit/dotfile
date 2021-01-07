@@ -3,7 +3,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'cormacrelf/vim-colors-github'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
@@ -26,10 +25,10 @@ let mapleader = ","
 let maplocalleader = ","
 set updatetime=100
 set timeoutlen=1300 ttimeoutlen=80
-set history=500
+set history=1000
 set undofile
-set undolevels=30
-set undoreload=500
+set undolevels=100
+set undoreload=1000
 set nobackup
 set nowb
 set nowrap
@@ -67,24 +66,19 @@ set clipboard^=unnamed,unnamedplus
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if exists('+termguicolors')
-    let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-    set termguicolors
-endif
 
-let g:github_colors_soft = 1
-
+" for alacritty
+"if exists('+termguicolors')
+    "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+    "let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+    "set termguicolors
+"endif
 set background=dark
-
-colorscheme github
-
-
-call github_colors#togglebg_map('<f5>')
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -96,30 +90,22 @@ let g:VM_theme = 'codedark'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline_theme='base16'
+let g:airline_theme='base16_google'
 let g:airline_powerline_fonts = 1
-let g:airline_highlighting_cache = 1
+let g:airline_highlighting_cache = 0
 let g:airline_extensions= ['branch', 'hunks', 'coc', 'tabline']
 let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#show_splits = 0
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git Gutter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-hi GitGutterAddLineNr          guibg=#DEFFCD guifg=#505050 ctermfg=2
-hi GitGutterChangeLineNr       guibg=#FBFFCD guifg=#505050 ctermfg=3
-hi GitGutterDeleteLineNr       guibg=#FFD8CB guifg=#505050 ctermfg=1
-hi GitGutterChangeDeleteLineNr guibg=#FBFFCD guifg=#505050 ctermfg=3
-hi GitGutterAdd				   			 guibg=#B4FFB2 guifg=#505050 ctermfg=2
-hi GitGutterChange						 guibg=#F9FFB2 guifg=#505050 ctermfg=3
-hi GitGutterDelete 			   		 guibg=#FFBBA6 guifg=#505050 ctermfg=1
-hi GitGutterChangeDeleteLine   guibg=#F9FFB2 guifg=#505050 ctermfg=3
-
-let g:gitgutter_max_signs=300
-let g:gitgutter_signs = 1
-let g:gitgutter_set_sign_backgrounds = 0
+let g:gitgutter_max_signs=500
 let g:gitgutter_enabled = 1
+let g:gitgutter_signs = 1
+let g:gitgutter_set_sign_backgrounds = 1
 let g:gitgutter_highlight_lines = 0
 let g:gitgutter_highlight_linenrs = 1
 
@@ -132,13 +118,12 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 let g:NERDTreeShowHidden=1
-let g:NERDTreeMinimalUI = 1
+let g:NERDTreeMinimalUI = 0
 let g:NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules', 'vendor']
 let g:NERDTreeStatusline = ''
 
 " Mirror the NERDTree before showing it. This makes it the same on all tabs.
 nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
-
 autocmd FileType nerdtree setlocal signcolumn=no
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
