@@ -111,6 +111,13 @@ let g:gitgutter_highlight_lines = 0
 let g:gitgutter_highlight_linenrs = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Mark Down Preview Server
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
+let g:instant_markdown_autoscroll = 1
+let g:instant_markdown_port = 8888
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>n :NERDTreeFocus<CR>
