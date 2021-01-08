@@ -1,8 +1,10 @@
-# DOTFILE
+# Dotfiles
 
 ![screenshot](./assets/screen_shot.png)
 
 ## VIM Plugs Component
+
+Follow is [link](https://github.com/junegunn/vim-plug) for pre-installation [vim-plug](https://github.com/junegunn/vim-plug) module
 
 - [coc.nvim](https://github.com/neoclide/coc.nvim)
 - [fzf](https://github.com/junegunn/fzf.vim)
@@ -20,7 +22,7 @@
 
 ## Installation With Makefile (MacOS Only)
 
-### basic setup required
+Basic setup required
 
 - [brew](https://brew.sh/) (osx)
 
