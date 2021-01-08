@@ -1,9 +1,9 @@
 ##############################################################
 # => ZSH Startup with Tmux
 ##############################################################
-#if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    #tmux || tmux new
-#fi
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux || tmux new
+fi
 
 ##############################################################
 # => ZSH Startup with P10K
