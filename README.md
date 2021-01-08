@@ -2,9 +2,11 @@
 
 ![screenshot](./assets/screen_shot.png)
 
-## VIM Plugs Component
+## Vim Plugs
 
 Follow is [link](https://github.com/junegunn/vim-plug) for pre-installation [vim-plug](https://github.com/junegunn/vim-plug) module
+
+#### Plug Dependencies
 
 - [coc.nvim](https://github.com/neoclide/coc.nvim)
 - [fzf](https://github.com/junegunn/fzf.vim)
@@ -20,22 +22,44 @@ Follow is [link](https://github.com/junegunn/vim-plug) for pre-installation [vim
 - [vim-visual-multi](https://github.com/mg979/vim-visual-multi)
 - [vim-instant-markdown](https://github.com/instant-markdown/vim-instant-markdown)
 
-## Installation With Makefile (MacOS Only)
+#### Configuation for [symlink](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command) necessary dotfiles
 
-Basic setup required
+[vim](https://www.vim.org/) user
 
-- [brew](https://brew.sh/) (osx)
-
-- disable missing control to work with [vim-visual-multi](https://github.com/mg979/vim-visual-multi) completely (osx)
-
-Easy to build development environment with this command.
-
-```
-$ make install
+```shell
+$ ln -vsf ${PWD}/.vimrc ${HOME}/.vimrc
+$ ln -vsf ${PWD}/.editorconfig ${HOME}/.editorconfig
 ```
 
-Check make command description
+[neovim](https://github.com/neovim/neovim) user
 
+```shell
+$ ln -vsf ${PWD}/.vimrc ${HOME}/.vimrc
+$ ln -vsf ${PWD}/.config/nvim/init.vim ${HOME}/.config/nvim/init.vim
+$ ln -vsf ${PWD}/.config/nvim/coc-settings.json ${HOME}/.config/nvim/coc-settings.json
+$ ln -vsf ${PWD}/.editorconfig ${HOME}/.editorconfig
 ```
-$ make help
+
+## Alacritty
+
+[Alacritty](https://github.com/alacritty/alacritty) is terminal emulator that has pretty easy configuration
+
+#### Configuation for symlink necessary dotfiles
+
+```shell
+$ ln -vsf ${PWD}/.config/alacritty/alacritty.yml ${HOME}/.config/alacritty/alacritty.yml
+```
+
+#### Tip
+
+select theme better with [alacritty-themes](https://www.npmjs.com/package/alacritty-themes)
+
+## Tmux
+
+Follow this link for [tmux](https://github.com/tmux/tmux) and [oh-my-tmux](https://github.com/gpakosz/.tmux) pre-installation guide
+
+#### Configuation for symlink necessary dotfiles
+
+```shell
+$ ln -vsf ${PWD}/.tmux.conf.local ${HOME}/.tmux.conf.local
 ```
