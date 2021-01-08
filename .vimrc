@@ -165,6 +165,7 @@ let g:coc_global_extensions = [
             \'coc-emmet',
             \'coc-html',
             \'coc-css',
+            \'coc-prettier',
             \'coc-json',
             \'coc-docker',
             \'coc-markdownlint',
