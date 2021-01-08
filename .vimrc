@@ -67,9 +67,9 @@ set clipboard^=unnamed,unnamedplus
 " => Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if exists('+termguicolors')
-    let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-    set termguicolors
+  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
 endif
 
 set background=dark
@@ -93,12 +93,6 @@ let g:VM_theme = 'codedark'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline_theme = "github"
 let g:airline_powerline_fonts = 1
-"let g:airline_highlighting_cache = 0
-"let g:airline_extensions= ['branch', 'hunks', 'coc', 'tabline']
-"let g:airline#extensions#tabline#left_sep = ' '
-"let g:airline#extensions#tabline#show_splits = 1
-"let g:airline#extensions#tabline#left_alt_sep = '|'
-"let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git Gutter
@@ -165,35 +159,35 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column -n --no-heading -p --c
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set shortmess+=c
 let g:coc_global_extensions = [
-            \'coc-tsserver@1.6.7',
-            \'coc-clangd',
-            \'coc-python',
-            \'coc-go',
-            \'coc-emmet',
-            \'coc-html',
-            \'coc-css',
-            \'coc-prettier@1.1.20',
-						\'coc-highlight@1.2.7',
-            \'coc-json@1.3.2',
-            \'coc-docker',
-            \'coc-markdownlint',
-            \'coc-sh',
-            \'coc-vetur',
-            \]
+      \'coc-tsserver@1.6.7',
+      \'coc-clangd',
+      \'coc-python',
+      \'coc-go',
+      \'coc-emmet',
+      \'coc-html',
+      \'coc-css',
+      \'coc-prettier@1.1.20',
+      \'coc-highlight@1.2.7',
+      \'coc-json@1.3.2',
+      \'coc-docker',
+      \'coc-markdownlint',
+      \'coc-sh',
+      \'coc-vetur',
+      \]
 
 function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~# '\s'
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-        execute 'h '.expand('<cword>')
-    elseif (coc#rpc#ready())
-        call CocActionAsync('doHover')
-    else
-        execute '!' . &keywordprg . " " . expand('<cword>')
-    endif
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
 endfunction
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
