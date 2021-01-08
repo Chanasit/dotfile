@@ -26,6 +26,7 @@ config: ## install configuration
 	ln -vsf ${PWD}/.config/alacritty/alacritty.yml ${HOME}/.config/alacritty/alacritty.yml
 	ln -vsf ${PWD}/.config/htop/htoprc ${HOME}/.config/htop/htoprc
 	ln -vsf ${PWD}/.config/nvim/init.vim ${HOME}/.config/nvim/init.vim
+	ln -vsf ${PWD}/.config/nvim/coc-settings.json ${HOME}/.config/nvim/coc-settings.json
 	ln -vsf ${PWD}/.zshrc ${HOME}/.zshrc
 	ln -vsf ${PWD}/.tmux.conf.local ${HOME}/.tmux.conf.local
 	ln -vsf ${PWD}/.p10k.zsh ${HOME}/.p10k.zsh
