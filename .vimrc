@@ -24,7 +24,7 @@ call plug#end()
 let mapleader = ","
 let maplocalleader = ","
 set updatetime=200
-set timeoutlen=1300 ttimeoutlen=80
+set timeoutlen=1000 ttimeoutlen=50
 set history=1000
 set undofile
 set undolevels=100
