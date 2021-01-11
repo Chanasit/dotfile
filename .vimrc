@@ -97,7 +97,7 @@ let g:airline_powerline_fonts = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git Gutter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:gitgutter_max_signs=500
+let g:gitgutter_max_signs=1000
 let g:gitgutter_enabled = 1
 let g:gitgutter_signs = 1
 let g:gitgutter_set_sign_backgrounds = 1
