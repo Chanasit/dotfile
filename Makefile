@@ -31,7 +31,6 @@ config: ## install configuration
 	ln -vsf ${PWD}/.tmux.conf.local ${HOME}/.tmux.conf.local
 	ln -vsf ${PWD}/.p10k.zsh ${HOME}/.p10k.zsh
 	ln -vsf ${PWD}/.curlrc ${HOME}/.curlrc
-	ln -vsf ${PWD}/.vim/coc-settings.json ${HOME}/.vim/coc-settings.json
 	vim '+PlugInstall'
 
 install: ## install all packages base on OSTYPE

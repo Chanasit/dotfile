@@ -1,3 +1,22 @@
 {
-	"coc.preferences.formatOnSaveFiletypes": ["*"]
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "diagnostic.checkCurrentLine": true,
+  "suggest.timeout": 5000,
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-lsp",
+      "filetypes": ["terraform", "tf"],
+      "initializationOptions": {},
+      "settings": {}
+    },
+    "swift": {
+      "command": "xcrun",
+      "args": ["sourcekit-lsp"],
+      "filetypes": ["swift", "c", "cpp"],
+      "initializationOptions": {},
+      "settings": {},
+      "rootPatterns": ["Cross.toml"],
+      "requireRootPattern": true
+    }
+  }
 }
