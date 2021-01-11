@@ -161,22 +161,6 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column -n --no-heading -p --c
 " => COC VIM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set shortmess+=c
-let g:coc_global_extensions = [
-      \'coc-tsserver@1.6.7',
-      \'coc-clangd',
-      \'coc-python',
-      \'coc-go',
-      \'coc-emmet',
-      \'coc-html',
-      \'coc-css',
-      \'coc-prettier@1.1.20',
-      \'coc-highlight@1.2.7',
-      \'coc-json@1.3.2',
-      \'coc-docker',
-      \'coc-markdownlint',
-      \'coc-sh',
-      \'coc-vetur',
-      \]
 
 function! s:check_back_space() abort
   let col = col('.') - 1
