@@ -42,7 +42,7 @@ cursor:
 
 # Font configuration (changes require restart)
 font:
-  size: 13
+  size: 12
   normal:
     family: Hack Nerd Font
     style: Regular
