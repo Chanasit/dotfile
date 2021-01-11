@@ -156,6 +156,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # GNU bin
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
+# Git Config
+export GIT_TRACE=1
+
 # Terraform Config
 export TF_LOG=1
 
