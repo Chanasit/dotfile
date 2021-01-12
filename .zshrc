@@ -35,6 +35,9 @@ NVM_COMPLETION=true
 # ZSH Plugins
 plugins=(
     osx
+    kubectl
+    git
+    docker
     zsh-nvm
     zsh-syntax-highlighting
     zsh-autosuggestions
