@@ -24,7 +24,7 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
 let maplocalleader = ","
-set updatetime=300
+set updatetime=100
 set timeoutlen=1000 ttimeoutlen=50
 set history=1000
 set undofile
@@ -100,7 +100,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git Gutter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:gitgutter_max_signs=1000
+let g:gitgutter_max_signs=500
 let g:gitgutter_enabled = 1
 let g:gitgutter_signs = 1
 let g:gitgutter_set_sign_backgrounds = 1
