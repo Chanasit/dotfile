@@ -156,8 +156,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # GNU bin
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
-# Git Config
-export GIT_TRACE=1
+# gcloud config
+source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 # Terraform Config
 export TF_LOG=1
