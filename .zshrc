@@ -159,10 +159,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # GNU bin
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
-# gcloud config
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
 # Terraform Config
 export TF_LOG=1
 
@@ -188,3 +184,9 @@ ZLE_RPROMPT_INDENT=0
 
 # Bash Completion
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/chanasit/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/chanasit/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/chanasit/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/chanasit/google-cloud-sdk/completion.zsh.inc'; fi
