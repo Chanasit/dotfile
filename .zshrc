@@ -186,7 +186,7 @@ ZLE_RPROMPT_INDENT=0
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/chanasit/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/chanasit/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '${HOME}/google-cloud-sdk/path.zsh.inc' ]; then . '${HOME}/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/chanasit/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/chanasit/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '${HOME}/google-cloud-sdk/completion.zsh.inc' ]; then . '${HOME}/google-cloud-sdk/completion.zsh.inc'; fi
