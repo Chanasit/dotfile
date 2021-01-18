@@ -7,7 +7,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'cormacrelf/vim-colors-github'
 Plug 'mbbill/undotree'
-Plug 'preservim/nerdtree'
+" Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-airline/vim-airline'
@@ -17,6 +17,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mg979/vim-visual-multi'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -90,6 +93,15 @@ let g:VM_leader="\\"
 let g:VM_theme = 'codedark'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Ranger
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ranger_map_keys = 0
+let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
+let g:ranger_open_new_tab = 1
+let g:ranger_replace_netrw = 1
+map <leader>f :Ranger<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline_theme = "tomorrow"
@@ -117,19 +129,19 @@ let g:instant_markdown_port = 8888
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+" nnoremap <leader>n :NERDTreeFocus<CR>
+" nnoremap <C-n> :NERDTree<CR>
+" nnoremap <C-t> :NERDTreeToggle<CR>
+" nnoremap <C-f> :NERDTreeFind<CR>
 
-let g:NERDTreeShowHidden=1
-let g:NERDTreeMinimalUI = 0
-let g:NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules', 'vendor']
-let g:NERDTreeStatusline = ''
+" let g:NERDTreeShowHidden=1
+" let g:NERDTreeMinimalUI = 0
+" let g:NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules', 'vendor']
+" let g:NERDTreeStatusline = ''
 
-" Mirror the NERDTree before showing it. This makes it the same on all tabs.
-nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
-autocmd FileType nerdtree setlocal signcolumn=no
+" " Mirror the NERDTree before showing it. This makes it the same on all tabs.
+" nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
+" autocmd FileType nerdtree setlocal signcolumn=no
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tmux
@@ -148,7 +160,7 @@ let g:fzf_tags_command = 'ctags -r'
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
 nnoremap <silent> <Leader>b :Buffers<CR>
-nnoremap <silent> <Leader>f :Files<CR>
+" nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>r :Rg<CR>
 nnoremap <silent> <Leader>/ :BLines<CR>
 nnoremap <silent> <Leader>' :Marks<CR>

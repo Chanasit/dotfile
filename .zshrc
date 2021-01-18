@@ -41,7 +41,6 @@ plugins=(
     zsh-nvm
     zsh-syntax-highlighting
     zsh-autosuggestions
-    web-search
 )
 
 nvim () {
@@ -174,6 +173,9 @@ export KUBECONFIG=$HOME/.kube/bn-sme-production-cluster:$HOME/.kube/bn-sme-stagi
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules,vendor}/*" 2> /dev/null'
 export FZF_COMPLETION_TRIGGER='~~'
 export FZF_COMPLETION_OPTS='+c -x'
+
+# Ranger config
+# export RANGER_LOAD_DEFAULT_RC=FALSE
 
 # P10K config
 [[ ! -f ~/dotfiles/.p10k.zsh ]] || source ~/dotfiles/.p10k.zsh
