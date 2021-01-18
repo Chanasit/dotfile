@@ -10,17 +10,17 @@ Follow is [link](https://github.com/junegunn/vim-plug) for pre-installation [vim
 
 - [coc.nvim](https://github.com/neoclide/coc.nvim)
 - [fzf](https://github.com/junegunn/fzf.vim)
-- [vim-colors-github](https://github.com/cormacrelf/vim-colors-github)
 - [undotree](https://github.com/mbbill/undotree)
-- [nerdtree](https://github.com/preservim/nerdtree)
-- [nerdcommenter](https://github.com/preservim/nerdcommenter)
+- [rnvimr](https://github.com/kevinhwang91/rnvimr)
 - [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
+- [vim-commentary](https://github.com/tpope/vim-commentary)
 - [vim-airline](https://github.com/vim-airline/vim-airline)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 - [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
 - [vim-visual-multi](https://github.com/mg979/vim-visual-multi)
 - [vim-instant-markdown](https://github.com/instant-markdown/vim-instant-markdown)
+- [vim-colors-github](https://github.com/cormacrelf/vim-colors-github)
 
 #### Configuation for [symlink](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command) necessary dotfiles
 

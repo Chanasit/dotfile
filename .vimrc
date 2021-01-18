@@ -18,8 +18,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'mg979/vim-visual-multi'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 
-Plug 'francoiscabrol/ranger.vim'
-Plug 'rbgrouleff/bclose.vim'
+Plug 'kevinhwang91/rnvimr'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -95,11 +94,31 @@ let g:VM_theme = 'codedark'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ranger
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ranger_map_keys = 0
-let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
-let g:ranger_open_new_tab = 1
-let g:ranger_replace_netrw = 1
-map <leader>f :Ranger<CR>
+" Make Ranger replace Netrw and be the file explorer
+let g:rnvimr_enable_ex = 1
+
+" Make Ranger to be hidden after picking a file
+let g:rnvimr_enable_picker = 1
+
+" Disable a border for floating window
+let g:rnvimr_draw_border = 0
+
+" Hide the files included in gitignore
+let g:rnvimr_hide_gitignore = 1
+
+" Change the border's color
+let g:rnvimr_border_attr = {'fg': 16, 'bg': -1}
+
+" Make Neovim wipe the buffers corresponding to the files deleted by Ranger
+let g:rnvimr_enable_bw = 1
+
+" Add a shadow window, value is equal to 100 will disable shadow
+let g:rnvimr_shadow_winblend = 70
+
+" Draw border with both
+let g:rnvimr_ranger_cmd = 'ranger --cmd="set draw_borders both"'
+
+nnoremap <silent> <Leader>d :RnvimrToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
@@ -127,23 +146,6 @@ let g:instant_markdown_autoscroll = 1
 let g:instant_markdown_port = 8888
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Nerd Tree
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" nnoremap <leader>n :NERDTreeFocus<CR>
-" nnoremap <C-n> :NERDTree<CR>
-" nnoremap <C-t> :NERDTreeToggle<CR>
-" nnoremap <C-f> :NERDTreeFind<CR>
-
-" let g:NERDTreeShowHidden=1
-" let g:NERDTreeMinimalUI = 0
-" let g:NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules', 'vendor']
-" let g:NERDTreeStatusline = ''
-
-" " Mirror the NERDTree before showing it. This makes it the same on all tabs.
-" nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
-" autocmd FileType nerdtree setlocal signcolumn=no
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tmux
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
@@ -160,7 +162,7 @@ let g:fzf_tags_command = 'ctags -r'
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
 nnoremap <silent> <Leader>b :Buffers<CR>
-" nnoremap <silent> <Leader>f :Files<CR>
+nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>r :Rg<CR>
 nnoremap <silent> <Leader>/ :BLines<CR>
 nnoremap <silent> <Leader>' :Marks<CR>
