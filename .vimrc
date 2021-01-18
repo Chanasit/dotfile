@@ -92,29 +92,11 @@ let g:VM_theme = 'codedark'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ranger
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Make Ranger replace Netrw and be the file explorer
 let g:rnvimr_enable_ex = 1
-
-" Make Ranger to be hidden after picking a file
 let g:rnvimr_enable_picker = 1
-
-" Disable a border for floating window
-let g:rnvimr_draw_border = 0
-
-" Hide the files included in gitignore
-let g:rnvimr_hide_gitignore = 1
-
-" Change the border's color
-let g:rnvimr_border_attr = {'fg': 16, 'bg': -1}
-
-" Make Neovim wipe the buffers corresponding to the files deleted by Ranger
 let g:rnvimr_enable_bw = 1
-
-" Add a shadow window, value is equal to 100 will disable shadow
+let g:rnvimr_border_attr = {'fg': 16, 'bg': -1}
 let g:rnvimr_shadow_winblend = 70
-
-" Draw border with both
-let g:rnvimr_ranger_cmd = 'ranger --cmd="set draw_borders both"'
 
 nnoremap <silent> <Leader>d :RnvimrToggle<CR>
 
@@ -158,7 +140,6 @@ nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
 let g:fzf_buffers_jump = 1
 let g:fzf_tags_command = 'ctags -r'
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
-let g:fzf_preview_window = []
 
 nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <silent> <Leader>f :Files<CR>
@@ -168,15 +149,7 @@ nnoremap <silent> <Leader>' :Marks<CR>
 nnoremap <silent> <Leader>g :Commits<CR>
 nnoremap <silent> <Leader>h :History<CR>
 
-function! RipgrepFzf(query, fullscreen)
-  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
-  let initial_command = printf(command_fmt, shellescape(a:query))
-  let reload_command = printf(command_fmt, '{q}')
-  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
-  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
-endfunction
-
-command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column -n --no-heading -p --color=always --fixed-strings --follow --smart-case --glob '!{.git,node_modules,vendor}/*' -s ".shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => COC VIM

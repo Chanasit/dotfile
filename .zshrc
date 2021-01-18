@@ -174,9 +174,6 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,
 export FZF_COMPLETION_TRIGGER='~~'
 export FZF_COMPLETION_OPTS='+c -x'
 
-# Ranger config
-# export RANGER_LOAD_DEFAULT_RC=FALSE
-
 # P10K config
 [[ ! -f ~/dotfiles/.p10k.zsh ]] || source ~/dotfiles/.p10k.zsh
 POWERLEVEL9K_DIR_MAX_LENGTH=1
