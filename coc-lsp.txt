@@ -12,4 +12,3 @@ coc-docker
 coc-markdownlint
 coc-sh
 coc-vetur
-coc-vimlsp

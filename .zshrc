@@ -50,8 +50,6 @@ nvim () {
 
 source $ZSH/oh-my-zsh.sh
 
-autoload -Uz compinit && compinit
-
 ##############################################################
 # => Keys Binding
 ##############################################################
@@ -160,7 +158,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # Terraform Config
-# export TF_LOG=ERROR
+export TF_LOG=ERROR
 
 # DOCKER CONFIG
 export COMPOSE_DOCKER_CLI_BUILD=1
@@ -190,7 +188,3 @@ if [ -f "${HOME}/google-cloud-sdk/path.zsh.inc" ]; then . "${HOME}/google-cloud-
 
 # The next line enables shell command completion for gcloud.
 if [ -f "${HOME}/google-cloud-sdk/completion.zsh.inc" ]; then . "${HOME}/google-cloud-sdk/completion.zsh.inc"; fi
-
-# Terraform Completion
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/terraform terraform
