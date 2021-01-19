@@ -3,6 +3,18 @@
   "diagnostic.checkCurrentLine": true,
   "suggest.timeout": 5000,
   "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
+    },
+    "go": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "trace.server": "verbose",
+      "filetypes": ["go"]
+    },
     "terraform": {
       "command": "terraform-ls",
 			"args": ["serve"],
