@@ -25,6 +25,7 @@ config: ## install configuration
 	ln -vsf ${PWD}/.config/htop ${HOME}/.config/htop
 	ln -vsf ${PWD}/.config/ranger ${HOME}/.config/ranger
 	ln -vsf ${PWD}/.config/nvim ${HOME}/.config/nvim
+	ln -vsf ${PWD}/.config/spotify-tui ${HOME}/.config/spotify-tui
 	ln -vsf ${PWD}/.editorconfig ${HOME}/.editorconfig
 	ln -vsf ${PWD}/.vimrc ${HOME}/.vimrc
 	ln -vsf ${PWD}/.zshrc ${HOME}/.zshrc
