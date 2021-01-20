@@ -21,17 +21,17 @@ config: ## install configuration
 	rm -rf ${HOME}/.tmux
 	git clone https://github.com/gpakosz/.tmux.git ${HOME}/.tmux
 	echo "symlink dotfile config \n"
-	ln -vsf ${PWD}/.config/alacritty ${HOME}/.config/alacritty
-	ln -vsf ${PWD}/.config/htop ${HOME}/.config/htop
-	ln -vsf ${PWD}/.config/ranger ${HOME}/.config/ranger
-	ln -vsf ${PWD}/.config/nvim ${HOME}/.config/nvim
-	ln -vsf ${PWD}/.config/spotify-tui ${HOME}/.config/spotify-tui
-	ln -vsf ${PWD}/.editorconfig ${HOME}/.editorconfig
-	ln -vsf ${PWD}/.vimrc ${HOME}/.vimrc
-	ln -vsf ${PWD}/.zshrc ${HOME}/.zshrc
-	ln -vsf ${PWD}/.tmux.conf.local ${HOME}/.tmux.conf.local
-	ln -vsf ${PWD}/.p10k.zsh ${HOME}/.p10k.zsh
-	ln -vsf ${PWD}/.curlrc ${HOME}/.curlrc
+	ln -vsfn ${PWD}/.config/alacritty ${HOME}/.config/alacritty
+	ln -vsfn ${PWD}/.config/htop ${HOME}/.config/htop
+	ln -vsfn ${PWD}/.config/ranger ${HOME}/.config/ranger
+	ln -vsfn ${PWD}/.config/nvim ${HOME}/.config/nvim
+	ln -vsfn ${PWD}/.config/spotify-tui ${HOME}/.config/spotify-tui
+	ln -vsfn ${PWD}/.editorconfig ${HOME}/.editorconfig
+	ln -vsfn ${PWD}/.vimrc ${HOME}/.vimrc
+	ln -vsfn ${PWD}/.zshrc ${HOME}/.zshrc
+	ln -vsfn ${PWD}/.tmux.conf.local ${HOME}/.tmux.conf.local
+	ln -vsfn ${PWD}/.p10k.zsh ${HOME}/.p10k.zsh
+	ln -vsfn ${PWD}/.curlrc ${HOME}/.curlrc
 	vim '+PlugInstall'
 
 install: ## install all packages base on OSTYPE
