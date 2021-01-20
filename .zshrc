@@ -114,7 +114,10 @@ export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 #PYTHON path
 export PATH="/usr/local/opt/python@3.9/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/python@3.9/lib"
-export PKG_CONFIG_PATH="/usr/local/opt/python@3.9/lib/pkgconfig"
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then export PKG_CONFIG_PATH="/usr/local/opt/python@3.9/lib/pkgconfig"
+elif [[ "$OSTYPE" == "darwin"* ]]; then export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig
+fi
 
 # GO path
 export GOPATH=$HOME/go
