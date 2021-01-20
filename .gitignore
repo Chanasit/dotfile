@@ -1,3 +1,6 @@
+# customize
+.config/ranger/__pycache__/
+
 # non-dot files
 # /[^.]*
 !/bin
