@@ -29,6 +29,10 @@ colors:
     cyan: '#9aedfe'
     white: '#f1f1f0'
 
+  vi_mode_cursor:
+    text: CellBackground
+    cursor: CellForeground
+
 mouse:
   hide_when_typing: true
   url:
@@ -37,8 +41,14 @@ mouse:
 selection:
   save_to_clipboard: true
 
+background_opacity: 0.99
+
 cursor:
-  vi_mode_style: Block
+  style:
+    shape: Block
+    blinking: Always
+  blink_interval: 800
+  vi_mode_style: None
 
 # Font configuration (changes require restart)
 font:
