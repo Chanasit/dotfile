@@ -48,6 +48,12 @@ nvim () {
     nvim "$@"
 }
 
+ranger () {
+    unset -f ranger
+    _zsh_nvm_load
+    ranger "$@"
+}
+
 source $ZSH/oh-my-zsh.sh
 
 ##############################################################
