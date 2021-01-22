@@ -16,7 +16,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mg979/vim-visual-multi'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
-Plug 'kevinhwang91/rnvimr'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -88,19 +87,6 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:VM_leader="\\"
 let g:VM_theme = 'codedark'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Ranger
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:rnvimr_enable_ex = 1
-let g:rnvimr_enable_picker = 1
-let g:rnvimr_enable_bw = 1
-let g:rnvimr_draw_border = 0
-let g:rnvimr_shadow_winblend = 70
-let g:rnvimr_border_attr = {'fg': 16, 'bg': -1}
-let g:rnvimr_shadow_winblend = 70
-
-nnoremap <silent> <Leader>d :RnvimrToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
