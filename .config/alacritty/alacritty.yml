@@ -2,36 +2,32 @@ env:
   TERM: screen-256color
 
 colors:
-  # Default colors
+  name: 3024 (light)
+  author: Chris Kempson
   primary:
-    background: '#282a36'
-    foreground: '#eff0eb'
-
-  # Normal colors
+    background: "#f6f6f6"
+    foreground: "#353839"
+  cursor:
+    text: "#f6f6f6"
+    cursor: "#353839"
   normal:
-    black: '#282a36'
-    red: '#ff5c57'
-    green: '#5af78e'
-    yellow: '#f3f99d'
-    blue: '#57c7ff'
-    magenta: '#ff6ac1'
-    cyan: '#9aedfe'
-    white: '#f1f1f0'
-
-  # Bright colors
+    black: "#353839"
+    red: "#353839"
+    green: "#353839"
+    yellow: "#353839"
+    blue: "#353839"
+    magenta: "#353839"
+    cyan: "#353839"
+    white: "#f6f6f6"
   bright:
-    black: '#686868'
-    red: '#ff5c57'
-    green: '#5af78e'
-    yellow: '#f3f99d'
-    blue: '#57c7ff'
-    magenta: '#ff6ac1'
-    cyan: '#9aedfe'
-    white: '#f1f1f0'
-
-  vi_mode_cursor:
-    text: CellBackground
-    cursor: CellForeground
+    black: "#353839"
+    red: "#353839"
+    green: "#353839"
+    yellow: "#353839"
+    blue: "#353839"
+    magenta: "#353839"
+    cyan: "#353839"
+    white: "#f6f6f6"
 
 mouse:
   hide_when_typing: true

@@ -77,6 +77,7 @@ alias vi="nvim"
 alias vim="nvim"
 alias emacs="emacs -nw"
 alias excel="open -a Microsoft\ Excel "
+alias grep="rg"
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     alias pbcopy='xclip -selection clipboard'
     alias pbpaste='xclip -selection clipboard -o'

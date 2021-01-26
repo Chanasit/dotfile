@@ -72,7 +72,7 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-set background=dark
+set background=light
 colorscheme github
 
 call github_colors#togglebg_map('<f5>')
