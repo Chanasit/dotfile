@@ -6,24 +6,24 @@ colors:
   author: HJKL
   primary:
     background: "#f6f6f6"
-    foreground: "#000000"
+    foreground: "#303030"
   cursor:
     text: "#f6f6f6"
-    cursor: "#000000"
+    cursor: "#303030"
   normal:
-    black: "#000000"
+    black: "#303030"
     red: "#E7555B"
     green: "#008A5C"
-    yellow: "#000000"
+    yellow: "#303030"
     blue: "#090063"
     magenta: "#6A008C"
     cyan: "#005CDF"
     white: "#f6f6f6"
   bright:
-    black: "#000000"
+    black: "#303030"
     red: "#E7555B"
     green: "#008A5C"
-    yellow: "#000000"
+    yellow: "#303030"
     blue: "#090063"
     magenta: "#6A008C"
     cyan: "#005CDF"

@@ -58,6 +58,7 @@ noremap! <C-j> <Down>
 noremap! <C-k> <Up>
 noremap! <C-l> <Right>
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NVIM Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -91,7 +92,7 @@ let g:VM_theme = 'codedark'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline_theme = "tomorrow"
+let g:airline_theme = "github"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
