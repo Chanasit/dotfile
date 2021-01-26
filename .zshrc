@@ -103,9 +103,8 @@ alias bt="blueutil"
 ##############################################################
 # => Export Global Environments Variable
 ##############################################################
-if [[ -n $SSH_CONNECTION ]]; then export EDITOR='vim'
-else export EDITOR='nvim'
-fi
+export VISUAL='nvim'
+export EDITOR='nvim'
 export TERM=screen-256color
 export ARCHFLAGS="-arch x86_64"
 export MANPATH="/usr/local/man:$MANPATH"

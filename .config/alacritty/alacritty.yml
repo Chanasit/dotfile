@@ -2,31 +2,31 @@ env:
   TERM: screen-256color
 
 colors:
-  name: 3024 (light)
-  author: Chris Kempson
+  name: Github Color
+  author: HJKL
   primary:
     background: "#f6f6f6"
-    foreground: "#353839"
+    foreground: "#767676"
   cursor:
     text: "#f6f6f6"
-    cursor: "#353839"
+    cursor: "#767676"
   normal:
-    black: "#353839"
-    red: "#353839"
-    green: "#353839"
-    yellow: "#353839"
-    blue: "#353839"
-    magenta: "#353839"
-    cyan: "#353839"
+    black: "#767676"
+    red: "#E7555B"
+    green: "#008A5C"
+    yellow: "#767676"
+    blue: "#090063"
+    magenta: "#6A008C"
+    cyan: "#005CDF"
     white: "#f6f6f6"
   bright:
-    black: "#353839"
-    red: "#353839"
-    green: "#353839"
-    yellow: "#353839"
-    blue: "#353839"
-    magenta: "#353839"
-    cyan: "#353839"
+    black: "#767676"
+    red: "#E7555B"
+    green: "#008A5C"
+    yellow: "#767676"
+    blue: "#090063"
+    magenta: "#6A008C"
+    cyan: "#005CDF"
     white: "#f6f6f6"
 
 mouse:
@@ -37,7 +37,7 @@ mouse:
 selection:
   save_to_clipboard: true
 
-background_opacity: 0.99
+background_opacity: 0.95
 
 cursor:
   vi_mode_style: None
