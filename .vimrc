@@ -87,7 +87,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " => Visual Multi
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:VM_leader="\\"
-let g:VM_theme = 'codedark'
+let g:VM_theme = "default"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
