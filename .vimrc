@@ -75,6 +75,7 @@ if exists('+termguicolors')
 endif
 
 set background=light
+let g:github_colors_soft = 1
 colorscheme github
 
 call github_colors#togglebg_map('<f5>')
