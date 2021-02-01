@@ -160,6 +160,8 @@ let g:fzf_tags_command = 'ctags -r'
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column -n --no-heading -p --color=always -s ".shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
+
 nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>r :Rg<CR>
