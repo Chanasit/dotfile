@@ -69,7 +69,6 @@ bindkey "^[[1;3D" backward-word
 ##############################################################
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias top="htop"
 alias ping='ping -c 5'
 alias fastping='ping -c 100 -s.2'
 alias watch='watch '
