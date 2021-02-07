@@ -54,10 +54,23 @@ set completeopt-=preview
 " last line history
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-noremap! <C-h> <Left>
-noremap! <C-j> <Down>
-noremap! <C-k> <Up>
-noremap! <C-l> <Right>
+noremap <C-h> <Left>
+noremap <C-j> <Down>
+noremap <C-k> <Up>
+noremap <C-l> <Right>
+
+" Go to tab by number
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
