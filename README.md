@@ -40,6 +40,11 @@ $ ln -vsf ${PWD}/.config/nvim/coc-settings.json ${HOME}/.config/nvim/coc-setting
 $ ln -vsf ${PWD}/.editorconfig ${HOME}/.editorconfig
 ```
 
+#### Performance Testing
+``` shell
+$ python <(curl -sSL https://raw.githubusercontent.com/hyiltiz/vim-plugins-profile/master/vim-plugins-profile.py)
+```
+
 ## Alacritty
 
 [Alacritty](https://github.com/alacritty/alacritty) is terminal emulator that has pretty easy configuration
