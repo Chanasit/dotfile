@@ -42,7 +42,7 @@ set signcolumn=yes
 
 " folding
 set foldmethod=indent
-set foldnestmax=2
+set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 
@@ -118,7 +118,7 @@ let g:rnvimr_enable_picker = 1
 let g:rnvimr_enable_bw = 1
 
 " Add a shadow window, value is equal to 100 will disable shadow
-let g:rnvimr_shadow_winblend = 70
+let g:rnvimr_shadow_winblend = 60
 
 let g:rnvimr_ranger_cmd = 'ranger --cmd="set draw_borders both"'
 
