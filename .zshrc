@@ -143,6 +143,9 @@ export CPPFLAGS="-I/usr/local/opt/llvm/include"
 export CC=/usr/bin/gcc
 export CXX=/usr/bin/g++
 
+#HASHKELL
+export PATH="$HOME/.cabal/bin:$PATH"
+
 
 # NVM path
 # export NVM_DIR="$HOME/.nvm"
