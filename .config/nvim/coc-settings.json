@@ -1,7 +1,15 @@
 {
+  "codeLens.enable": true,
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnSaveFiletypes": ["ts", "go"],
-  "diagnostic.checkCurrentLine": true,
-  "suggest.timeout": 5000,
+  "suggest.timeout": 600,
+  "suggest.maxPreviewWidth": 100,
+  "suggest.maxCompleteItemCount": 10,
+  "tsserver.log": "verbose",
+  "typescript.format.semicolons": "insert",
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "typescript.preferences.useAliasesForRenames": false,
   "languageserver": {
     "bash": {
       "command": "bash-language-server",
