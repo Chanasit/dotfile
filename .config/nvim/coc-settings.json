@@ -5,7 +5,7 @@
   "coc.preferences.formatOnSaveFiletypes": ["ts", "go"],
   "suggest.timeout": 600,
   "suggest.maxPreviewWidth": 100,
-  "suggest.maxCompleteItemCount": 10,
+  "suggest.maxCompleteItemCount": 50,
   "tsserver.log": "verbose",
   "typescript.format.semicolons": "insert",
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
