@@ -17,6 +17,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'mg979/vim-visual-multi'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'kevinhwang91/rnvimr'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
