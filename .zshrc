@@ -96,6 +96,7 @@ alias dota2="open -a Dota\ 2"
 alias g3="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gs="git status"
 alias gd="git diff"
+alias gf="git fetch --all"
 alias gb='git branch | fzf | xargs git checkout'
 alias bt="blueutil"
 
