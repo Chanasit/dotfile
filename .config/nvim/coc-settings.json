@@ -30,7 +30,7 @@
     },
     "terraform": {
       "command": "terraform-ls",
-			"args": ["serve"],
+      "args": ["serve"],
       "filetypes": ["terraform", "tf"],
       "initializationOptions": {},
       "settings": {}
