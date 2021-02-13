@@ -42,18 +42,6 @@ plugins=(
     zsh-autosuggestions
 )
 
-nvim () {
-    unset -f nvim
-    _zsh_nvm_load
-    nvim "$@"
-}
-
-ranger () {
-    unset -f ranger
-    _zsh_nvm_load
-    ranger "$@"
-}
-
 source $ZSH/oh-my-zsh.sh
 
 ##############################################################
@@ -149,10 +137,9 @@ export PATH="$HOME/.cabal/bin:$PATH"
 
 
 # NVM path
-# export NVM_DIR="$HOME/.nvm"
-# if [[ "$OSTYPE" == "linux-gnu"* ]]; then source "$HOME/.nvm/nvm.sh"
-# elif [[ "$OSTYPE" == "darwin"* ]]; then source "$(brew --prefix nvm)/nvm.sh"
-# fi
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Custom binary file (ubuntu)
 export PATH=$PATH:$HOME/bin
@@ -171,6 +158,9 @@ export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # Terraform Config
 export TF_LOG=
+# Terraform Completion
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
 
 # DOCKER CONFIG
 export COMPOSE_DOCKER_CLI_BUILD=1
@@ -200,7 +190,3 @@ if [ -f "${HOME}/google-cloud-sdk/path.zsh.inc" ]; then . "${HOME}/google-cloud-
 
 # The next line enables shell command completion for gcloud.
 if [ -f "${HOME}/google-cloud-sdk/completion.zsh.inc" ]; then . "${HOME}/google-cloud-sdk/completion.zsh.inc"; fi
-
-# Terraform Completion
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/terraform terraform
