@@ -51,48 +51,16 @@ bindkey -v
 bindkey -v '^?' backward-delete-char
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
-
-##############################################################
-# => Alias Bash Script
-##############################################################
-alias zshconfig="nvim ~/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias ping='ping -c 5'
-alias fastping='ping -c 100 -s.2'
-alias watch='watch '
-alias vi="nvim"
-alias vim="nvim"
-alias emacs="emacs -nw"
-alias excel="open -a Microsoft\ Excel "
-alias grep="rg"
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    alias pbcopy='xclip -selection clipboard'
-    alias pbpaste='xclip -selection clipboard -o'
-fi
-alias clang="clang-11"
-alias python="python3"
-alias pip="pip3"
-alias pypy="pypy3"
-alias pip_pypy="pip_pypy3"
-alias k="kubectl"
-alias tf="terraform"
-alias os="openstack"
-alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport"
-alias icloud="~/Library/Mobile\ Documents/com~apple~CloudDocs/"
-alias spotify="open -a spotify"
-alias dota2="open -a Dota\ 2"
-alias g3="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
-alias gs="git status"
-alias gd="git diff"
-alias gf="git fetch --all"
-alias gb='git branch | fzf | xargs git checkout'
-alias bt="blueutil"
-
 ##############################################################
 # => Export Global Environments Variable
 ##############################################################
-export VISUAL='nvim'
-export EDITOR='nvim'
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  export VISUAL='nvim'
+  export EDITOR='nvim'
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  export VISUAL='mvim -v'
+  export EDITOR='mvim -v'
+fi
 export TERM=screen-256color
 export ARCHFLAGS="-arch x86_64"
 export MANPATH="/usr/local/man:$MANPATH"
@@ -190,3 +158,42 @@ if [ -f "${HOME}/google-cloud-sdk/path.zsh.inc" ]; then . "${HOME}/google-cloud-
 
 # The next line enables shell command completion for gcloud.
 if [ -f "${HOME}/google-cloud-sdk/completion.zsh.inc" ]; then . "${HOME}/google-cloud-sdk/completion.zsh.inc"; fi
+
+export NNN_OPTS="H"
+export NNN_PLUG='f:finder;o:fzopen;p:mocplay;d:diffs;t:nmount;v:imgview'
+
+##############################################################
+# => Alias Bash Script
+##############################################################
+alias ping='ping -c 5'
+alias fastping='ping -c 100 -s.2'
+alias watch='watch '
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then alias vi="nvim"
+elif [[ "$OSTYPE" == "darwin"* ]]; then alias vi="mvim -v"
+fi
+alias emacs="emacs -nw"
+alias excel="open -a Microsoft\ Excel "
+alias grep="rg"
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    alias pbcopy='xclip -selection clipboard'
+    alias pbpaste='xclip -selection clipboard -o'
+fi
+alias clang="clang-11"
+alias python="python3"
+alias pip="pip3"
+alias pypy="pypy3"
+alias pip_pypy="pip_pypy3"
+alias k="kubectl"
+alias tf="terraform"
+alias os="openstack"
+alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport"
+alias icloud="~/Library/Mobile\ Documents/com~apple~CloudDocs/"
+alias spotify="open -a spotify"
+alias dota2="open -a Dota\ 2"
+alias g3="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias gs="git status"
+alias gd="git diff"
+alias gf="git fetch --all"
+alias gb='git branch | fzf | xargs git checkout'
+alias bt="blueutil"
+alias ls='nnn -de'

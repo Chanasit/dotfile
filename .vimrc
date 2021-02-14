@@ -16,8 +16,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mg979/vim-visual-multi'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
-Plug 'kevinhwang91/rnvimr'
 Plug 'Yggdroot/indentLine'
+Plug 'mcchrish/nnn.vim'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -25,14 +25,14 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
 let maplocalleader = ","
-set updatetime=300
+set updatetime=50
 set timeoutlen=1000 ttimeoutlen=50
 set history=1000
 set undofile
 set undolevels=100
 set undoreload=1000
 set nobackup
-set nowb
+set nowritebackup
 set nowrap
 set noswapfile
 
@@ -41,16 +41,13 @@ set so=8
 set relativenumber
 set signcolumn=yes
 
-" folding
-set foldmethod=indent
-set foldnestmax=10
-set nofoldenable
-set foldlevel=2
-
 " completion
 set cmdheight=1
 set pumheight=8
 set completeopt-=preview
+
+" clipboard
+set clipboard^=unnamed,unnamedplus
 
 " last line history
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -73,9 +70,27 @@ noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => NVIM Config
+" => N^3
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set clipboard^=unnamed,unnamedplus
+" Disable default mappings
+let g:nnn#set_default_mappings = 0
+
+let g:nnn#action = {
+      \ '<CR>': 'tab split',
+      \ '<c-x>': 'split',
+      \ '<c-v>': 'vsplit' }
+
+" Opens the nnn window in a split
+let g:nnn#layout = 'new' " or vnew, tabnew etc.
+
+" Or pass a dictionary with window size
+let g:nnn#layout = { 'left': '~20%' } " or right, up, down
+
+" Floating window (neovim latest and vim with patch 8.2.191)
+let g:nnn#layout = { 'window': { 'width': 0.9, 'height': 0.6, 'highlight': 'Debug' } }
+
+" Start nnn in the current file's directory
+nnoremap <leader>d :NnnPicker %:p:h<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme
@@ -102,52 +117,6 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:VM_leader="\\"
 let g:VM_theme = "default"
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Ranger
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Make Ranger replace Netrw and be the file explorer
-let g:rnvimr_enable_ex = 1
-
-" Make Ranger to be hidden after picking a file
-let g:rnvimr_enable_picker = 1
-
-" Make Neovim wipe the buffers corresponding to the files deleted by Ranger
-let g:rnvimr_enable_bw = 1
-
-" Add a shadow window, value is equal to 100 will disable shadow
-let g:rnvimr_shadow_winblend = 60
-
-let g:rnvimr_ranger_cmd = 'ranger --cmd="set draw_borders both"'
-
-nnoremap <silent> <Leader>d :RnvimrToggle<CR>
-
-" Map Rnvimr action
-let g:rnvimr_action = {
-            \ '<cr>': 'NvimEdit tabedit',
-            \ '<C-x>': 'NvimEdit split',
-            \ '<C-v>': 'NvimEdit vsplit',
-            \ 'gw': 'JumpNvimCwd',
-            \ 'yw': 'EmitRangerCwd'
-            \ }
-
-" Add views for Ranger to adapt the size of floating window
-let g:rnvimr_ranger_views = [
-            \ {'minwidth': 80, 'ratio': []},
-            \ {'minwidth': 50, 'maxwidth': 89, 'ratio': [1,1]},
-            \ {'maxwidth': 49, 'ratio': [1]}
-            \ ]
-
-" Customize the initial layout
-let g:rnvimr_layout = {
-            \ 'relative': 'editor',
-            \ 'width': float2nr(round(0.7 * &columns)),
-            \ 'height': float2nr(round(0.7 * &lines)),
-            \ 'col': float2nr(round(0.15 * &columns)),
-            \ 'row': float2nr(round(0.15 * &lines)),
-            \ 'style': 'minimal'
-            \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
@@ -209,12 +178,8 @@ nnoremap <silent> <Leader>h :History<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set shortmess+=c
 
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
+" Use <Tab> to trigger completion.
+inoremap <silent><expr> <Tab> coc#refresh()
 
 " Remap <C-f> and <C-b> for scroll float windows/popups.
 if has('nvim-0.4.0') || has('patch-8.2.0750')
