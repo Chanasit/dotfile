@@ -93,7 +93,7 @@ let g:floaterm_height = 0.8
 let g:floaterm_complete_options = {'shortcut': 'floaterm', 'priority': 5, 'filter_length': [5, 20]}
 nnoremap <silent> <leader>d :FloatermNew nnn<cr>
 nnoremap <silent> <leader>r :FloatermNew rg<cr>
-nnoremap <silent> <leader>g :FloatermNew gd<cr>
+nnoremap <silent> <leader>g :FloatermNew lazygit<cr>
 nnoremap <silent> <leader>f :FloatermNew fzf<cr>
 nnoremap <silent> <leader>k :FloatermNew k9s<cr>
 
