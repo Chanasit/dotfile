@@ -17,7 +17,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'mg979/vim-visual-multi'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'Yggdroot/indentLine'
-Plug 'mcchrish/nnn.vim'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -68,29 +67,6 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => N^3
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Disable default mappings
-let g:nnn#set_default_mappings = 0
-
-let g:nnn#action = {
-      \ '<CR>': 'tab split',
-      \ '<c-x>': 'split',
-      \ '<c-v>': 'vsplit' }
-
-" Opens the nnn window in a split
-let g:nnn#layout = 'new' " or vnew, tabnew etc.
-
-" Or pass a dictionary with window size
-let g:nnn#layout = { 'left': '~20%' } " or right, up, down
-
-" Floating window (neovim latest and vim with patch 8.2.191)
-let g:nnn#layout = { 'window': { 'width': 0.9, 'height': 0.6, 'highlight': 'Debug' } }
-
-" Start nnn in the current file's directory
-nnoremap <leader>d :NnnPicker %:p:h<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme
