@@ -87,11 +87,15 @@ call github_colors#togglebg_map('<f5>')
 " => FloatTerm
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:floaterm_opener = "tabe"
-nnoremap <silent> <leader>d :FloatermNew --height=0.8 --width=0.8 --wintype=float --name=floaterm1 --autoclose=2 nnn<cr>
-nnoremap <silent> <leader>r :FloatermNew --height=0.8 --width=0.8 --wintype=float --name=floaterm1 --autoclose=2 rg<cr>
-nnoremap <silent> <leader>g :FloatermNew --height=0.8 --width=0.8 --wintype=float --name=floaterm1 --autoclose=2 git diff<cr>
-nnoremap <silent> <leader>f :FloatermNew --height=0.8 --width=0.8 --wintype=float --name=floaterm1 --autoclose=2 fzf<cr>
-nnoremap <silent> <leader>k :FloatermNew --height=0.8 --width=0.8 --wintype=float --name=floaterm1 --autoclose=2 k9s<cr>
+let g:floaterm_autoclose = 2
+let g:floaterm_width = 0.8
+let g:floaterm_height = 0.8
+let g:floaterm_complete_options = {'shortcut': 'floaterm', 'priority': 5, 'filter_length': [5, 20]}
+nnoremap <silent> <leader>d :FloatermNew nnn<cr>
+nnoremap <silent> <leader>r :FloatermNew rg<cr>
+nnoremap <silent> <leader>g :FloatermNew gd<cr>
+nnoremap <silent> <leader>f :FloatermNew fzf<cr>
+nnoremap <silent> <leader>k :FloatermNew k9s<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor Config
