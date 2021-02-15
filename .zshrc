@@ -166,7 +166,7 @@ export NNN_PLUG='f:finder;o:fzopen;p:mocplay;d:diffs;t:nmount;v:imgview'
 # => Alias Bash Script
 ##############################################################
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  alias vi="nvim"
+  alias vi="vim"
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
