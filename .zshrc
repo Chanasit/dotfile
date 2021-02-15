@@ -55,8 +55,8 @@ bindkey "^[[1;3D" backward-word
 # => Export Global Environments Variable
 ##############################################################
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  export VISUAL='nvim'
-  export EDITOR='nvim'
+  export VISUAL='vim'
+  export EDITOR='vim'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   export VISUAL='mvim -v'
   export EDITOR='mvim -v'
@@ -165,19 +165,19 @@ export NNN_PLUG='f:finder;o:fzopen;p:mocplay;d:diffs;t:nmount;v:imgview'
 ##############################################################
 # => Alias Bash Script
 ##############################################################
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  alias vi="nvim"
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  alias vi="mvim -v"
+fi
 alias ping='ping -c 5'
 alias fastping='ping -c 100 -s.2'
 alias watch='watch '
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then alias vi="nvim"
-elif [[ "$OSTYPE" == "darwin"* ]]; then alias vi="mvim -v"
-fi
 alias emacs="emacs -nw"
 alias excel="open -a Microsoft\ Excel "
 alias grep="rg"
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    alias pbcopy='xclip -selection clipboard'
-    alias pbpaste='xclip -selection clipboard -o'
-fi
 alias clang="clang-11"
 alias python="python3"
 alias pip="pip3"

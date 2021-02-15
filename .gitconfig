@@ -10,9 +10,8 @@
 	insteadOf = https://gitlab.com/
 [pull]
 	rebase = false
-
 [color]
-  ui = auto
+  ui = true
 [color "branch"]
   current = #FEFFD2 reverse
   local = #FEFFD2
