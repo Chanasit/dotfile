@@ -10,3 +10,19 @@
 	insteadOf = https://gitlab.com/
 [pull]
 	rebase = false
+
+[color]
+  ui = auto
+[color "branch"]
+  current = #FEFFD2 reverse
+  local = #FEFFD2
+  remote = green
+[color "diff"]
+  meta = #FEFFD2 bold
+  frag = #625CB5 bold
+  old = #E96468 bold
+  new = green bold
+[color "status"]
+  added = #FEFFD2
+  changed = green
+  untracked = #006AE2

@@ -131,9 +131,9 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:gitgutter_max_signs=1000
 let g:gitgutter_enabled = 1
 let g:gitgutter_signs = 1
-let g:gitgutter_set_sign_backgrounds = 1
+let g:gitgutter_set_sign_backgrounds = 0
 let g:gitgutter_highlight_lines = 0
-let g:gitgutter_highlight_linenrs = 1
+let g:gitgutter_highlight_linenrs = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mark Down Preview Server

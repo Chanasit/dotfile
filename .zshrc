@@ -197,3 +197,4 @@ alias gf="git fetch --all"
 alias gb='git branch | fzf | xargs git checkout'
 alias bt="blueutil"
 alias nnn="nnn -de"
+alias lg="lazygit"
