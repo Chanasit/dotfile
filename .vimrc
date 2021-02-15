@@ -23,7 +23,7 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
 let maplocalleader = ","
-set updatetime=50
+set updatetime=300
 set timeoutlen=1000 ttimeoutlen=50
 set history=1000
 set undofile
