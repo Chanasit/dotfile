@@ -86,6 +86,11 @@ call github_colors#togglebg_map('<f5>')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => FloatTerm
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set floaterm window's background to #FFFFFF
+hi Floaterm guibg=#FFFFFF
+" Set floating window border line color to #FFFFFF, and background to #FFFFFF
+hi FloatermBorder guibg=#FFFFFF guifg=#015DC5
+
 let g:floaterm_opener = "tabe"
 let g:floaterm_autoclose = 2
 let g:floaterm_width = 0.8
