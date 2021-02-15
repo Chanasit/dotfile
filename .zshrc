@@ -55,8 +55,8 @@ bindkey "^[[1;3D" backward-word
 # => Export Global Environments Variable
 ##############################################################
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  export VISUAL='vim'
-  export EDITOR='vim'
+  export VISUAL='nvim'
+  export EDITOR='nvim'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   export VISUAL='mvim -v'
   export EDITOR='mvim -v'
@@ -166,7 +166,7 @@ export NNN_PLUG='f:finder;o:fzopen;p:mocplay;d:diffs;t:nmount;v:imgview'
 # => Alias Bash Script
 ##############################################################
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  alias vi="vim"
+  alias vi="nvim"
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
