@@ -2,6 +2,8 @@
 " => VIM Plug
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
+Plug 'Yggdroot/indentLine'
+Plug 'voldikss/vim-floaterm'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'cormacrelf/vim-colors-github'
 Plug 'mbbill/undotree'
@@ -14,8 +16,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mg979/vim-visual-multi'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
-Plug 'Yggdroot/indentLine'
-Plug 'voldikss/vim-floaterm'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -91,11 +91,12 @@ let g:floaterm_autoclose = 2
 let g:floaterm_width = 0.8
 let g:floaterm_height = 0.8
 let g:floaterm_complete_options = {'shortcut': 'floaterm', 'priority': 5, 'filter_length': [5, 20]}
-nnoremap <silent> <leader>d :FloatermNew nnn<cr>
+nnoremap <silent> <leader>d :FloatermNew nnn -de<cr>
 nnoremap <silent> <leader>r :FloatermNew rg<cr>
 nnoremap <silent> <leader>g :FloatermNew lazygit<cr>
 nnoremap <silent> <leader>f :FloatermNew fzf<cr>
 nnoremap <silent> <leader>k :FloatermNew k9s<cr>
+nnoremap <silent> <leader>z :FloatermToggle<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editor Config
