@@ -55,8 +55,8 @@ bindkey "^[[1;3D" backward-word
 # => Export Global Environments Variable
 ##############################################################
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  export VISUAL='vim'
-  export EDITOR='vim'
+  export VISUAL='nvim'
+  export EDITOR='nvim'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   export VISUAL='mvim -v'
   export EDITOR='mvim -v'
