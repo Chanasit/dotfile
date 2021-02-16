@@ -190,11 +190,6 @@ alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A
 alias icloud="~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 alias spotify="open -a spotify"
 alias dota2="open -a Dota\ 2"
-alias g3="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
-alias gs="git status"
-alias gd="git diff"
-alias gf="git fetch --all"
-alias gb='git branch | fzf | xargs git checkout'
 alias bt="blueutil"
 alias nnn="nnn -de"
 alias lg="lazygit"
