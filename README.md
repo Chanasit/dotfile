@@ -9,10 +9,10 @@ Follow is [link](https://github.com/junegunn/vim-plug) for pre-installation [vim
 #### Plug Dependencies
 
 - [coc.nvim](https://github.com/neoclide/coc.nvim)
-- [fzf](https://github.com/junegunn/fzf.vim)
 - [undotree](https://github.com/mbbill/undotree)
-- [rnvimr](https://github.com/kevinhwang91/rnvimr)
+- [indentLine](https://github.com/Yggdroot/indentLine)
 - [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
+- [vim-floaterm](https://github.com/voldikss/vim-floaterm)
 - [vim-commentary](https://github.com/tpope/vim-commentary)
 - [vim-airline](https://github.com/vim-airline/vim-airline)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
@@ -21,6 +21,14 @@ Follow is [link](https://github.com/junegunn/vim-plug) for pre-installation [vim
 - [vim-visual-multi](https://github.com/mg979/vim-visual-multi)
 - [vim-instant-markdown](https://github.com/instant-markdown/vim-instant-markdown)
 - [vim-colors-github](https://github.com/cormacrelf/vim-colors-github)
+
+#### Floating Window required bin file
+
+- [nnn](https://github.com/jarun/nnn)
+- [rg](https://github.com/BurntSushi/ripgrep)
+- [fzf](https://github.com/junegunn/fzf)
+- [k9s](https://github.com/derailed/k9s)
+- [lazygit](https://github.com/jesseduffield/lazygit)
 
 #### Configuation for [symlink](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command) necessary dotfiles
 
