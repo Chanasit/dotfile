@@ -159,8 +159,8 @@ if [ -f "${HOME}/google-cloud-sdk/path.zsh.inc" ]; then . "${HOME}/google-cloud-
 # The next line enables shell command completion for gcloud.
 if [ -f "${HOME}/google-cloud-sdk/completion.zsh.inc" ]; then . "${HOME}/google-cloud-sdk/completion.zsh.inc"; fi
 
-export NNN_OPTS="H"
-export NNN_PLUG='f:finder;o:fzopen;p:mocplay;d:diffs;t:nmount;v:imgview'
+# NNN file manager
+export NNN_PLUG='1:bookmarks;p:preview-tui;o:fzz;b:nbak;i:img-preview'
 
 ##############################################################
 # => Alias Bash Script
