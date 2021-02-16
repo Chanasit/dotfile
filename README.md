@@ -22,7 +22,7 @@ Follow is [link](https://github.com/junegunn/vim-plug) for pre-installation [vim
 - [vim-instant-markdown](https://github.com/instant-markdown/vim-instant-markdown)
 - [vim-colors-github](https://github.com/cormacrelf/vim-colors-github)
 
-#### Floating Window required bin file
+#### Binary Dependencies
 
 - [nnn](https://github.com/jarun/nnn)
 - [rg](https://github.com/BurntSushi/ripgrep)
@@ -30,7 +30,7 @@ Follow is [link](https://github.com/junegunn/vim-plug) for pre-installation [vim
 - [k9s](https://github.com/derailed/k9s)
 - [lazygit](https://github.com/jesseduffield/lazygit)
 
-#### Configuation for [symlink](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command) necessary dotfiles
+#### Configuation for [symlink](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command) to necessary dotfiles
 
 [vim](https://www.vim.org/) user
 
