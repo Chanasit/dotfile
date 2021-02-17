@@ -193,3 +193,7 @@ alias dota2="open -a Dota\ 2"
 alias bt="blueutil"
 alias nnn="nnn -de"
 alias lg="lazygit"
+alias gs='git status'
+alias g3='git t'
+alias gd='git df'
+alias gf='git fetch --all'
