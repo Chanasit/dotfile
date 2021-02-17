@@ -160,7 +160,9 @@ if [ -f "${HOME}/google-cloud-sdk/path.zsh.inc" ]; then . "${HOME}/google-cloud-
 if [ -f "${HOME}/google-cloud-sdk/completion.zsh.inc" ]; then . "${HOME}/google-cloud-sdk/completion.zsh.inc"; fi
 
 # NNN file manager
-export NNN_PLUG='1:bookmarks;p:preview-tui;o:fzz;b:nbak;i:img-preview'
+export NNN_COLORS='4321'
+# export NNN_PLUG='t:preview-tui;i:img-preview;v:treeview'
+export NNN_FIFO='/tmp/nnn.fifo'
 
 ##############################################################
 # => Alias Bash Script
@@ -191,7 +193,7 @@ alias icloud="~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 alias spotify="open -a spotify"
 alias dota2="open -a Dota\ 2"
 alias bt="blueutil"
-alias nnn="nnn -de"
+alias nnn="nnn -dea"
 alias lg="lazygit"
 alias gs='git status'
 alias g3='git t'
