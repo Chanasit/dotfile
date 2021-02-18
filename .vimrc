@@ -117,8 +117,14 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Visual Multi
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:VM_leader="\\"
+let g:VM_leader = '\'
 let g:VM_theme = "default"
+let g:VM_maps = {}
+let g:VM_maps["Select All"]        = '<leader>a'
+let g:VM_maps["Visual All"]        = '<leader>a'
+let g:VM_maps["Align"]             = '<leader>A'
+let g:VM_maps["Add Cursor Down"]   = '<C-j>'
+let g:VM_maps["Add Cursor Up"]     = '<C-k>'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
