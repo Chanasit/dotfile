@@ -2,32 +2,32 @@ env:
   TERM: screen-256color
 
 colors:
-  # Default colors
+  name: Github Color
+  author: HJKL
   primary:
-    background: '#282a36'
-    foreground: '#f8f8f2'
-
-  # Normal colors
+    background: "#f6f6f6"
+    foreground: "#303030"
+  cursor:
+    text: "#f6f6f6"
+    cursor: "#303030"
   normal:
-    black: '#000000'
-    red: '#ff5555'
-    green: '#50fa7b'
-    yellow: '#f1fa8c'
-    blue: '#caa9fa'
-    magenta: '#ff79c6'
-    cyan: '#8be9fd'
-    white: '#bfbfbf'
-
-  # Bright colors
+    black: "#303030"
+    red: "#E7555B"
+    green: "#008A5C"
+    yellow: "#303030"
+    blue: "#090063"
+    magenta: "#6A008C"
+    cyan: "#005CDF"
+    white: "#f6f6f6"
   bright:
-    black: '#575b70'
-    red: '#ff6e67'
-    green: '#5af78e'
-    yellow: '#f4f99d'
-    blue: '#caa9fa'
-    magenta: '#ff92d0'
-    cyan: '#9aedfe'
-    white: '#e6e6e6'
+    black: "#303030"
+    red: "#E7555B"
+    green: "#008A5C"
+    yellow: "#303030"
+    blue: "#090063"
+    magenta: "#6A008C"
+    cyan: "#005CDF"
+    white: "#f6f6f6"
 
 mouse:
   hide_when_typing: true
