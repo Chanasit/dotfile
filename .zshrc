@@ -134,9 +134,9 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 # Android Home
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+# export PATH=$PATH:$ANDROID_HOME/tools
+# export PATH=$PATH:$ANDROID_HOME/tools/bin
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # DOCKER CONFIG
 export COMPOSE_DOCKER_CLI_BUILD=1
@@ -207,3 +207,4 @@ alias gs='git status'
 alias g3='git t'
 alias gd='git df'
 alias gf='git fetch --all'
+alias emu='emulator -avd hjkl'
