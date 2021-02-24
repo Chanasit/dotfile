@@ -58,8 +58,8 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   export VISUAL='nvim'
   export EDITOR='nvim'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  export VISUAL='mvim -v'
-  export EDITOR='mvim -v'
+  export VISUAL='nvim'
+  export EDITOR='nvim'
 fi
 export TERM=screen-256color
 export ARCHFLAGS="-arch x86_64"
@@ -180,7 +180,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  alias vi="mvim -v"
+  alias vi="nvim"
 fi
 alias ping='ping -c 5'
 alias fastping='ping -c 100 -s.2'
