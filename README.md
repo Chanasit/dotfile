@@ -12,6 +12,7 @@ Follow is [link](https://github.com/junegunn/vim-plug) for pre-installation [vim
 - [undotree](https://github.com/mbbill/undotree)
 - [indentLine](https://github.com/Yggdroot/indentLine)
 - [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
+- [vim-easymotion](https://github.com/easymotion/vim-easymotion)
 - [vim-floaterm](https://github.com/voldikss/vim-floaterm)
 - [vim-commentary](https://github.com/tpope/vim-commentary)
 - [vim-airline](https://github.com/vim-airline/vim-airline)

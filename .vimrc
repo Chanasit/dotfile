@@ -16,6 +16,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mg979/vim-visual-multi'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 " Automatically install missing plugins on startup
@@ -29,10 +30,11 @@ autocmd VimEnter *
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
 let maplocalleader = ","
-set updatetime=300
+set updatetime=160
 set timeoutlen=1000 ttimeoutlen=50
 set history=1000
 set undofile
+set hidden
 set undolevels=100
 set undoreload=1000
 set nobackup
@@ -42,6 +44,7 @@ set nowrap
 set noswapfile
 set lazyredraw
 set nocursorline
+set shortmess+=c
 
 " interface
 set so=8
@@ -94,8 +97,10 @@ call github_colors#togglebg_map('<f5>')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => FloatTerm
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Set floaterm window's background to #FFFFFF
 hi Floaterm guibg=#FFFFFF
+
 " Set floating window border line color to #FFFFFF, and background to #FFFFFF
 hi FloatermBorder guibg=#FFFFFF guifg=#090063
 
@@ -104,6 +109,7 @@ let g:floaterm_autoclose = 2
 let g:floaterm_width = 0.8
 let g:floaterm_height = 0.8
 let g:floaterm_complete_options = {'shortcut': 'floaterm', 'priority': 5, 'filter_length': [5, 20]}
+
 nnoremap <silent> <leader>d :FloatermNew nnn -de<cr>
 nnoremap <silent> <leader>r :FloatermNew rg<cr>
 nnoremap <silent> <leader>g :FloatermNew lazygit<cr>
@@ -115,6 +121,13 @@ nnoremap <silent> <leader>z :FloatermToggle<cr>
 " => Editor Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Easy Motion Overide f
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Move to word
+map  ff <Plug>(easymotion-bd-w)
+nmap ff <Plug>(easymotion-overwin-w)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Visual Multi
@@ -161,7 +174,6 @@ let g:instant_markdown_port = 3333
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => COC VIM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set shortmess+=c
 
 " Use <Tab> to trigger completion.
 inoremap <silent><expr> <Tab> coc#refresh()
