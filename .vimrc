@@ -40,6 +40,8 @@ set nowritebackup
 set noundofile
 set nowrap
 set noswapfile
+set lazyredraw
+set nocursorline
 
 " interface
 set so=8
