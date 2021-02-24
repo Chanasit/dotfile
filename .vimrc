@@ -15,6 +15,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'mg979/vim-visual-multi'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " Automatically install missing plugins on startup
@@ -122,8 +123,8 @@ let g:VM_maps = {}
 let g:VM_maps["Select All"]        = '<leader>a'
 let g:VM_maps["Visual All"]        = '<leader>a'
 let g:VM_maps["Align"]             = '<leader>A'
-let g:VM_maps["Add Cursor Down"]   = '<C-j>'
-let g:VM_maps["Add Cursor Up"]     = '<C-k>'
+let g:VM_maps["Add Cursor Down"]   = '<C-Down>'
+let g:VM_maps["Add Cursor Up"]     = '<C-Up>'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
