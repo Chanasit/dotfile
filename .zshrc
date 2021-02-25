@@ -2,7 +2,7 @@
 # => ZSH Startup with Tmux
 ##############################################################
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux || tmux new
+  tmux attach -t hack || tmux new -s hack
 fi
 
 ##############################################################
