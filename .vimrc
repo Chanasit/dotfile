@@ -225,7 +225,5 @@ command! -nargs=0 OR   :call CocAction('runCommand', 'editor.action.organizeImpo
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 :lua <<EOF
-require"nvim-treesitter.configs".setup {
-  highlight = { enable = true },
-}
+require"nvim-treesitter.configs".setup { highlight = { enable = true } }
 EOF
