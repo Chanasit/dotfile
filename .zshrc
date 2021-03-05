@@ -40,6 +40,7 @@ plugins=(
     zsh-nvm
     zsh-syntax-highlighting
     zsh-autosuggestions
+    zsh-vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -47,10 +48,10 @@ source $ZSH/oh-my-zsh.sh
 ##############################################################
 # => Keys Binding
 ##############################################################
-bindkey -v
-bindkey -v '^?' backward-delete-char
-bindkey "^[[1;3C" forward-word
-bindkey "^[[1;3D" backward-word
+# bindkey -v
+# bindkey -v '^?' backward-delete-char
+# bindkey "^[[1;3C" forward-word
+# bindkey "^[[1;3D" backward-word
 ##############################################################
 # => Export Global Environments Variable
 ##############################################################
