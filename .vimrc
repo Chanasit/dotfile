@@ -1,4 +1,3 @@
-set nocompatible
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM Plug
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -79,17 +78,17 @@ noremap <leader>0 :tablast<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if exists('+termguicolors')
-  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
+" if exists('+termguicolors')
+"   let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+"   let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+"   set termguicolors
+" endif
+
+set termguicolors
 
 set background=light
 let g:github_colors_soft = 1
 colorscheme github
-
-call github_colors#togglebg_map('<f5>')
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => FloatTerm
