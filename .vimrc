@@ -84,8 +84,6 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-set termguicolors
-
 set background=light
 let g:github_colors_soft = 1
 colorscheme github
