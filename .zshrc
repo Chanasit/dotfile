@@ -90,7 +90,7 @@ export GOPRIVATE="gitlab.com/botnoi-sme,bitbucket.org/botnoi-sme,github.com/botn
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then export GOROOT=/snap/go/current
-elif [[ "$OSTYPE" == "darwin"* ]]; then export GOROOT=/usr/local/Cellar/go/1.15.8/libexec
+elif [[ "$OSTYPE" == "darwin"* ]]; then export GOROOT=/usr/local/Cellar/go/1.16/libexec
 fi
 
 # Clang LLVM
