@@ -186,7 +186,13 @@ mode "resize" {
 
 bindsym Mod1+r mode "resize"
 
+smart_gaps on
+smart_gaps inverse_outer
+gaps inner 10
+gaps outer 10
+
 exec setxkbmap -model pc105 -layout us,th -variant  -option grp:win_space_toggle
+exec --no-startup-id nitrogen --set-centered ~/Wallpapers/001.jpg --head=0
 
 # class                 border  bground text    indicator child_border
 client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
