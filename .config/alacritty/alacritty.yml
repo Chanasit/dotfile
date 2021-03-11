@@ -37,7 +37,7 @@ mouse:
 selection:
   save_to_clipboard: true
 
-background_opacity: 0.98
+background_opacity: 0.95
 
 cursor:
   vi_mode_style: None
@@ -65,7 +65,6 @@ font:
 
 window:
   padding:
-    x: 1
+    x: 0
     y: 0
   dynamic_padding: true
-  decorations: "none"
