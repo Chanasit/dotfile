@@ -2,32 +2,53 @@ env:
   TERM: screen-256color
 
 colors:
-  name: Grayscale (light)
-  author: Chris Kempson
+  # Default colors
   primary:
-    background: "#f7f7f7"
-    foreground: "#464646"
+    background: '#2c2c2c'
+    foreground: '#d6d6d6'
+
+    dim_foreground: '#dbdbdb'
+    bright_foreground: '#d9d9d9'
+    dim_background: '#202020' # not sure
+    bright_background: '#3a3a3a' # not sure
+
+  # Cursor colors
   cursor:
-    text: "#f7f7f7"
-    cursor: "#464646"
+    text: '#2c2c2c'
+    cursor: '#d9d9d9'
+
+  # Normal colors
   normal:
-    black: "#101010"
-    red: "#7c7c7c"
-    green: "#8e8e8e"
-    yellow: "#a0a0a0"
-    blue: "#686868"
-    magenta: "#747474"
-    cyan: "#868686"
-    white: "#b9b9b9"
+    black: '#1c1c1c'
+    red: '#bc5653'
+    green: '#909d63'
+    yellow: '#ebc17a'
+    blue: '#7eaac7'
+    magenta: '#aa6292'
+    cyan: '#86d3ce'
+    white: '#cacaca'
+
+  # Bright colors
   bright:
-    black: "#525252"
-    red: "#7c7c7c"
-    green: "#8e8e8e"
-    yellow: "#a0a0a0"
-    blue: "#686868"
-    magenta: "#747474"
-    cyan: "#868686"
-    white: "#f7f7f7"
+    black: '#636363'
+    red: '#bc5653'
+    green: '#909d63'
+    yellow: '#ebc17a'
+    blue: '#7eaac7'
+    magenta: '#aa6292'
+    cyan: '#86d3ce'
+    white: '#f7f7f7'
+
+  # Dim colors
+  dim:
+    black: '#232323'
+    red: '#74423f'
+    green: '#5e6547'
+    yellow: '#8b7653'
+    blue: '#556b79'
+    magenta: '#6e4962'
+    cyan: '#5c8482'
+    white: '#828282'
 
 mouse:
   hide_when_typing: true
